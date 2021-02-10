@@ -1,12 +1,12 @@
 # Site settings
-title: site-title
-tagline: site-tagline
+title: min(Hieu)
+tagline: Hieu's Digital Oasis
 description: site-description
 image: /assets/images/logo.svg
-url: https://github.com/meebuhs/arco
-github_url: https://github.com/meebuhs
+url: https://min-hieu.github.io
+github_url: https://github.com/min-hieu
 resume: true
-author: Alex Sharpe
+author: Minh Hieu
 lang: en-AU
 
 # Build settings
