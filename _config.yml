@@ -5,6 +5,8 @@ description: site-description
 image: /assets/images/logo.svg
 url: https://min-hieu.github.io
 github_url: https://github.com/min-hieu
+twitter:  
+  username: minhieupublic
 resume: true
 author: Minh Hieu
 lang: en-AU
