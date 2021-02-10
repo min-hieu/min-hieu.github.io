@@ -1,0 +1,142 @@
+@import "constants";
+@import "fonts";
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit;
+    color: $text-colour-dark;
+    :hover, :focus {
+      color: lighten($text-colour-dark, 24%);
+    }
+  }
+
+h1 {
+    font-size: 2rem; 
+    margin: 0.5em 0 1em 0;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+h2 {
+    font-size: 1.75rem; 
+    margin: 2em 0 0.8em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1.75em 0 1.2em;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: (1.25rem / 2) 0 (1.25rem / 2.5) 0;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+h5 {
+    font-size: 1.15rem;
+    margin: (1.15rem / 2) 0 (1.15rem / 2.5) 0;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+h6 {
+    font-size: 1rem; 
+    margin: (1rem / 2) 0 (1rem / 2.5) 0; 
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-highlight;
+    &:hover, &:focus {
+        color: lighten($primary-highlight, 14%);
+    }
+}
+
+blockquote {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+    border-left: 5px solid $secondary-highlight;
+}
+
+.notice {
+    border: 1px solid $sidebar-colour;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+}
+
+.table {
+  display: table;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.table-top {
+  vertical-align: top;
+}
+
+.table-middle {
+  vertical-align: middle;
+}
+
+.table-bottom {
+  vertical-align: bottom;
+}
+
+table {
+  display: table;
+  &.striped > tbody {
+    > tr:nth-child(odd) {
+      background-color: $table-background-colour;
+    }
+  }
+}
+
+td, th {
+  padding: 10px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+
+li, ul {
+    line-height: 1.5em;
+}
+
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.content {
+    width: auto;
+    height: auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+

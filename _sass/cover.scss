@@ -1,0 +1,53 @@
+@import "constants";
+@import "fonts";
+
+.cover-text {
+    h1 {
+        color: $primary-highlight;
+        margin: 0;
+    }
+    h6 {
+        text-transform: uppercase;
+        color: $text-colour-light;
+    }
+    a {
+        color: $primary-highlight;
+        :hover {
+            color: lighten($primary-highlight, 24%);
+        }
+    }
+}
+
+.open-button-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    background: $sidebar-colour;
+    color: $text-colour-light;
+    transition: all .25s ease;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.cover-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.cover-tagline {
+    max-width: 250px;
+    margin: auto;
+    color: $hover-colour;
+}

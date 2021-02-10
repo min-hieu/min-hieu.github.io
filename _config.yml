@@ -1,0 +1,16 @@
+# Site settings
+title: site-title
+tagline: site-tagline
+description: site-description
+image: /assets/images/image.png
+url: https://github.com/meebuhs/arco
+github_url: https://github.com/meebuhs
+resume: true
+author: Alex Sharpe
+lang: en-AU
+
+# Build settings
+theme: arco
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

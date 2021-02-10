@@ -1,0 +1,264 @@
+@import "constants";
+@import "fonts";
+
+.sidebar-text, .sidebar-links {
+    h1 {
+        margin: 0;
+        :hover {
+            color: lighten($primary-highlight, 14%);
+        }
+    }
+    h6 {
+        text-transform: uppercase;
+        color: $text-colour-light;
+    }
+    a {
+        text-decoration: none;
+        color: $primary-highlight;
+        &:hover, &:focus {
+            color: lighten($primary-highlight, 14%);
+        }
+    }
+}
+
+.sidebar-tagline {
+    max-width: 250px;
+    margin: auto;
+    color: $hover-colour;
+}
+
+.github-image {
+    width: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+#sidebar {
+    display: flex;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    background: $sidebar-colour;
+    color: $text-colour-light;
+    transition: all .35s ease;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content-fader {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: white;
+    opacity: 1;
+    animation-duration: .35s;
+    animation-timing-function: ease;
+}
+
+#sidebar-fader {
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: $sidebar-colour;
+    opacity: 1;
+    animation-duration: .35s;
+    animation-timing-function: ease;
+}
+
+@media only screen and (orientation: portrait) {
+    .sidebar {
+        width: 100%;
+        height: $sidebar-height;
+    }
+
+    .sidebar-minimised {
+        width: 100%;
+        height: $sidebar-height-min;
+    }
+
+    .sidebar-text {
+        h6 {
+            margin: 0;
+        }
+    }
+
+    .content {
+        max-width: 100%;
+        margin: calc(#{$sidebar-height} + 1em) 1em 1em 1em;
+    }
+
+    #content-fader {
+        bottom: 0;
+        height: calc(100% - #{$sidebar-height});
+        width: 100%;
+    }
+
+    #sidebar-fader {
+        top: 0;
+        height: $sidebar-height;
+        width: 100%;
+    }
+
+    @media (min-width: 450px) {
+        #sidebar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar-header {
+            display: flex;
+            margin-left: 1em;
+        }
+
+        .sidebar-image-container {
+            margin-right: 1em;
+        }
+    
+        .sidebar-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .sidebar-text {
+            text-align: start;
+            h1 {
+                margin-top: -0.2em;
+            }
+        }
+
+        .sidebar-links {
+            margin-right: 1em;
+            text-align: end;
+        }
+
+        .post-buttons {
+            margin: 3em 0;
+        }
+    }
+
+    @media (max-width: 450px) {
+        #sidebar {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .sidebar-image-container {
+            display: none;
+        }
+
+        .sidebar-text {
+            h1 {
+                margin-top: -0.3em;
+            }
+        }
+
+        .sidebar-links {
+            margin-top: 1em;
+        }
+
+        .post-buttons {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            a {
+                margin: .5em;
+            }
+        }
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #sidebar {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sidebar, .sidebar-minimised {
+        width: $sidebar-width;
+        height: 100%;
+    }
+
+    .sidebar-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    
+    .content {
+        justify-content: space-between;
+        margin: 1em 1em 1em calc(1em + #{$sidebar-width});
+    }
+
+    .sidebar-links {
+        margin-top: 1em;
+    }
+
+    #content-fader {
+        top: 0;
+        width: calc(100% - #{$sidebar-width});
+        height: 100%;
+        background: white;
+    }
+
+    #sidebar-fader {
+        bottom: 0;
+        height: 100%;
+        width: $sidebar-width;
+    }
+
+    .post-buttons {
+        margin: 3em 0;
+    }
+}
+
+@keyframes fade-out {
+    from { 
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0
+    }
+    
+    to {
+        opacity: 1
+    }
+}
+
+#content-fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#content-fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+#sidebar-fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#sidebar-fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}

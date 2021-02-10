@@ -1,0 +1,57 @@
+@media only screen and (orientation: landscape) and (min-width: 1250px) {
+    .post {
+        max-width: 900px !important;
+    }
+}
+
+.post {
+    max-width: 100%;
+}
+
+.post-title h1 {
+    margin: 0;
+}
+
+.post-description {
+    margin-bottom: 0.5em;
+}
+
+.post-date {
+    color: $secondary-highlight;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.post-image {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.post-tags {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: $tertiary-highlight;
+}
+
+.post-content {
+    margin-bottom: 2em;
+}
+
+.clickable-image {
+    max-width: 100%;
+    max-height: 600px;
+    text-align: center;
+}
+
+.clickable-image a {
+    max-width: 80%;
+    display: inline-block;
+}
+
+.post-content img {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 5px;
+}

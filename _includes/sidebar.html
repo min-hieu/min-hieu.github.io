@@ -1,0 +1,30 @@
+<section id="sidebar" class="sidebar"> 
+    <svg id="sidebar-fader"></svg>
+    <div class="sidebar-header">
+        {% if site.image %}
+            <div class="sidebar-image-container">
+                <img class="sidebar-image" src="{{ site.image }}" />
+            </div>
+        {% endif %}
+        <div class="sidebar-text">
+            <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
+            <h6>{{ site.description }}</h6>
+            {% if site.tagline %}
+                <div class="sidebar-tagline">
+                    {{ site.tagline }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="sidebar-links">
+        {% if site.github_url %}
+            <a href="{{ site.github_url }}"><img class="github-image" src="/assets/images/GitHub-Mark-Light-64px.png"/>github</a>
+        {% endif %}
+        {% if site.github_url and site.resume %}
+                / 
+        {% endif %}
+        {% if site.resume %}
+            <a href="{{ "/resume" }}" class="fade-onclick">resume</a>
+        {% endif %}
+    </div>
+</section>
