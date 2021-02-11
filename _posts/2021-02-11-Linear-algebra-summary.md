@@ -62,13 +62,13 @@ mathjax: true
 
 <details closed><summary><b>Definitions</b></summary>
 
-+ A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
+- A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
 
 $$a_1x_1+a_2x_2+...+a_nx_n =b$$
 
 &emsp;&emsp;&emsp;*where  $a_1, a_2,...,a_n$   and $b$ are constants and the $a_i$'s are not all zero.*
 
-+ A <span id="notion-highlight-1"><b>homogeneous linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
+- A <span id="notion-highlight-1"><b>homogeneous linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
 
 $$a_1x_1+a_2x_2+...+a_nx_n =0$$
 
@@ -193,7 +193,7 @@ b_2 \\ \vdots \\b_m \\
 
 ---
 
-## 3.1 <span id="notion-highlight-1"><b>Operations on Matrices</b></span>
+## 3.1 Operations on Matrices
 
 <details closed><summary><b>Definitions</b></summary>
     - A <span id="notion-highlight-1"><b>matrix</b></span> is a rectangular array of numbers. The numbers in the array are called the <span id="notion-highlight-1"><b>entries</b></span> in the matrix. The <span id="notion-highlight-1"><b>size</b></span> of a matrix is described by specifying the number of <span id="notion-highlight-1"><b>rows</b></span> (horizontal lines) and <span id="notion-highlight-1"><b>columns</b></span> (vertical lines) that occur in the matrix.
@@ -250,7 +250,7 @@ b_2 \\ \vdots \\b_m \\
 
 </details>
 
-## 3.2 <span id="notion-highlight-1"><b>Inverses; Algebraic Properties of Matrices</b></span>
+## 3.2 Inverses; Algebraic Properties of Matrices
 
 <details closed><summary><b>Definitions</b></summary>
     - The <span id="notion-highlight-1"><b>negative</b></span> or the <span id="notion-highlight-1"><b>additive inverse</b></span> of a matrix $A$  is defined to be
@@ -340,7 +340,7 @@ b_2 \\ \vdots \\b_m \\
         $$rc=tr(cr)$$
 </details>
 
-## 3.3 <span id="notion-highlight-1"><b>Elementary Matrices; A Method for Finding $A^{-1}$</b></span>
+## 3.3 Elementary Matrices; A Method for Finding $A^{-1}$
 
 <details closed><summary><b>Definitions</b></summary>
     - An $n\times n$ matrix is called an <span id="notion-highlight-1"><b>elementary matrix</b></span> if it can be obtained from the $n\times n$ identity matrix $I_n$ by performing a single elementary row operation.
@@ -417,7 +417,7 @@ b_2 \\ \vdots \\b_m \\
 
     Apply Gauss-Jordan elimination to attempt to reduce $[A\mid I]$  to $[I\mid B]$. If the reduction can be carried out, then $A^{-1}=B$. Otherwise, $A^{-1}$ does not exist. 
 
-## 3.4 <span id="notion-highlight-1"><b>Subspaces and Linear Independence</b></span>
+## 3.4 Subspaces and Linear Independence
 
 <details closed><summary><b>Definitions</b></summary>
     - A nonempty set $W$  of vectors in $\R^n$ is called a <span id="notion-highlight-1"><b>subspace</b></span> of $\R^n$ if it is closed under scalar multiplication (i.e. any scalar multiple of a vector in $W$  is in $W$) and is closed under addition (i.e. the sum of any two vectors in $W$  is in $W$).
@@ -471,7 +471,7 @@ b_2 \\ \vdots \\b_m \\
 </details>
 
 
-## 3.5 <span id="notion-highlight-1"><b>The Geometry of Linear Systems</b></span>
+## 3.5 The Geometry of Linear Systems
 
 <details closed><summary><b>Definitions</b></summary>
     - The solution set of a consistent nonhomogeneous linear system $Ax=b$ is expressible in the form
@@ -508,7 +508,7 @@ b_2 \\ \vdots \\b_m \\
     - Let $A$ be an $m\times n$ matrix. Then the solution space of the homogeneous linear system $Ax=0$ consists of all vectors in $\R^n$ that are orthogonal to every row vector of the matrix $A$.
 </details>
 
-## 3.6 <span id="notion-highlight-1"><b>Matrices with Special Forms</b></span>
+## 3.6 Matrices with Special Forms
 
 <details closed><summary><b>Definitions</b></summary>
     - A square matrix in which all entries off the main diagonal are zero is called a <span id="notion-highlight-1"><b>diagonal matrix</b></span>.
@@ -553,7 +553,7 @@ b_2 \\ \vdots \\b_m \\
         $$(I-A)^{-1}=I+A+A^2+A^3+...$$
 </details>
 
-## 3.7 <span id="notion-highlight-1"><b>Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</b></span>
+## 3.7 Matrix Factorizations; $\rm{\textit{LU}}$-Decompositions
 
 <details closed><summary><b>Definitions</b></summary>
     - Let $A$ be a square matrix. A factorization of $A$ as
