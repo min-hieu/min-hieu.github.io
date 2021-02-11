@@ -18,14 +18,14 @@
     </div>
     <div class="sidebar-links">
         {% if site.github_url %}
-            <a href="{{ site.github_url }}"><img class="github-image" src="/assets/images/GitHub-Mark-Light-64px.png"/>github</a>
+            <a href="{{ site.github_url }}"><img class="github-image" src="/assets/images/github-icon.png"/>github</a>
         {% endif %}
         {% if site.github_url and site.resume %}
                 <br> 
         {% endif %}
-            <a href="/posts/about">about</a><br>
+            <a href="/posts/about"><img class="github-image" src="/assets/images/question-icon.png"/>about</a><br>
         {% if site.resume %}
-            <a href="{{ "/resume" }}" class="fade-onclick">resume</a>
+            <a href="{{ "/resume" }}" class="fade-onclick"><img class="github-image" src="/assets/images/resume-icon.png"/>resume</a>
         {% endif %}
     </div>
 </section>
