@@ -12,49 +12,49 @@ mathjax: true
 ## Quick Access
 
 <details closed>
-<summary><b>contents</b></summary>
+    <summary><b>contents</b></summary>
 
-<details closed>
-<summary><b>Chapter 2.</b> Systems of Linear Equations</summary>
-&emsp;<b>2.1</b> <a href > Introduction to System of Linear Equation</a> <br>
-&emsp;<b>2.2</b> <a href > Solving Linear Systems by Row Reduction</a>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 2.</b> Systems of Linear Equations</summary>
+    &emsp;<b>2.1</b> <a href > Introduction to System of Linear Equation</a> <br>
+    &emsp;<b>2.2</b> <a href > Solving Linear Systems by Row Reduction</a>
+    </details>
 
-<details closed>
-<summary><b>Chapter 3.</b> Matrices and Matrix Algebra</summary>
-&emsp;<b>3.1</b> <a href > Operations on Matrices</a> <br>
-&emsp;<b>3.2</b> <a href > Inverses; Algebraic Properties of Matrices</a> <br>
-&emsp;<b>3.3</b> <a href > Elementary Matrices; A Method for Finding $A^{-1}$</a> <br>
-&emsp;<b>3.4</b> <a href > Subspaces and Linear Independence</a> <br>
-&emsp;<b>3.5</b> <a href > The Geometry of Linear Systems</a> <br>
-&emsp;<b>3.6</b> <a href > Matrices with Special Forms</a> <br>
-&emsp;<b>3.7</b> <a href > Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</a> <br>
-&emsp;<b>3.8</b> <a href > Partitioned Matrices and Parallel Processing*</a> <br>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 3.</b> Matrices and Matrix Algebra</summary>
+    &emsp;<b>3.1</b> <a href > Operations on Matrices</a> <br>
+    &emsp;<b>3.2</b> <a href > Inverses; Algebraic Properties of Matrices</a> <br>
+    &emsp;<b>3.3</b> <a href > Elementary Matrices; A Method for Finding $A^{-1}$</a> <br>
+    &emsp;<b>3.4</b> <a href > Subspaces and Linear Independence</a> <br>
+    &emsp;<b>3.5</b> <a href > The Geometry of Linear Systems</a> <br>
+    &emsp;<b>3.6</b> <a href > Matrices with Special Forms</a> <br>
+    &emsp;<b>3.7</b> <a href > Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</a> <br>
+    &emsp;<b>3.8</b> <a href > Partitioned Matrices and Parallel Processing*</a> <br>
+    </details>
 
-<details closed>
-<summary><b>Chapter 4.</b> Determinants</summary>
-&emsp;<b>4.1</b> <a href > Determinants; Cofactor Expansion</a> <br>
-&emsp;<b>4.2</b> <a href > Properties of Determinants</a> <br>
-&emsp;<b>4.3</b> <a href > Cramer's Rule; Formula for $A^{-1}$; Applications of Determinants</a> <br>
-&emsp;<b>4.4</b> <a href > A First Look at Eigenvalues and Eigenvectors</a> <br>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 4.</b> Determinants</summary>
+    &emsp;<b>4.1</b> <a href > Determinants; Cofactor Expansion</a> <br>
+    &emsp;<b>4.2</b> <a href > Properties of Determinants</a> <br>
+    &emsp;<b>4.3</b> <a href > Cramer's Rule; Formula for $A^{-1}$; Applications of Determinants</a> <br>
+    &emsp;<b>4.4</b> <a href > A First Look at Eigenvalues and Eigenvectors</a> <br>
+    </details>
 
-<details closed>
-<summary><b>Chapter 6.</b> Linear Transformations</summary>
-&emsp;<b>6.1</b> <a href > Matrices as Transformations</a> <br>
-&emsp;<b>6.2</b> <a href > Geometry of Linear Operators</a> <br>
-&emsp;<b>6.3</b> <a href > Kernel and Range</a> <br>
-&emsp;<b>6.4</b> <a href > Composition and Invertibility of Linear Transformations</a> <br>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 6.</b> Linear Transformations</summary>
+    &emsp;<b>6.1</b> <a href > Matrices as Transformations</a> <br>
+    &emsp;<b>6.2</b> <a href > Geometry of Linear Operators</a> <br>
+    &emsp;<b>6.3</b> <a href > Kernel and Range</a> <br>
+    &emsp;<b>6.4</b> <a href > Composition and Invertibility of Linear Transformations</a> <br>
+    </details>
 
-<details closed>
-<summary><b>Chapter 7.</b> Dimension and structure</summary>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 7.</b> Dimension and structure</summary>
+    </details>
 
-<details closed>
-<summary><b>Chapter 8.</b> Diagonalization</summary>
-</details>
+    &emsp;<details closed>
+    <summary><b>Chapter 8.</b> Diagonalization</summary>
+    </details>
 
 </details>
 
