@@ -61,13 +61,14 @@ mathjax: true
 ## 2.1 Introduction to System of Linear Equations
 
 <details closed><summary><b>Definitions</b></summary>
-- A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
+
++ A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
 
 $$a_1x_1+a_2x_2+...+a_nx_n =b$$
 
 &emsp;&emsp;&emsp;*where  $a_1, a_2,...,a_n$   and $b$ are constants and the $a_i$'s are not all zero.*
 
-- A <span id="notion-highlight-1"><b>homogeneous linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
++ A <span id="notion-highlight-1"><b>homogeneous linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
 
 $$a_1x_1+a_2x_2+...+a_nx_n =0$$
 
@@ -337,6 +338,7 @@ b_2 \\ \vdots \\b_m \\
     - Let $\textbf{r}$ be a $1\times n$ row vector and $c$ be an $n\times 1$ column vector. Then
 
         $$rc=tr(cr)$$
+</details>
 
 ## 3.3 <span id="notion-highlight-1"><b>Elementary Matrices; A Method for Finding $A^{-1}$</b></span>
 
