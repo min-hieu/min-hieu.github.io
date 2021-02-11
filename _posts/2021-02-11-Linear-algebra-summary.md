@@ -14,13 +14,13 @@ mathjax: true
 <details closed>
     <summary><b>contents</b></summary><ul>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 2.</b> Systems of Linear Equations</summary><ul>
     &emsp;<b>2.1</b> <a href > Introduction to System of Linear Equation</a> <br>
     &emsp;<b>2.2</b> <a href > Solving Linear Systems by Row Reduction</a>
-    </ul></details>
+    </li></ul></details>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 3.</b> Matrices and Matrix Algebra</summary><ul>
     &emsp;<b>3.1</b> <a href > Operations on Matrices</a> <br>
     &emsp;<b>3.2</b> <a href > Inverses; Algebraic Properties of Matrices</a> <br>
@@ -30,39 +30,39 @@ mathjax: true
     &emsp;<b>3.6</b> <a href > Matrices with Special Forms</a> <br>
     &emsp;<b>3.7</b> <a href > Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</a> <br>
     &emsp;<b>3.8</b> <a href > Partitioned Matrices and Parallel Processing*</a> <br>
-    </ul></details>
+    </li></ul></details>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 4.</b> Determinants</summary><ul>
     &emsp;<b>4.1</b> <a href > Determinants; Cofactor Expansion</a> <br>
     &emsp;<b>4.2</b> <a href > Properties of Determinants</a> <br>
     &emsp;<b>4.3</b> <a href > Cramer's Rule; Formula for $A^{-1}$; Applications of Determinants</a> <br>
     &emsp;<b>4.4</b> <a href > A First Look at Eigenvalues and Eigenvectors</a> <br>
-    </ul></details>
+    </li></ul></details>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 6.</b> Linear Transformations</summary><ul>
     &emsp;<b>6.1</b> <a href > Matrices as Transformations</a> <br>
     &emsp;<b>6.2</b> <a href > Geometry of Linear Operators</a> <br>
     &emsp;<b>6.3</b> <a href > Kernel and Range</a> <br>
     &emsp;<b>6.4</b> <a href > Composition and Invertibility of Linear Transformations</a> <br>
-    </ul></details>
+    </li></ul></details>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 7.</b> Dimension and structure</summary><ul>
-    </ul></details>
+    </li></ul></details>
 
-    &emsp;<details closed>
+    <details closed>
     <summary><b>Chapter 8.</b> Diagonalization</summary><ul>
-    </ul></details>
+    </li></ul></details>
 
-</ul></details>
+</li></ul></details>
 
 ## 2.1 Introduction to System of Linear Equations
 
 <details closed><summary><b>Definitions</b></summary><ul>
 
-</li><li>A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
+<li>A <span id="notion-highlight-1"><b>linear equation</b></span> in the $n$  variables $x_1, x_2, ..., x_n$  is defined to be one that can be expressed in the form
 
     $$a_1x_1+a_2x_2+...+a_nx_n =b$$
 
@@ -121,11 +121,11 @@ mathjax: true
     &emsp;&emsp;&emsp;is called the <span id="notion-highlight-1"><b>matrix of coefficients</b></span> or the <span id="notion-highlight-1"><b>coefficient matrix</b></span> of the linear system.
 
 </li><li>Matrices that can be obtained from one another by a finite sequence of elementary row operations are said to be <span id="notion-highlight-1"><b>row equivalent</b></span>.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
-</ul></details>
+<li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
+</li></ul></details>
 - <span id="notion-highlight-1"><b>Elementary Row Operations</b></span>
     1. <span id="notion-highlight-1"><b>[Row scaling]</b></span> Multiplying a row through by a nonzero constant. 
     2. <span id="notion-highlight-1"><b>[Row interchange]</b></span> Interchange two rows. That is, interchange the $i$th and $j$th row vectors of a matrix where $i\neq j$.
@@ -134,8 +134,7 @@ mathjax: true
 ## 2.2 Solving Linear Systems by Row Reduction
 
 <details closed>
-<summary><b>Definitions</b></summary><ul>
-</li><li>A matrix is said to be in <span id="notion-highlight-1"><b>row echelon form</b></span> if it has the following properties:
+<summary><b>Definitions</b></summary><ul><li>A matrix is said to be in <span id="notion-highlight-1"><b>row echelon form</b></span> if it has the following properties:
         1. If a row does not constist entirely of zeros, then the first nonzero number in the row is 1 which is called a <span id="notion-highlight-1"><b>leading 1</b></span> or the <span id="notion-highlight-1"><b>pivot</b></span> for that row.
         2. If there are any rows that consist entirely of zeros, then they are grouped together at the bottom of the matrix. 
         3. In any two successive rows that do not consist entirely of zeros, the leading 1 in the lower row occurs farther to the right than the leading 1 in the higher row. 
@@ -146,10 +145,10 @@ mathjax: true
 </li><li>A <span id="notion-highlight-1"><b>submatrix</b></span> (or <span id="notion-highlight-1"><b>block</b></span>) of a matrix $A$  is defined to be an array obrtained by deleting any combination of rows and columns from $A$ .
 </li><li>The column vectors of a matrix $A$ that lie in the column positions where the leading 1's occur in the row echelon forms of $A$ are called the <span id="notion-highlight-1"><b>pivot columns</b></span> of $A$.
 </li><li>The zero vector in $\mathbb{R}^n$ is called the <span id="notion-highlight-1"><b>trivial solution</b></span> of a homogeneous linear system with $n$ unknowns. All other solutions, if any, are called <span id="notion-highlight-1"><b>nontrivial solutions</b></span>.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>A homogeneous linear system has only the trivial solution or it has infinitely many solutions; there are no other possibilities.
+<li>A homogeneous linear system has only the trivial solution or it has infinitely many solutions; there are no other possibilities.
     </li><li>*proof*
 
             Assume that a homogeneous linear system with $n$ unknowns has some nontrivial solution, say $x=(x_1,x_2,...,x_n)$. Then $kx$ is a solution for any scalar $k$. Thus the system has infinitely many solution  $\blacksquare$
@@ -159,7 +158,7 @@ mathjax: true
     </li><li>*proof*
 
             If a homogeneous linear system $Ax=0$ has $m$ equations and $n$ unknowns with $m<n$, then the number of nonzero rows of the reduced row echelon form of $A$ is less than $n$. Thus there is at least one free variables  $\blacksquare$
-</ul></details>
+</li></ul></details>
 
 - <span id="notion-highlight-1"><b>Gauss Elimination</b></span>
 </li><li><span id="notion-highlight-1"><b>Step 1.</b></span>
@@ -196,7 +195,7 @@ mathjax: true
 ## 3.1 Operations on Matrices
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>A <span id="notion-highlight-1"><b>matrix</b></span> is a rectangular array of numbers. The numbers in the array are called the <span id="notion-highlight-1"><b>entries</b></span> in the matrix. The <span id="notion-highlight-1"><b>size</b></span> of a matrix is described by specifying the number of <span id="notion-highlight-1"><b>rows</b></span> (horizontal lines) and <span id="notion-highlight-1"><b>columns</b></span> (vertical lines) that occur in the matrix.
+<li>A <span id="notion-highlight-1"><b>matrix</b></span> is a rectangular array of numbers. The numbers in the array are called the <span id="notion-highlight-1"><b>entries</b></span> in the matrix. The <span id="notion-highlight-1"><b>size</b></span> of a matrix is described by specifying the number of <span id="notion-highlight-1"><b>rows</b></span> (horizontal lines) and <span id="notion-highlight-1"><b>columns</b></span> (vertical lines) that occur in the matrix.
 </li><li>A matrix $A=(a_{ij})$ with $n$ row and $n$  columns is called a <span id="notion-highlight-1"><b>square matrix</b></span> of order $n$. The entries $a_{11},a_{12},..., a_{nn}$ are said to form the <span id="notion-highlight-1"><b>main diagnal</b></span> of $A$.
 </li><li>Two matrices are defined to be <span id="notion-highlight-1"><b>equal</b></span> if they have the same size and their corresponding entries are equal.
 </li><li>Let $A$ and $B$ be matrices withthe same size. The <span id="notion-highlight-1"><b>sum $A+B$</b></span> is defined to be the matrix obtained by adding the entries of $B$ to the corresponding entries of $A$. That is, the entry in the $i$th row and $j$ th column of $A+B$  is $a_{ij}+b_{ij}$ where $a_{ij}$ and $b_{ij}$ are the $ij$th entries of $A$ and $B$  respectively.
@@ -222,10 +221,10 @@ mathjax: true
 </li><li>let $\textbf{u}$ and $\textbf{v}$ be column vectors with the same size. Then
 
         $$\textbf{u}^\mathsf{T}\textbf{v} = \textbf{u}\cdot\textbf{v} = \textbf{v}\cdot\textbf{u} = \textbf{v}^\mathsf{T}\textbf{u}$$
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>*(Linearity Properties)* Let $A$ be an $m\times n$ matrix. Let $\textbf{u}$ and $\textbf{v}$ be column vectors in $\mathbb{R}^n$ and $c$ be a scalar. Then the following hold.
+<li>*(Linearity Properties)* Let $A$ be an $m\times n$ matrix. Let $\textbf{u}$ and $\textbf{v}$ be column vectors in $\mathbb{R}^n$ and $c$ be a scalar. Then the following hold.
         1. $A(c\textbf{u}) = c(A\textbf{u})$
         2. $A(\textbf{u}+\textbf{v}) = A\textbf{u}+A\textbf{v}$
     </li><li>*proof*
@@ -248,12 +247,12 @@ mathjax: true
         1. For $j = 1,2,...,n$, the $j$th column vector of the matrix product $AB$ is a linear combination of the column vectors of $A$ with the coefficients coming from $b_j$.
         2. For $i = 1,2,...,m$, the $i$th row vector of the matrix product $AB$ is a linear combination of the row vectors of $B$ with the coefficients coming from $a_i$.
 
-</ul></details>
+</li></ul></details>
 
 ## 3.2 Inverses; Algebraic Properties of Matrices
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>The <span id="notion-highlight-1"><b>negative</b></span> or the <span id="notion-highlight-1"><b>additive inverse</b></span> of a matrix $A$  is defined to be
+<li>The <span id="notion-highlight-1"><b>negative</b></span> or the <span id="notion-highlight-1"><b>additive inverse</b></span> of a matrix $A$  is defined to be
 
         $$-A=(-1)A$$
 
@@ -278,10 +277,10 @@ mathjax: true
         $$p(A) = a_0I_n + a_1A + a_2A^2 + ... + a_mA^m$$
 
         that is, $p(A)$ is obtained by substituting $A$ for $x$ and replacing the constant term $a_0$ by the matrix $a_0I_n$. An expression of [form]() is called a <span id="notion-highlight-1"><b>matrix polynomial</b></span> in $A$.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $a$ and $b$  be any scalars. Let $A$, $B$ and $C$  be matrices with the same size. Then the following rules of matrix arithmatic are valid.
+<li>Let $a$ and $b$  be any scalars. Let $A$, $B$ and $C$  be matrices with the same size. Then the following rules of matrix arithmatic are valid.
         1. *(Commutative law for addition)* $A+B=B+A$
         2. *(Associative law for addition)* $A+(B+C) = (A+B )+C$
         3. *(Associative law of scalar multiplication)* $(ab)A=a(bA)$
@@ -338,16 +337,16 @@ mathjax: true
 </li><li>Let $\textbf{r}$ be a $1\times n$ row vector and $c$ be an $n\times 1$ column vector. Then
 
         $$rc=tr(cr)$$
-</ul></details>
+</li></ul></details>
 
 ## 3.3 Elementary Matrices; A Method for Finding $A^{-1}$
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>An $n\times n$ matrix is called an <span id="notion-highlight-1"><b>elementary matrix</b></span> if it can be obtained from the $n\times n$ identity matrix $I_n$ by performing a single elementary row operation.
-</ul></details>
+<li>An $n\times n$ matrix is called an <span id="notion-highlight-1"><b>elementary matrix</b></span> if it can be obtained from the $n\times n$ identity matrix $I_n$ by performing a single elementary row operation.
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $A$ be an $m\times n$ matrix. If an elementary matrix $E$ results from performing a certain row operation on $I_m$, then the product $EA$ is the matrix that results when this same operation is performed on $A$.
+<li>Let $A$ be an $m\times n$ matrix. If an elementary matrix $E$ results from performing a certain row operation on $I_m$, then the product $EA$ is the matrix that results when this same operation is performed on $A$.
 </li><li>Every elementary matrix is invertible and the inverse is an elementary matrix.
     </li><li>*proof*
 
@@ -403,7 +402,7 @@ mathjax: true
         4. $Ax=0$ has only the trivial solution.
         5. $Ax=b$ is consistent for every vector $b$ in $\R^n$.
         6. $Ax=b$  has exactly one solution for every vector $b$ in $\R^n$.
-</ul></details>
+</li></ul></details>
 
 - <span id="notion-highlight-1"><b>The Inversion Algorithm</b></span>
 
@@ -420,7 +419,7 @@ mathjax: true
 ## 3.4 Subspaces and Linear Independence
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>A nonempty set $W$  of vectors in $\R^n$ is called a <span id="notion-highlight-1"><b>subspace</b></span> of $\R^n$ if it is closed under scalar multiplication (i.e. any scalar multiple of a vector in $W$  is in $W$) and is closed under addition (i.e. the sum of any two vectors in $W$  is in $W$).
+<li>A nonempty set $W$  of vectors in $\R^n$ is called a <span id="notion-highlight-1"><b>subspace</b></span> of $\R^n$ if it is closed under scalar multiplication (i.e. any scalar multiple of a vector in $W$  is in $W$) and is closed under addition (i.e. the sum of any two vectors in $W$  is in $W$).
 </li><li>The subspace $W$ of all linear combinations
 
         $$x=t_1\textbf{v}_1 + t_2\textbf{v}_2 + ... + t_k\textbf{v}_k$$
@@ -443,10 +442,10 @@ mathjax: true
         that is, the zero vector is a unique linear combination of $\textbf{v}_1,\textbf{v}_2,...,\textbf{v}_s$ (or the vectors $\textbf{v}_1,\textbf{v}_2,...,\textbf{v}_s$ are said to be <span id="notion-highlight-1"><b>linear independent</b></span>). If there are scalars, not all zeros, that satisfy this equation, the $S$ is said to be <span id="notion-highlight-1"><b>linearly dependent.</b></span> (or the vectors $\textbf{v}_1,\textbf{v}_2,...,\textbf{v}_s$ are said to be <span id="notion-highlight-1"><b>linearly dependent</b></span>).
 
 </li><li>let $W$ be a subspace of $\R^n$ and $x_0$ be a vector in $\R^n$. The <span id="notion-highlight-1"><b>translation of $W$by $x_0$</b></span> is defined to be the set of vectors of the form $x=x_0 + \textbf{v}$ with a vector $\textbf{v}$ in $W$ and is denoted by $x_0 + W$.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $\textbf{v}_1, \textbf{v}_2,..., \textbf{v}_k$ be vectors in $\R^n$. Then the set of all linear combinations
+<li>Let $\textbf{v}_1, \textbf{v}_2,..., \textbf{v}_k$ be vectors in $\R^n$. Then the set of all linear combinations
 
         $$x=t_1\textbf{v}_1 + t_2 \textbf{v}_2+...+t_k\textbf{v}_k$$
 
@@ -468,13 +467,13 @@ mathjax: true
         6. $Ax=b$  has exactly one solution for every vector $b$ in $\R^n$.
         7. The column vectors of $A$ are linearly independent.
         8. The row vectors of $A$ are linearly independent.
-</ul></details>
+</li></ul></details>
 
 
 ## 3.5 The Geometry of Linear Systems
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>The solution set of a consistent nonhomogeneous linear system $Ax=b$ is expressible in the form
+<li>The solution set of a consistent nonhomogeneous linear system $Ax=b$ is expressible in the form
 
         $$x=x_0 + t_1\textbf{v}_1+...+t_s\textbf{v}_s = x_0 + x_h$$
 
@@ -495,10 +494,10 @@ mathjax: true
         $$a_1x_1 + a_2x_2 + ... + a_nx_n = b$$
 
         is called a <span id="notion-highlight-1"><b>hyperplane</b></span> in $\R^n$. This linear equation can be expressed in dot product notation as $a\cdot x=b$ 
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $Ax=b$ be a consistent nonhomogeneous linear system. If $W$ is the solution space of the associated homogeneous linear system $Ax=0$, then the solution set of $Ax=b$ is the translated subspace $x_0 + W$ where $x_0$ is any solution of the nonhomogeneous linear system $Ax=b$.
+<li>Let $Ax=b$ be a consistent nonhomogeneous linear system. If $W$ is the solution space of the associated homogeneous linear system $Ax=0$, then the solution set of $Ax=b$ is the translated subspace $x_0 + W$ where $x_0$ is any solution of the nonhomogeneous linear system $Ax=b$.
 </li><li>A general solution of a consistent linear system $Ax=b$ can be obtained by adding a particular solution of $Ax=b$ to a general solution of the associated homogeneous linear system $Ax=0$.
 </li><li>Let $A$  be an $m\times n$ matrix. Then the following are equivalent.
         1. $Ax=0$ has only the trivial solution.
@@ -506,12 +505,11 @@ mathjax: true
 </li><li>A nonhomogeneous linear system with more unknowns than equations is either inconsistent or has infinitely many solutions.
 </li><li>A linear system $Ax=b$ is consistent if and only if $b$ is in the space spanned by the column vectors of $A$.
 </li><li>Let $A$ be an $m\times n$ matrix. Then the solution space of the homogeneous linear system $Ax=0$ consists of all vectors in $\R^n$ that are orthogonal to every row vector of the matrix $A$.
-</ul></details>
+</li></ul></details>
 
 ## 3.6 Matrices with Special Forms
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>A square matrix in which all entries off the main diagonal are zero is called a <span id="notion-highlight-1"><b>diagonal matrix</b></span>.
+<details closed><summary><b>Definitions</b></summary><ul><li>A square matrix in which all entries off the main diagonal are zero is called a <span id="notion-highlight-1"><b>diagonal matrix</b></span>.
 </li><li>A square matrix in which all entries above the main diagonal are zero is called <span id="notion-highlight-1"><b>lower triangular</b></span>. A square matrix in which all entries below the main diagonal are zero is called <span id="notion-highlight-1"><b>upper triangle</b></span>. A matrix that is either upper triangular or lower triangular (or both) is called <span id="notion-highlight-1"><b>triangular</b></span>.
 </li><li>A lower triangular matrix with zeros on the main diagonal is called <span id="notion-highlight-1"><b>strictly lower triangular</b></span>. An upper triangular matrix with zeros on the main diagonal is called <span id="notion-highlight-1"><b>strictly upper triangular</b></span>. A matrix that is either strictly upper triangular or strictly lower triangular (or both) is called <span id="notion-highlight-1"><b>strictly triangular</b></span>.
 </li><li>A square matrix $A$ is said to be <span id="notion-highlight-1"><b>symmetric</b></span> if
@@ -529,10 +527,10 @@ mathjax: true
         or equivalently, $x_0$ is a solution of the homogeneous linear system $(I-A)x=0$.
 
 </li><li>A square matrix $A$ with the property that $A^k=O$ for some positive integer $k$ is said to be <span id="notion-highlight-1"><b>nilpotent</b></span> and the smallest positive integer power $k$ for which $A^k=O$ is called the <span id="notion-highlight-1"><b>index of nilpotent</b></span>.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>The following statement hold.
+<li>The following statement hold.
         1. The transpose of a lower triangular matrix is upper triangular and the transpose of an upper triangular matrix is lower triangular.
         2. A product of lower triangular matrices is lower triangular and a product of upper triangular matrices is upper triangular.
         3. A triangular matrix is invertible if and only if its diagonal entries are all nonzero.
@@ -551,12 +549,12 @@ mathjax: true
 </li><li>Let $A$  be an $n\times n$ matrix for which the sum of the absolute values of the entries in each column (or each row) is less than 1. Then the matrix $I-A$ is invertible and can be expressed as <span id="notion-highlight-1"><b>power series representation</b></span>
 
         $$(I-A)^{-1}=I+A+A^2+A^3+...$$
-</ul></details>
+</li></ul></details>
 
 ## 3.7 Matrix Factorizations; $\rm{\textit{LU}}$-Decompositions
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $A$ be a square matrix. A factorization of $A$ as
+<li>Let $A$ be a square matrix. A factorization of $A$ as
 
         $$A=LU$$
 
@@ -577,10 +575,10 @@ mathjax: true
         $$A=PLU$$
 
         where $P$ is a permutation matrix, $L$ is a lower triangular matrix and $U$ is an upper triangular matrix is called a $PLU$</b></span>-decomposition</b></span> or $</b></span>PLU$-factorization</b></span> of $A$.
-</ul></details>
+</li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $A$ be a square matrix. If $A$ can be reduced to row echelon form by Gaussian elimination with no row interchanges, then $A$ has an $LU$-decomposition.
+<li>Let $A$ be a square matrix. If $A$ can be reduced to row echelon form by Gaussian elimination with no row interchanges, then $A$ has an $LU$-decomposition.
 - <span id="notion-highlight-1"><b>The Method of $LU$-Decomposition</b></span>
 
     Let $A$ be a square matrix in the form $A=LU$ where $L$ is a lower triangular matrix and $U$ is an upper triangular matrix. To solve a linear system $Ax=b$, proceed as follows:
@@ -598,7 +596,7 @@ mathjax: true
         <span id="notion-highlight-1"><b>Step 3</b></span>. Solve the linear system $Ly=b$ for the unknown $y$.
 
         <span id="notion-highlight-1"><b>Step 4</b></span>. Substitute the now-known vector $y$ into [this equation]() and solve for $x$.
-</ul></details>
+</li></ul></details>
 
 - <span id="notion-highlight-1"><b>Finding an $LU$-Decomposition of a matrix</b></span>
 
@@ -615,7 +613,7 @@ mathjax: true
 ## 4.1 Determinants; Cofactor Expansion
 
 <details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $A$ be a $2\times 2$ or $3\times 3$ matrix. The <span id="notion-highlight-1"><b>determinant</b></span> of $A$, denoted $\textrm{det}(A)$ or $|A|$, is defined as follows:
+<li>Let $A$ be a $2\times 2$ or $3\times 3$ matrix. The <span id="notion-highlight-1"><b>determinant</b></span> of $A$, denoted $\textrm{det}(A)$ or $|A|$, is defined as follows:
         1. $2\times 2$ case: If 
 
             $$A=\begin{bmatrix}
@@ -672,10 +670,9 @@ mathjax: true
         $$C_{ij}=(-1)^{i+j}M_{ij}$$
 
         is called the <span id="notion-highlight-1"><b>cofactor of entry $a_{ij}$</b></span> (or the $</b></span>ij$th cofactor</b></span> of $A$).
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $A$ be a square matrix with a row of zeros or a column of zeros. Then $\textrm{det}(A)=0$.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $A$ be a square matrix with a row of zeros or a column of zeros. Then $\textrm{det}(A)=0$.
 </li><li>Let $A$ be a triangular matrix. Then $\textrm{det}(A)$ is the product of the entries on the main diagonal.
 </li><li>Let $A=(a_{ij})$ be an $n\times n$ matrix. Then $\textrm{det}(A)$ can be computed by multiplying the entries in any row (or column) by their cofactors and adding the resulting products, that is, for each $i=1,2,...,n,$
 
@@ -684,12 +681,11 @@ mathjax: true
         and for each $j=1,2,...,n,$
 
         $$\textrm{det}(A) = a_{1j}C_{1j} + a_{2j}C_{2j} + ... + a_{nj}C_{nj}$$
-</ul></details>
+</li></ul></details>
 
 ## 4.2 Properties of Determinants
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $A$
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $A$
      be a square matrix. Then $\textrm{det}(A) = \textrm{det}(A^\mathsf{T})$.
 </li><li>Let $A$ be a square matrix. Then the following hold. *(determinant equalities)*
         1. If $B$ is the matrix that results when a single row or a single column of $A$
@@ -733,7 +729,7 @@ mathjax: true
          are linearly independent.
         8. The row vectors of $A$ are linearly independet.
         9. $\textrm{det}(A)\neq0.$
-</ul></details>
+</li></ul></details>
 
 - <span id="notion-highlight-1"><b>Computation of a Determinant</b></span>
     1. Reduce $A$ to a triangular matrix, using only row addition and row interchange.
@@ -742,8 +738,7 @@ mathjax: true
 
 ## 4.3 Cramer's Rule; Formula for $A^{-1}$; Applications of Determinants
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $A=(a_{ij})$ be an $n\times n$ matrix and $C_{ij}$ be the cofactors of entries $a_{ij}$ for $i,j=1,2,3,...,n$. The matrix
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $A=(a_{ij})$ be an $n\times n$ matrix and $C_{ij}$ be the cofactors of entries $a_{ij}$ for $i,j=1,2,3,...,n$. The matrix
 
         $$C= \begin{bmatrix}
         C_{11} & C_{12} & \cdots & C_{1n}\\
@@ -791,10 +786,9 @@ mathjax: true
             where $\theta$ is the angle between $\textbf{u}$ and $\textbf{v}$ in $[0,\pi]$ if $\textbf{u}$ and $\textbf{v}$  are nonzero vectors and $\theta$ is any angle if either $\textbf{u}$ or $\textbf{v}$ (or both) is 0.
 
     </li><li>The direction of $\textbf{u}\times \textbf{v}$ is such that $\textbf{u}\times \textbf{v}$ is orthogonal to both $\textbf{u}$ and $\textbf{v}$ and the ordered triple ($\textbf{u}$, $\textbf{v}$, $\textbf{u}\times \textbf{v}$) is a right-handed set of vectors if $\textbf{u}$ and $\textbf{v}$ are not parallel.
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $A$ be a square matrix. Then the following hold.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $A$ be a square matrix. Then the following hold.
         1. If the entries in any row of $A$ are multiplied by the cofactors of the corresponding entries in a different row, then the sum of the products is zero.
         2. If the entries in any column of $A$ are multiplied by the cofactors of the corresponding entries in a different column, then the sum of the products is zero.
 
@@ -836,12 +830,11 @@ mathjax: true
         2. The area of the parallelogram that has $\textbf{u}$ and $\textbf{v}$ as adjacent side is 
 
             $$\textrm{Area} = \lVert \textbf{u}\times \textbf{v} \lVert$$
-</ul></details>
+</li></ul></details>
 
 ## 4.4 A First Look at Eigenvalues and Eigenvectors
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $A$ be an $n\times n$ matrix. A scalar $\lambda$ is called an <span id="notion-highlight-1"><b>eigenvalue</b></span> of $A$ if there is a nonzero vector $x$ in $\R^n$ such that
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $A$ be an $n\times n$ matrix. A scalar $\lambda$ is called an <span id="notion-highlight-1"><b>eigenvalue</b></span> of $A$ if there is a nonzero vector $x$ in $\R^n$ such that
 
         $$Ax=\lambda x$$
 
@@ -857,10 +850,9 @@ mathjax: true
 
 </li><li>Let $A$ be an $n\times n$ matrix and $\lambda$ be an eigenvalue of $A$. The solution space of the homogeneous linear system $\textrm{det}(\lambda I_n-A) = 0$ is called the <span id="notion-highlight-1"><b>eigenspace</b></span> of $A$ corresponding to $\lambda$. That is, the <span id="notion-highlight-1"><b>eigenspace</b></span> of $A$ is the set consisting of the zero vector in $\R^n$ together with all eigenvectors of $A$ corresponding to $\lambda$. It is a subspace of $\R^n$.
 </li><li>For $i=1,2,\cdots,n$, the exponent $m_i$ is called the <span id="notion-highlight-1"><b>algebraic multiplicity</b></span> of $\lambda_i$. That is, the <span id="notion-highlight-1"><b>algebraic multiplicity</b></span> of an eigenvalue of $A$ is its multiplicity as a root of the characteristic equation of $A$. The [expression]() is called the <span id="notion-highlight-1"><b>complete linear factorization</b></span> of the characteristic polynomial.
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $A$ be an $n\times n$ matrix. Then the following are equivalent.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $A$ be an $n\times n$ matrix. Then the following are equivalent.
         1. $A$ has nontrivial fixed points.
         2. $I_n - A$ is singular.
         3. $\textrm{det}(I_n-A) = 0$.
@@ -911,14 +903,13 @@ mathjax: true
 </li><li>Let $A$ be an $n\times n$  matrix with eigenvalues $\lambda _1, \lambda_2, \cdots ,\lambda_n$ (repeated according to multiplicity). Then the following hold.
         1. $\textrm{det}(A)=\lambda_1\lambda_2\cdots\lambda_n$.
         2. $\textrm{tr}(A) = \lambda_1 + \lambda_2 + \cdots \lambda_n$.
-</ul></details>
+</li></ul></details>
 
 ---
 
 ## 6.1 Matrices as Transformations
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>A function whose inputs and outputs are vectors is called a <span id="notion-highlight-1"><b>transformation</b></span>. If $T$  is a transformation from $\R^n$  to $\R^m$, then the set $R^m$ is called the codomain of $T$. A transformation is called an operator on $\R^n$  if it maps $\R^n$ into $\R^n$.
+<details closed><summary><b>Definitions</b></summary><ul><li>A function whose inputs and outputs are vectors is called a <span id="notion-highlight-1"><b>transformation</b></span>. If $T$  is a transformation from $\R^n$  to $\R^m$, then the set $R^m$ is called the codomain of $T$. A transformation is called an operator on $\R^n$  if it maps $\R^n$ into $\R^n$.
 </li><li>Let $A = (a_{ij})$  be an $m\times n$ matrix. Define
 
         $$T_A(x)= Ax = \begin{bmatrix}
@@ -937,10 +928,9 @@ mathjax: true
 </li><li>A <span id="notion-highlight-1"><b>rotation</b></span> about the origin in $\R^2$ through an angle is defined to be a transformation that rotates each vector $x$ in $\R^2$ about the origin through an angle $\theta$.
 </li><li>A <span id="notion-highlight-1"><b>reflection</b></span> about a line through the origin in $\R^2$ is defined to be a transformation that maps each vector $x$ in $\R^2$ into its mirror image about a line $L$ through the origin.
 </li><li>An <span id="notion-highlight-1"><b>orthogonal projection</b></span> onto a line through the origin in $\R^2$ is defined to be a transformation that projects each vector $x$ in $\R^2$ onto a line $L$ through the origin by dropping a perpendicular to $L$.
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $T: \R^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{u}$ and $\textbf{v}$ be vectors in $\R^n$. Then the following hold.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \R^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{u}$ and $\textbf{v}$ be vectors in $\R^n$. Then the following hold.
         1. $T(0) = 0$
         2. $T(-\textbf{u}) = -T(\textbf{u})$
         3. $T(\textbf{u}-\textbf{v}) = T(\textbf{u}) - T(\textbf{v})$ 
@@ -951,12 +941,11 @@ mathjax: true
         where $A$ is the $m\times n$ matrix given by 
 
         $$A=[T(\textbf{e}_1)\mid T(\textbf{e}_2)\mid \cdots \mid T(\textbf{e}_n)]$$
-</ul></details>
+</li></ul></details>
 
 ## 6.2 Geometry of Linear Operators
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>A linear operator $T :\R^n \rightarrow \R^n$ is called an <span id="notion-highlight-1"><b>orthogonal operator</b></span> or a <span id="notion-highlight-1"><b>linear isometry</b></span> if
+<details closed><summary><b>Definitions</b></summary><ul><li>A linear operator $T :\R^n \rightarrow \R^n$ is called an <span id="notion-highlight-1"><b>orthogonal operator</b></span> or a <span id="notion-highlight-1"><b>linear isometry</b></span> if
 
         $$\rVert T(x)\rVert = \rVert x\rVert$$
 
@@ -999,10 +988,9 @@ mathjax: true
         for each vector $(x,y)$ in $\R^2$ is called the <span id="notion-highlight-1"><b>vertical shear</b></span> with factor $k$. The standard matrix for $T$ is 
 
         $$A=\begin{bmatrix}                  1 & 0\\ k & 1 \end{bmatrix}$$
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $T: \R^n\rightarrow\R^m$ be a linear operator. Then the following are equivalent.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \R^n\rightarrow\R^m$ be a linear operator. Then the following are equivalent.
         1. $\rVert T(x)\rVert = \rVert x\rVert$ for all vectors $x$ in $\R^n$, i.e., $T$  is orthogonal or length preserving.
         2. $T(x)\cdot T(y)=x\cdot y$ for all vectors $x$ and $y$ in $\R^n$, i.e., $T$ is dot product preserving.
 </li><li>The following statements hold.
@@ -1034,20 +1022,18 @@ mathjax: true
         $$R_{\textbf{u},\theta} = \begin{bmatrix}a^2\omega+\cos\theta & ab\omega-c\sin\theta & ac\omega+b\sin\theta\\ ab\omega+c\sin\theta & b^2\omega+\cos\theta & bc\omega-a\sin\theta\\ ac\omega - b\sin\theta & bc\omega+a\sin\theta & c^2\omega+\cos \theta\end{bmatrix}$$
 
         where $\omega=1-\cos \theta$
-</ul></details>
+</li></ul></details>
 
 ## 6.3 Kernel and Range
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $T: \R^n \rightarrow \R^m$ be a linear transformation. The set of vectors in $\R^n$ that maps into $0$ is called the <span id="notion-highlight-1"><b>kernel</b></span> of $T$ and is denoted by $\textrm{ker}(T)$.
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $T: \R^n \rightarrow \R^m$ be a linear transformation. The set of vectors in $\R^n$ that maps into $0$ is called the <span id="notion-highlight-1"><b>kernel</b></span> of $T$ and is denoted by $\textrm{ker}(T)$.
 </li><li>Let $A$ be an $m\times n$ matrix. The solution space of the linear system $Ax=0$  or equivalently, the kernel of the transformation $T_A$, is called the <span id="notion-highlight-1"><b>null space</b></span> of the matrix $A$ and is denoted by $\textrm{null}(A)$.
 </li><li>Let $T:\R^n\rightarrow \R^m$ be a linear transformation. The <span id="notion-highlight-1"><b>range</b></span> of $T$, denoted by $\textrm{ran}(T)$, is denoted to be the set of all vectors in $\R^m$ that are images of at least one vector in $\R^n$
 </li><li>A linear transformation $T:\R^n\rightarrow \R^m$ is said to be <span id="notion-highlight-1"><b>onto</b></span> if the range of $T$ is the codomain $\R^m$, that is, every vector in $\R^m$ is the image of at least one vector in $\R^n$.
 </li><li>A linear transformation $T:\R^n\rightarrow\R^m$ is said to be <span id="notion-highlight-1"><b>one-to-one</b></span> if $T$ maps distinct vectors in $\R^n$ into distinct vectors in $\R^m$.
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $T$  be a linear transformation. Then the kernel of $T$ is a subspace of $\R^n$.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T$  be a linear transformation. Then the kernel of $T$ is a subspace of $\R^n$.
 </li><li>Let $A$ be an $m\times n$  matrix. Then the kernel of the transformation represented by $A$ is the solution space of the linear system $Ax=0$.
 </li><li>Let $T: \R^n \rightarrow \R^m$ be a linear transformation. Then $T$ maps subspace of $R^n$ into subspace of $R^m$.
 </li><li>Let $T:\R^n\rightarrow \R^m$ be a linear transformation. Then the range of $T$  is a subspace of $\R^m$.
@@ -1073,12 +1059,11 @@ mathjax: true
         10. $\lambda=0$   is not an eigenvalue of $A$.
         11. $T_A$ is one-to-one.
         12. $T_A$ is onto.
-</ul></details>
+</li></ul></details>
 
 ## 6.4 Composition and Invertibility of Linear Transformations
 
-<details closed><summary><b>Definitions</b></summary><ul>
-</li><li>Let $T_1:\R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations in which the codomain of $T_1$ is the same as the domain of $T_2$. <span id="notion-highlight-1"><b>The composition of $T_2$ with $T_1$</b></span>, denoted by $T_2\circ T_1$, is defined to be the transformation from $\R^n$ to $\R^m$ such that
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $T_1:\R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations in which the codomain of $T_1$ is the same as the domain of $T_2$. <span id="notion-highlight-1"><b>The composition of $T_2$ with $T_1$</b></span>, denoted by $T_2\circ T_1$, is defined to be the transformation from $\R^n$ to $\R^m$ such that
 
         $$(T_2\circ T_1)(x) = T_2(T_1(x))$$
 
@@ -1092,10 +1077,9 @@ mathjax: true
 
 </li><li>Let $T: \R^n \rightarrow \R^m$ be a one-to-one linear transformation. Each vector $\textbf{w}$ in the range of $T$  is the image of a unique vector $x$ in the domain of $T$ which is called the <span id="notion-highlight-1"><b>preimage</b></span> of $\textbf{w}$. A new function from the range of $T$ to $\R^n$  that maps $\textbf{w}$ into $x$ is called the <span id="notion-highlight-1"><b>inverse</b></span> of $</b></span>T$</b></span> and is denoted by $T^{-1}$. A one-to-one linear operator is called an <span id="notion-highlight-1"><b>invertible linear operator</b></span>.
 </li><li>Let $A$ be an $n\times n$  invertible matrix and $T:\R^n \rightarrow \R^n$ be the transformation represented by $A$. If $\textbf{v}$ is a vector in $\R^n$ and $A\textbf{v} = \lambda\textbf{v}$ for some scalar $\lambda$, then $T(\textbf{v}) = \lambda\textbf{v}$, that is, $T$ maps the vector $\textbf{v}$ onto a vector that is parallel to $\textbf{v}$. If $\textbf{v} \neq0$, then the scalar $\lambda$ is called an <span id="notion-highlight-1"><b>eigenvalue</b></span> of $T$ and $\textbf{v}$ is called an <span id="notion-highlight-1"><b>eigenvector</b></span> of $T$ corresponding to $\lambda$.v
-</ul></details>
+</li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul>
-</li><li>Let $T_1: \R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations. Then $T_2\circ T_1:\R^n\rightarrow\R^m$ is a linear transformation.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T_1: \R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations. Then $T_2\circ T_1:\R^n\rightarrow\R^m$ is a linear transformation.
 </li><li>Let $A$ be a $k\times n$  matrix and $B$ be an $m\times k$ matrix. Then the $m\times n$ matrix $BA$ is the standard matrix for the composition of the linear transformation represented by $B$ with the linear transformation represented by $A$.
 </li><li>Let $T_1, T_2,\cdots,T_k$ be a succession of rotations about axees through the origin in $\R^3$. Then the $k$ notations can be accomplished by a single rotation about some appropriate axis through the origin in $\R^3$.
 </li><li>Let $A$ be a $2\times 2$  invertible matrix. Then the linear operator represented by $A$ is a composition of shears, compressions and expansions in the direction of the coordinate axes and reflections about the coordinate axes and about the line $y=x$.
@@ -1111,6 +1095,6 @@ mathjax: true
         4. The images of three points lie on a line if and only if the original points lie on a line. 
         5. The images of the line segment joining two points is the line segment joining the images of those points.
 </li><li>Let $T: \R^2\rightarrow \R^2$ be an invertible linear operator. Then $T$ maps the unit square into a nondegenerate parallelogram that has a vertex at the origin and has adjacent sides $T(\textbf{e}_1)$  and $T(\textbf{e}_2)$. The area of the parellelogram is $|\textrm{det}(A)|$ where $A = [T(\textbf{e}_1) \mid T(\textbf{e}_2) ]$  is the standard matrix for $T$.
-</ul></details>
+</li></ul></details>
 
 ---
