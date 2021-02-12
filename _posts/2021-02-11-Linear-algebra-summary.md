@@ -6,7 +6,7 @@ permalink: posts/linear-algebra-summary-intro
 images: 
     cover: /assets/images/2021-02-11-linear-algebra-cover.png
     top: /assets/images/2021-02-11-linear-algebra-top.png
-tags: [linear-algebra, linear, algebra, mathematics, Machine Learning, Quantum Mechanics, Introductory, Summary ]
+tags: [linear algebra, mathematics, Machine Learning, Quantum Mechanics, Introductory, Summary]
 mathjax: true 
 ---
 ## Quick Access
