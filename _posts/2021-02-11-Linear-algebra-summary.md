@@ -126,10 +126,14 @@ mathjax: true
 <details closed><summary><b>Theorems</b></summary><ul>
 <li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
 </li></ul></details>
-- <span id="notion-highlight-1"><b>Elementary Row Operations</b></span>
-    1. <span id="notion-highlight-1"><b>[Row scaling]</b></span> Multiplying a row through by a nonzero constant. 
-    2. <span id="notion-highlight-1"><b>[Row interchange]</b></span> Interchange two rows. That is, interchange the $i$th and $j$th row vectors of a matrix where $i\neq j$.
-    3. <span id="notion-highlight-1"><b>[Row addition]</b></span> Add a multiple of one row to another. That is, add to the $i$th row vector of a matrix $s$ times the $j$th row vector where $i\neq j$. 
+<div>
+<span id="notion-highlight-1"><b>Elementary Row Operations</b></span>
+<ol>
+    <li> <span id="notion-highlight-2"><i>[Row scaling]</i></span> Multiplying a row through by a nonzero constant. </li>
+    <li> <span id="notion-highlight-2"><i>[Row interchange]</i></span> Interchange two rows. That is, interchange the $i$th and $j$th row vectors of a matrix where $i\neq j$. </li>
+    <li> <span id="notion-highlight-2"><i>[Row addition]</i></span> Add a multiple of one row to another. That is, add to the $i$th row vector of a matrix $s$ times the $j$th row vector where $i\neq j$. </li>
+</ol> 
+</div>
 
 ## 2.2 Solving Linear Systems by Row Reduction
 
