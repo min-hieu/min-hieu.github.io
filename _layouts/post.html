@@ -28,7 +28,7 @@ layout: default
       <span class="post-tags">{{ page.tags | join: ", "}}</span>
       <span class="post-tags">
         {% for tag in page.tags %}
-        <a class="tag" href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="tag post-tag" href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
       </span>
       

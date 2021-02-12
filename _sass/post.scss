@@ -39,6 +39,13 @@ span#notion-highlight-1 {
     color: $tertiary-highlight;
 }
 
+.post-tag {
+    border-radius: 0.2rem;
+    background-color: $text-colour-light;
+    padding: 0 0.2rem;
+    color: white;
+}
+
 .post-content {
     margin-bottom: 2em;
 }
