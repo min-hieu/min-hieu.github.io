@@ -25,7 +25,6 @@ layout: default
     <div class="post-header">
       <span class="post-date">{{ page.date | date_to_string}}</span>
       &middot;
-      <span class="post-tags">{{ page.tags | join: ", "}}</span>
       <span class="post-tags">
         {% for tag in page.tags %}
         <a class="tag post-tag" href="/tags/#{{ tag | slugify }}">{{ tag }}</a>
