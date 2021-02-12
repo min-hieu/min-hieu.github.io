@@ -27,9 +27,11 @@ layout: default
       &middot;
       <span class="post-tags">{{ page.tags | join: ", "}}</span>
     </div>
+    {% if page.title != "Tags" %}
     <div class="clickable-image"><a href="{{ page.images.top }}" style="max-width: 80%">
       <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.images.top }}" />
     </a></div>
+    {% endif %}
 
     <div class="post-content">
       {{ content }}
