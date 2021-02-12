@@ -126,6 +126,7 @@ mathjax: true
 <details closed><summary><b>Theorems</b></summary><ul>
 <li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
 </li></ul></details>
+<br>
 <div>
 <span id="notion-highlight-1"><b>Elementary Row Operations</b></span>
 <ol>
