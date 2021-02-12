@@ -41,9 +41,7 @@ The purpose of this snippet is to list all the tags you have in your site.
 {% endcomment %}
 <span class="post-tags">
     {% for tag in tags %}
-    <span class="post-tag">
-        <a href="#{{ tag | slugify }}"> {{ tag }} </a>
-    </span>
+        <a class="tag post-tag" href="#{{ tag | slugify }}"> {{ tag }} </a>
     {% endfor %}
 </span>
 
