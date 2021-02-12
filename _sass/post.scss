@@ -46,6 +46,11 @@ span#notion-highlight-1 {
     color: white;
 }
 
+.post-tag:hover {
+    color:white;
+    background-color: $primary-highlight;
+}
+
 .post-content {
     margin-bottom: 2em;
 }
