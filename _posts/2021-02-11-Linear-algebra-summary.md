@@ -422,11 +422,11 @@ mathjax: true
  <legend class="box-header"><b>The Inversion Algorithm</b></legend>
 <ul style="list-style:none">
     <li>Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:</li>
-    <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 1</b></span> <br>
+    <li>&emsp;&emsp;<span id="notion-highlight-2"><b>Step 1</b></span> <br>
 
     Form the augmented matrix $[A\mid I]$.</li>
 
-    <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 2</b></span> <br>
+    <li>&emsp;&emsp;<span id="notion-highlight-2"><b>Step 2</b></span> <br>
 
     Apply Gauss-Jordan elimination to attempt to reduce $[A\mid I]$  to $[I\mid B]$. If the reduction can be carried out, then $A^{-1}=B$. Otherwise, $A^{-1}$ does not exist. 
 
