@@ -163,7 +163,7 @@ mathjax: true
     </li><li>*proof*
 
             If a homogeneous linear system $Ax=0$ has $m$ equations and $n$ unknowns with $m<n$, then the number of nonzero rows of the reduced row echelon form of $A$ is less than $n$. Thus there is at least one free variables  $\blacksquare$
-</li></ul></details><br />
+</li></ul></details>
 <p></p>
 <fieldset>
 <legend class="box-header"><b>Gauss Elimination</b></legend>
@@ -193,7 +193,7 @@ mathjax: true
     Cover the top row in the matrix and begin again with <span id="notion-highlight-1"><b>[Step 1]()</b></span> applied to the submatrix that remains. That is, mentally cross off this first column and the first row of the matrix to obtain a smaller matrix. Go back to <span id="notion-highlight-1"><b>[Step 1]()</b></span> and repeat the process with this smaller matrix until either no rows or no columns remain.
 </li></ul>
 </fieldset>  
-
+<p></p>
 <fieldset>
 <legend class="box-header"><b>Gauss-Jordan Elimination</b></legend>
 <ul style="list-style:none">
@@ -203,6 +203,7 @@ mathjax: true
 </li><li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 2.</b></span><br>
     &emsp;Beginning with the last nonzero row and working upward, add suitable multiples of each row to  the rows above to introduce zeros above the leading 1's.  
 </li></ul></fieldset>
+
 ---
 
 ## 3.1 Operations on Matrices
@@ -416,18 +417,21 @@ mathjax: true
         5. $Ax=b$ is consistent for every vector $b$ in $\R^n$.
         6. $Ax=b$  has exactly one solution for every vector $b$ in $\R^n$.
 </li></ul></details>
-
-- <span id="notion-highlight-1"><b>The Inversion Algorithm</b></span>
+<p></p>
+<fieldset>
+ <legend id="notion-highlight-1"><b>The Inversion Algorithm</b></legend>
 
     Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:
+<ul style="list-style">
+    <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 1</b></span> <br>
 
-    <span id="notion-highlight-1"><b>Step 1</b></span>
+    Form the augmented matrix $[A\mid I]$.</li>
 
-    Form the augmented matrix $[A\mid I]$.
-
-    <span id="notion-highlight-1"><b>Step 2</b></span> 
+    <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 2</b></span> <br>
 
     Apply Gauss-Jordan elimination to attempt to reduce $[A\mid I]$  to $[I\mid B]$. If the reduction can be carried out, then $A^{-1}=B$. Otherwise, $A^{-1}$ does not exist. 
+
+</li></ul></fieldset>
 
 ## 3.4 Subspaces and Linear Independence
 
