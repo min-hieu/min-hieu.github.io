@@ -419,10 +419,10 @@ mathjax: true
 </li></ul></details>
 <p></p>
 <fieldset>
- <legend id="notion-highlight-1"><b>The Inversion Algorithm</b></legend>
+ <legend class="box-header"><b>The Inversion Algorithm</b></legend>
 
-    Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:
-<ul style="list-style">
+    &emsp;&emsp;Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:
+<ul style="list-style:none">
     <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 1</b></span> <br>
 
     Form the augmented matrix $[A\mid I]$.</li>
