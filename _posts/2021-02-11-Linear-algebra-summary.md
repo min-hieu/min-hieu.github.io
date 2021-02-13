@@ -125,7 +125,8 @@ mathjax: true
 
 <details closed><summary><b>Theorems</b></summary><ul>
 <li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
-</li></ul></details><br />
+</li></ul></details>
+<p></p>
 <fieldset>
 <legend class="box-header"><b>Elementary Row Operations</b></legend>
 <ol>
@@ -163,29 +164,35 @@ mathjax: true
 
             If a homogeneous linear system $Ax=0$ has $m$ equations and $n$ unknowns with $m<n$, then the number of nonzero rows of the reduced row echelon form of $A$ is less than $n$. Thus there is at least one free variables  $\blacksquare$
 </li></ul></details><br />
-<br />
+<p></p>
 <fieldset>
 <legend id="notion-highlight-1"><b>Gauss Elimination</b></legend>
-&emsp;&emsp;<span id="notion-highlight-2"><b>Step 1.</b></span>
+<ul style="list-style: none;">
+<li>
+    &emsp;&emsp;<span id="notion-highlight-2"><b>Step 1.</b></span><br>
+    &emsp;Locate the leftmost column that does not consist entirely of zeros. That is, if the first column contains only zero entries, then cross it off mentally. Continue in  this fashion until the first column of the remaining matrix has a nonzero entry or unril the columns are exhausted.
+</li>
 
-    &emsp;Locate the leftmost column that does not consist entirely of zeros. That is, if the first column contains only zero entries, then cross it off mentally. Continue in this fashion until the first column of the remaining matrix has a nonzero entry or unril the columns are exhausted.
-
-&emsp;&emsp;<span id="notion-highlight-2"><b>Step 2.</b></span>
-
+<li>
+    &emsp;&emsp;<span id="notion-highlight-2"><b>Step 2.</b></span><br>
     &emsp;Interchange the top row with another row, if necessary, to bring a nonzero entry to the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span>. That is, use row interchange, if necessary, to obtain a nonzero entry in the top row of the first column of the remaining matrix.
+</li>
 
-&emsp;&emsp;<span id="notion-highlight-2"><b>Step 3.</b></span>
-
+<li>
+    &emsp;&emsp;<span id="notion-highlight-2"><b>Step 3.</b></span><br>
     &emsp;If the entry that is now at the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span> is $a$, then multiply the first row by $1/a$ in order to introduce a leading 1.
+</li>
 
-&emsp;&emsp;<span id="notion-highlight-2"><b>Step 4.</b></span>
-
+<li>
+    &emsp;&emsp;<span id="notion-highlight-2"><b>Step 4.</b></span><br>
     &emsp;Add suitable multiples of the top row to the rows below so that all entries below leading 1 become zero. That is, for each row below that has a nonzero entry $r$ in the first column, add $-r$ times the top row to that row to create a zero in the first column. In this fashion, create zeros below 1 in the entire first column of the remaining matrix.
+</li>
 
-&emsp;&emsp;<span id="notion-highlight-2"><b>Step 5.</b></span>
-
+<li>
+    &emsp;&emsp;<span id="notion-highlight-2"><b>Step 5.</b></span><br>
     Cover the top row in the matrix and begin again with <span id="notion-highlight-1"><b>[Step 1]()</b></span> applied to the submatrix that remains. That is, mentally cross off this first column and the first row of the matrix to obtain a smaller matrix. Go back to <span id="notion-highlight-1"><b>[Step 1]()</b></span> and repeat the process with this smaller matrix until either no rows or no columns remain.
-<fieldset>  
+</li></ul>
+</fieldset>  
 
 - <span id="notion-highlight-1"><b>Gauss-Jordan Elimination</b></span>
 </li><li><span id="notion-highlight-1"><b>Step 1.</b></span>
