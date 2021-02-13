@@ -127,7 +127,7 @@ mathjax: true
 <li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
 </li></ul></details>
 
-<fieldset>
+<br><fieldset>
 <legend class="box-header"><b>Elementary Row Operations</b></legend>
 <ol>
     <li> <span id="notion-highlight-2"><i>[Row scaling]</i></span> Multiplying a row through by a nonzero constant. </li>
@@ -165,26 +165,28 @@ mathjax: true
             If a homogeneous linear system $Ax=0$ has $m$ equations and $n$ unknowns with $m<n$, then the number of nonzero rows of the reduced row echelon form of $A$ is less than $n$. Thus there is at least one free variables  $\blacksquare$
 </li></ul></details>
 
-- <span id="notion-highlight-1"><b>Gauss Elimination</b></span>
-</li><li><span id="notion-highlight-1"><b>Step 1.</b></span>
+<br><fieldset>
+<legend id="notion-highlight-1"><b>Gauss Elimination</b></legend>
+&emsp;&emsp;<span id="notion-highlight-2"><b>Step 1.</b></span>
 
-    Locate the leftmost column that does not consist entirely of zeros. That is, if the first column contains only zero entries, then cross it off mentally. Continue in this fashion until the first column of the remaining matrix has a nonzero entry or unril the columns are exhausted.
+    &emsp;Locate the leftmost column that does not consist entirely of zeros. That is, if the first column contains only zero entries, then cross it off mentally. Continue in this fashion until the first column of the remaining matrix has a nonzero entry or unril the columns are exhausted.
 
-</li><li><span id="notion-highlight-1"><b>Step 2.</b></span>
+&emsp;&emsp;<span id="notion-highlight-2"><b>Step 2.</b></span>
 
-    Interchange the top row with another row, if necessary, to bring a nonzero entry to the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span>. That is, use row interchange, if necessary, to obtain a nonzero entry in the top row of the first column of the remaining matrix.
+    &emsp;Interchange the top row with another row, if necessary, to bring a nonzero entry to the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span>. That is, use row interchange, if necessary, to obtain a nonzero entry in the top row of the first column of the remaining matrix.
 
-</li><li><span id="notion-highlight-1"><b>Step 3.</b></span>
+&emsp;&emsp;<span id="notion-highlight-2"><b>Step 3.</b></span>
 
-    If the entry that is now at the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span> is $a$, then multiply the first row by $1/a$ in order to introduce a leading 1.
+    &emsp;If the entry that is now at the top of the column found in <span id="notion-highlight-1"><b>[Step 1]()</b></span> is $a$, then multiply the first row by $1/a$ in order to introduce a leading 1.
 
-</li><li><span id="notion-highlight-1"><b>Step 4.</b></span>
+&emsp;&emsp;<span id="notion-highlight-2"><b>Step 4.</b></span>
 
-    Add suitable multiples of the top row to the rows below so that all entries below leading 1 become zero. That is, for each row below that has a nonzero entry $r$ in the first column, add $-r$ times the top row to that row to create a zero in the first column. In this fashion, create zeros below 1 in the entire first column of the remaining matrix.
+    &emsp;Add suitable multiples of the top row to the rows below so that all entries below leading 1 become zero. That is, for each row below that has a nonzero entry $r$ in the first column, add $-r$ times the top row to that row to create a zero in the first column. In this fashion, create zeros below 1 in the entire first column of the remaining matrix.
 
-</li><li><span id="notion-highlight-1"><b>Step 5.</b></span>
+&emsp;&emsp;<span id="notion-highlight-2"><b>Step 5.</b></span>
 
     Cover the top row in the matrix and begin again with <span id="notion-highlight-1"><b>[Step 1]()</b></span> applied to the submatrix that remains. That is, mentally cross off this first column and the first row of the matrix to obtain a smaller matrix. Go back to <span id="notion-highlight-1"><b>[Step 1]()</b></span> and repeat the process with this smaller matrix until either no rows or no columns remain.
+<fieldset>  
 
 - <span id="notion-highlight-1"><b>Gauss-Jordan Elimination</b></span>
 </li><li><span id="notion-highlight-1"><b>Step 1.</b></span>
