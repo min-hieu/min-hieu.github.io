@@ -166,7 +166,7 @@ mathjax: true
 </li></ul></details><br />
 <p></p>
 <fieldset>
-<legend id="notion-highlight-1"><b>Gauss Elimination</b></legend>
+<legend class="box-header"><b>Gauss Elimination</b></legend>
 <ul style="list-style: none;">
 <li>
     &emsp;&emsp;<span id="notion-highlight-2"><b>Step 1.</b></span><br>
@@ -194,15 +194,15 @@ mathjax: true
 </li></ul>
 </fieldset>  
 
-- <span id="notion-highlight-1"><b>Gauss-Jordan Elimination</b></span>
-</li><li><span id="notion-highlight-1"><b>Step 1.</b></span>
+<fieldset>
+<legend class="box-header"><b>Gauss-Jordan Elimination</b></legend>
+<ul style="list-style:none">
+<li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 1.</b></span><br>
+    &emsp;Follow <span id="notion-highlight-1"><b>[Step 1]()</b></span> to [Step 5]() in <span id="notion-highlight-1"><b>Gauss Elimination</b></span>
 
-    Follow <span id="notion-highlight-1"><b>[Step 1]()</b></span> to [Step 5]() in <span id="notion-highlight-1"><b>Gauss Elimination</b></span>
-
-</li><li><span id="notion-highlight-1"><b>Step 2.</b></span>
-
-    Beginning with the last nonzero row and working upward, add suitable multiples of each row to  the rows above to introduce zeros above the leading 1's.  
-
+</li><li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 2.</b></span><br>
+    &emsp;Beginning with the last nonzero row and working upward, add suitable multiples of each row to  the rows above to introduce zeros above the leading 1's.  
+</li></ul></fieldset>
 ---
 
 ## 3.1 Operations on Matrices
