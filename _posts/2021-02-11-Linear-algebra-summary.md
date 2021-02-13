@@ -879,7 +879,7 @@ mathjax: true
         2. $\lambda$ is a solution of the equation $\textrm{det}(\lambda I_n-A) = 0$.
         3. The linear system $(\lambda I_n-A)x = 0$ has nontrivial solutions.
 </li><li>Let $A$ be a triangular matrix. Then the eigenvalue of $A$ are the entries on the main diagonal of $A$.
-</li><li>Let $\lambda$ be an eigenvalue of a matrix $A$ and $x$ be a corresponding eigenvector. If $r\in \N$, then $\lambda^r$ is an eigenvalue of $A^r$ and $x$ is a corresponding eigenvector.
+</li><li>Let $\lambda$ be an eigenvalue of a matrix $A$ and $x$ be a corresponding eigenvector. If $r\in \mathbb{N}$, then $\lambda^r$ is an eigenvalue of $A^r$ and $x$ is a corresponding eigenvector.
 </li><li>Let $A$ be an $n\times n$ matrix. Then the following are equivalent.
         1. The reduced row echelon form of $A$ is $I_n$.
         2. $A$ is expressible as a product of elementary matrices.
@@ -1053,7 +1053,7 @@ mathjax: true
 
 <details closed><summary><b>Theorems</b></summary><ul><li>Let $T$  be a linear transformation. Then the kernel of $T$ is a subspace of $\R^n$.
 </li><li>Let $A$ be an $m\times n$  matrix. Then the kernel of the transformation represented by $A$ is the solution space of the linear system $Ax=0$.
-</li><li>Let $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then $T$ maps subspace of $R^n$ into subspace of $R^m$.
+</li><li>Let $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then $T$ maps subspace of $\mathbb{R}^n$ into subspace of $\mathbb{R}^m$.
 </li><li>Let $T:\R^n\rightarrow \mathbb{R}^m$ be a linear transformation. Then the range of $T$  is a subspace of $\R^m$.
 </li><li>Let $A$ be an $m\times n$ matrix. Then the range of the transformation represented by $A$ is the subspace of $\R^m$ that is spanned by the column vectors of $A$.
 </li><li>Let $T:\R^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then the following are equivalent.
