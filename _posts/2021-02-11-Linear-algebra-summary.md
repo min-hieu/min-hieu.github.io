@@ -937,7 +937,7 @@ mathjax: true
 
         for each vector $x=(x_1,x_2,\cdots,x_n)$ in $\R^n$ where $a_i = (a_{i1},a_{i2},\cdots,a_{in})$ is the $i$ th row vector of $A$ for $i=1,2,\cdots, m$. The trasformation $T_A$ from $\R^n$ to $\R^m$ is called the <span id="notion-highlight-1"><b>transformation represented by $A$</b></span> or the <span id="notion-highlight-1"><b>multiplication by $A$.</b></span>
 
-</li><li>A function $T: \R^n\rightarrow\R^m$ is called a <span id="notion-highlight-1"><b>linear transformation</b></span> from $\R^n$ to $\R^m$ if the following two properties hold for all vectors $\textbf{u}$ and $\textbf{v}$ in $\R^n$ and all scalar $c$:
+</li><li>A function $T: \mathbb{R}^n\rightarrow\R^m$ is called a <span id="notion-highlight-1"><b>linear transformation</b></span> from $\R^n$ to $\R^m$ if the following two properties hold for all vectors $\textbf{u}$ and $\textbf{v}$ in $\R^n$ and all scalar $c$:
         1. <span id="notion-highlight-1"><b>(Homogeneity property) $T(c\textbf{u}) =c T(\textbf{u})$</b></span>
         2. <span id="notion-highlight-1"><b>(Additivity property)</b></span> $T(\textbf{u} + \textbf{v}) = T(\textbf{u}) + T(\textbf{v})$
 
@@ -948,11 +948,11 @@ mathjax: true
 </li><li>An <span id="notion-highlight-1"><b>orthogonal projection</b></span> onto a line through the origin in $\R^2$ is defined to be a transformation that projects each vector $x$ in $\R^2$ onto a line $L$ through the origin by dropping a perpendicular to $L$.
 </li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \R^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{u}$ and $\textbf{v}$ be vectors in $\R^n$. Then the following hold.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \mathbb{R}^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{u}$ and $\textbf{v}$ be vectors in $\R^n$. Then the following hold.
         1. $T(0) = 0$
         2. $T(-\textbf{u}) = -T(\textbf{u})$
         3. $T(\textbf{u}-\textbf{v}) = T(\textbf{u}) - T(\textbf{v})$ 
-</li><li>Let $T: \R^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{e}_1,\textbf{e}_2,\cdots , \textbf{e}_n$ be the standard unit vectors in $\R^n$ and $x$ be a vector in $\R^n$. Then $T(x)$ can be expressed as
+</li><li>Let $T: \mathbb{R}^n\rightarrow\R^m$ be a linear transformation. Let $\textbf{e}_1,\textbf{e}_2,\cdots , \textbf{e}_n$ be the standard unit vectors in $\R^n$ and $x$ be a vector in $\R^n$. Then $T(x)$ can be expressed as
 
         $$T(x) = Ax$$
 
@@ -963,7 +963,7 @@ mathjax: true
 
 ## 6.2 Geometry of Linear Operators
 
-<details closed><summary><b>Definitions</b></summary><ul><li>A linear operator $T :\R^n \rightarrow \R^n$ is called an <span id="notion-highlight-1"><b>orthogonal operator</b></span> or a <span id="notion-highlight-1"><b>linear isometry</b></span> if
+<details closed><summary><b>Definitions</b></summary><ul><li>A linear operator $T :\R^n \rightarrow \mathbb{R}^n$ is called an <span id="notion-highlight-1"><b>orthogonal operator</b></span> or a <span id="notion-highlight-1"><b>linear isometry</b></span> if
 
         $$\rVert T(x)\rVert = \rVert x\rVert$$
 
@@ -1008,7 +1008,7 @@ mathjax: true
         $$A=\begin{bmatrix}                  1 & 0\\ k & 1 \end{bmatrix}$$
 </li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \R^n\rightarrow\R^m$ be a linear operator. Then the following are equivalent.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T: \mathbb{R}^n\rightarrow\R^m$ be a linear operator. Then the following are equivalent.
         1. $\rVert T(x)\rVert = \rVert x\rVert$ for all vectors $x$ in $\R^n$, i.e., $T$  is orthogonal or length preserving.
         2. $T(x)\cdot T(y)=x\cdot y$ for all vectors $x$ and $y$ in $\R^n$, i.e., $T$ is dot product preserving.
 </li><li>The following statements hold.
@@ -1026,8 +1026,8 @@ mathjax: true
         3. $Ax\cdot Ay = x\cdot y$ for all vectors $x$  and $y$ in $\R^n$.
         4. The column vectors of $A$ are orthogonal. 
         5. The row vectors of $A$ are othogonal. 
-</li><li>A linear operator $T: \R^n \rightarrow \R^n$ is orthogonal if and only if the standard matrix for $T$  is orthogonal.
-</li><li>Let $T: \R^2\rightarrow \R^2$ be an orthogonal linear operator. Then the standard matrix for $T$  is expressible in the form
+</li><li>A linear operator $T: \mathbb{R}^n \rightarrow \mathbb{R}^n$ is orthogonal if and only if the standard matrix for $T$  is orthogonal.
+</li><li>Let $T: \mathbb{R}^2\rightarrow \mathbb{R}^2$ be an orthogonal linear operator. Then the standard matrix for $T$  is expressible in the form
 
         $$R_\theta = \begin{bmatrix}           \cos\theta  & -\sin\theta\\ \sin\theta  & cos\theta\\ \end{bmatrix}$$
 
@@ -1044,25 +1044,25 @@ mathjax: true
 
 ## 6.3 Kernel and Range
 
-<details closed><summary><b>Definitions</b></summary><ul><li>Let $T: \R^n \rightarrow \R^m$ be a linear transformation. The set of vectors in $\R^n$ that maps into $0$ is called the <span id="notion-highlight-1"><b>kernel</b></span> of $T$ and is denoted by $\textrm{ker}(T)$.
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a linear transformation. The set of vectors in $\R^n$ that maps into $0$ is called the <span id="notion-highlight-1"><b>kernel</b></span> of $T$ and is denoted by $\textrm{ker}(T)$.
 </li><li>Let $A$ be an $m\times n$ matrix. The solution space of the linear system $Ax=0$  or equivalently, the kernel of the transformation $T_A$, is called the <span id="notion-highlight-1"><b>null space</b></span> of the matrix $A$ and is denoted by $\textrm{null}(A)$.
-</li><li>Let $T:\R^n\rightarrow \R^m$ be a linear transformation. The <span id="notion-highlight-1"><b>range</b></span> of $T$, denoted by $\textrm{ran}(T)$, is denoted to be the set of all vectors in $\R^m$ that are images of at least one vector in $\R^n$
-</li><li>A linear transformation $T:\R^n\rightarrow \R^m$ is said to be <span id="notion-highlight-1"><b>onto</b></span> if the range of $T$ is the codomain $\R^m$, that is, every vector in $\R^m$ is the image of at least one vector in $\R^n$.
+</li><li>Let $T:\R^n\rightarrow \mathbb{R}^m$ be a linear transformation. The <span id="notion-highlight-1"><b>range</b></span> of $T$, denoted by $\textrm{ran}(T)$, is denoted to be the set of all vectors in $\R^m$ that are images of at least one vector in $\R^n$
+</li><li>A linear transformation $T:\R^n\rightarrow \mathbb{R}^m$ is said to be <span id="notion-highlight-1"><b>onto</b></span> if the range of $T$ is the codomain $\R^m$, that is, every vector in $\R^m$ is the image of at least one vector in $\R^n$.
 </li><li>A linear transformation $T:\R^n\rightarrow\R^m$ is said to be <span id="notion-highlight-1"><b>one-to-one</b></span> if $T$ maps distinct vectors in $\R^n$ into distinct vectors in $\R^m$.
 </li></ul></details>
 
 <details closed><summary><b>Theorems</b></summary><ul><li>Let $T$  be a linear transformation. Then the kernel of $T$ is a subspace of $\R^n$.
 </li><li>Let $A$ be an $m\times n$  matrix. Then the kernel of the transformation represented by $A$ is the solution space of the linear system $Ax=0$.
-</li><li>Let $T: \R^n \rightarrow \R^m$ be a linear transformation. Then $T$ maps subspace of $R^n$ into subspace of $R^m$.
-</li><li>Let $T:\R^n\rightarrow \R^m$ be a linear transformation. Then the range of $T$  is a subspace of $\R^m$.
+</li><li>Let $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then $T$ maps subspace of $R^n$ into subspace of $R^m$.
+</li><li>Let $T:\R^n\rightarrow \mathbb{R}^m$ be a linear transformation. Then the range of $T$  is a subspace of $\R^m$.
 </li><li>Let $A$ be an $m\times n$ matrix. Then the range of the transformation represented by $A$ is the subspace of $\R^m$ that is spanned by the column vectors of $A$.
-</li><li>Let $T:\R^n \rightarrow \R^m$ be a linear transformation. Then the following are equivalent.
+</li><li>Let $T:\R^n \rightarrow \mathbb{R}^m$ be a linear transformation. Then the following are equivalent.
         1. $T$ is one-to-one
         2. $\textrm{ker}(T) = \{0\}$
-</li><li>Let $A$ be an $m\times n$ matrix. Then the transformation $T_A:\R^n\rightarrow \R^m$ represented by $A$  is one-to-one if and only if the linear system $Ax=0$  has only the trivial solution.
-</li><li>Let $A$ be an $m\times n$ matrix. Then the transformation $T_A:\R^n\rightarrow \R^m$ represented by $A$  is onto if and only if the linear system $Ax =b$  is consistent for every vector $b$ in $\R^m$.
+</li><li>Let $A$ be an $m\times n$ matrix. Then the transformation $T_A:\R^n\rightarrow \mathbb{R}^m$ represented by $A$  is one-to-one if and only if the linear system $Ax=0$  has only the trivial solution.
+</li><li>Let $A$ be an $m\times n$ matrix. Then the transformation $T_A:\R^n\rightarrow \mathbb{R}^m$ represented by $A$  is onto if and only if the linear system $Ax =b$  is consistent for every vector $b$ in $\R^m$.
 </li><li>Let $T:\R^n\rightarrow\R^n$ be a linear operator on $\R^n$. Then $T$ is one-to-one if and only if it is onto.
-</li><li>Let $A$ be an $n\times n$ matrix and $T_A : \R^n\rightarrow \R^n$  be the linear transformation represented by 
+</li><li>Let $A$ be an $n\times n$ matrix and $T_A : \mathbb{R}^n\rightarrow \mathbb{R}^n$  be the linear transformation represented by 
     $A$. Then the following are equivalent.
         1. The reduced row echelon form of $A$ is $I_n$.
         2. $A$ is expressible as a product of elementary matrices.
@@ -1081,7 +1081,7 @@ mathjax: true
 
 ## 6.4 Composition and Invertibility of Linear Transformations
 
-<details closed><summary><b>Definitions</b></summary><ul><li>Let $T_1:\R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations in which the codomain of $T_1$ is the same as the domain of $T_2$. <span id="notion-highlight-1"><b>The composition of $T_2$ with $T_1$</b></span>, denoted by $T_2\circ T_1$, is defined to be the transformation from $\R^n$ to $\R^m$ such that
+<details closed><summary><b>Definitions</b></summary><ul><li>Let $T_1:\R^n\rightarrow \mathbb{R}^k$ and $T_2: \mathbb{R}^k\rightarrow\R^m$ be linear transformations in which the codomain of $T_1$ is the same as the domain of $T_2$. <span id="notion-highlight-1"><b>The composition of $T_2$ with $T_1$</b></span>, denoted by $T_2\circ T_1$, is defined to be the transformation from $\R^n$ to $\R^m$ such that
 
         $$(T_2\circ T_1)(x) = T_2(T_1(x))$$
 
@@ -1093,26 +1093,26 @@ mathjax: true
 
         where $\lambda_1,\lambda_2,\cdots,\lambda_n$ are nonnegative scalars. Let $\textbf{e}_1,\textbf{e}_2,\cdots, \textbf{e}_n$  be the standard unit vectors in $\R^n$ . Multiplication by $D$ causes an expansion in the direction of $\textbf{e}_i$ if $\lambda_i >1$  and a compression in the direction of $\textbf{e}_i$  if $0\leq \lambda _i < 1$ . Multiplication by $D$ has no effect in the direction of $\textbf{e} _i$  if $\lambda_i =1$. This matrix is called <span id="notion-highlight-1"><b>scaling matrix</b></span>. 
 
-</li><li>Let $T: \R^n \rightarrow \R^m$ be a one-to-one linear transformation. Each vector $\textbf{w}$ in the range of $T$  is the image of a unique vector $x$ in the domain of $T$ which is called the <span id="notion-highlight-1"><b>preimage</b></span> of $\textbf{w}$. A new function from the range of $T$ to $\R^n$  that maps $\textbf{w}$ into $x$ is called the <span id="notion-highlight-1"><b>inverse</b></span> of $</b></span>T$</b></span> and is denoted by $T^{-1}$. A one-to-one linear operator is called an <span id="notion-highlight-1"><b>invertible linear operator</b></span>.
-</li><li>Let $A$ be an $n\times n$  invertible matrix and $T:\R^n \rightarrow \R^n$ be the transformation represented by $A$. If $\textbf{v}$ is a vector in $\R^n$ and $A\textbf{v} = \lambda\textbf{v}$ for some scalar $\lambda$, then $T(\textbf{v}) = \lambda\textbf{v}$, that is, $T$ maps the vector $\textbf{v}$ onto a vector that is parallel to $\textbf{v}$. If $\textbf{v} \neq0$, then the scalar $\lambda$ is called an <span id="notion-highlight-1"><b>eigenvalue</b></span> of $T$ and $\textbf{v}$ is called an <span id="notion-highlight-1"><b>eigenvector</b></span> of $T$ corresponding to $\lambda$.v
+</li><li>Let $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a one-to-one linear transformation. Each vector $\textbf{w}$ in the range of $T$  is the image of a unique vector $x$ in the domain of $T$ which is called the <span id="notion-highlight-1"><b>preimage</b></span> of $\textbf{w}$. A new function from the range of $T$ to $\R^n$  that maps $\textbf{w}$ into $x$ is called the <span id="notion-highlight-1"><b>inverse</b></span> of $</b></span>T$</b></span> and is denoted by $T^{-1}$. A one-to-one linear operator is called an <span id="notion-highlight-1"><b>invertible linear operator</b></span>.
+</li><li>Let $A$ be an $n\times n$  invertible matrix and $T:\R^n \rightarrow \mathbb{R}^n$ be the transformation represented by $A$. If $\textbf{v}$ is a vector in $\R^n$ and $A\textbf{v} = \lambda\textbf{v}$ for some scalar $\lambda$, then $T(\textbf{v}) = \lambda\textbf{v}$, that is, $T$ maps the vector $\textbf{v}$ onto a vector that is parallel to $\textbf{v}$. If $\textbf{v} \neq0$, then the scalar $\lambda$ is called an <span id="notion-highlight-1"><b>eigenvalue</b></span> of $T$ and $\textbf{v}$ is called an <span id="notion-highlight-1"><b>eigenvector</b></span> of $T$ corresponding to $\lambda$.v
 </li></ul></details>
 
-<details closed><summary><b>Theorems</b></summary><ul><li>Let $T_1: \R^n\rightarrow \R^k$ and $T_2: \R^k\rightarrow\R^m$ be linear transformations. Then $T_2\circ T_1:\R^n\rightarrow\R^m$ is a linear transformation.
+<details closed><summary><b>Theorems</b></summary><ul><li>Let $T_1: \mathbb{R}^n\rightarrow \mathbb{R}^k$ and $T_2: \mathbb{R}^k\rightarrow\R^m$ be linear transformations. Then $T_2\circ T_1:\R^n\rightarrow\R^m$ is a linear transformation.
 </li><li>Let $A$ be a $k\times n$  matrix and $B$ be an $m\times k$ matrix. Then the $m\times n$ matrix $BA$ is the standard matrix for the composition of the linear transformation represented by $B$ with the linear transformation represented by $A$.
 </li><li>Let $T_1, T_2,\cdots,T_k$ be a succession of rotations about axees through the origin in $\R^3$. Then the $k$ notations can be accomplished by a single rotation about some appropriate axis through the origin in $\R^3$.
 </li><li>Let $A$ be a $2\times 2$  invertible matrix. Then the linear operator represented by $A$ is a composition of shears, compressions and expansions in the direction of the coordinate axes and reflections about the coordinate axes and about the line $y=x$.
-</li><li>Let $T: \R^n\rightarrow\R^m$ be a linear transformation. If $T$ is one-to-one, then $T^{-1}$ is one-to-one.
-</li><li>Let $T: \R^n\rightarrow\R^n$ be a linear operator. If $T$ is one-to-one, then the standard matrix $A$ for $T$ is invertible and its inverse is the standard matrix for $T^{-1}$, i.e.,
+</li><li>Let $T: \mathbb{R}^n\rightarrow\R^m$ be a linear transformation. If $T$ is one-to-one, then $T^{-1}$ is one-to-one.
+</li><li>Let $T: \mathbb{R}^n\rightarrow\R^n$ be a linear operator. If $T$ is one-to-one, then the standard matrix $A$ for $T$ is invertible and its inverse is the standard matrix for $T^{-1}$, i.e.,
 
         $$T_{A^{-1}}= (T_A)^{-1}$$
 
-</li><li>Let $T: \R^2\rightarrow \R^2$ be an invertible linear operator. Then the following hold.
+</li><li>Let $T: \mathbb{R}^2\rightarrow \mathbb{R}^2$ be an invertible linear operator. Then the following hold.
         1. The image of a line is a line
         2. The image of a line passes through the origin if and only if the original line passes through the origin
         3. The images of two lines are parallel if and only if the original lines are parallel
         4. The images of three points lie on a line if and only if the original points lie on a line. 
         5. The images of the line segment joining two points is the line segment joining the images of those points.
-</li><li>Let $T: \R^2\rightarrow \R^2$ be an invertible linear operator. Then $T$ maps the unit square into a nondegenerate parallelogram that has a vertex at the origin and has adjacent sides $T(\textbf{e}_1)$  and $T(\textbf{e}_2)$. The area of the parellelogram is $|\textrm{det}(A)|$ where $A = [T(\textbf{e}_1) \mid T(\textbf{e}_2) ]$  is the standard matrix for $T$.
+</li><li>Let $T: \mathbb{R}^2\rightarrow \mathbb{R}^2$ be an invertible linear operator. Then $T$ maps the unit square into a nondegenerate parallelogram that has a vertex at the origin and has adjacent sides $T(\textbf{e}_1)$  and $T(\textbf{e}_2)$. The area of the parellelogram is $|\textrm{det}(A)|$ where $A = [T(\textbf{e}_1) \mid T(\textbf{e}_2) ]$  is the standard matrix for $T$.
 </li></ul></details>
 
 ---
