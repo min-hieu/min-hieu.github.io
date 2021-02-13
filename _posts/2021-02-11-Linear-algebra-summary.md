@@ -125,9 +125,8 @@ mathjax: true
 
 <details closed><summary><b>Theorems</b></summary><ul>
 <li>Every system of linear equations has zero, one, or infinitely many solutions; there are no other possibilities.
-</li></ul></details>
-
-<br><fieldset>
+</li></ul></details><br />
+<fieldset>
 <legend class="box-header"><b>Elementary Row Operations</b></legend>
 <ol>
     <li> <span id="notion-highlight-2"><i>[Row scaling]</i></span> Multiplying a row through by a nonzero constant. </li>
