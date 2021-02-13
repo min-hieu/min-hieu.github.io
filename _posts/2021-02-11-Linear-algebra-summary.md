@@ -420,9 +420,8 @@ mathjax: true
 <p></p>
 <fieldset>
  <legend class="box-header"><b>The Inversion Algorithm</b></legend>
-
-    &emsp;&emsp;Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:
 <ul style="list-style:none">
+    <li>&emsp;Let $A$  be a square matrix. To find $A^{-1}$, if it exits, preceed as follows:</li>
     <li>&emsp;&emsp;<span id="notion-highlight-1"><b>Step 1</b></span> <br>
 
     Form the augmented matrix $[A\mid I]$.</li>
