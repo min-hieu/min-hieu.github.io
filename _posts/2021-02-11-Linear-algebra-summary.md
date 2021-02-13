@@ -16,20 +16,20 @@ mathjax: true
 
     <details closed>
     <summary><b>Chapter 2.</b> Systems of Linear Equations</summary><ul>
-    &emsp;<b>2.1</b> <a href > Introduction to System of Linear Equation</a> <br>
-    &emsp;<b>2.2</b> <a href > Solving Linear Systems by Row Reduction</a>
+    &emsp;<b>2.1</b> <a href="#21-introduction-to-system-of-linear-equations" > Introduction to System of Linear Equation</a> <br>
+    &emsp;<b>2.2</b> <a href="#22-solving-linear-systems-by-row-reduction"s > Solving Linear Systems by Row Reduction</a>
     </li></ul></details>
 
     <details closed>
     <summary><b>Chapter 3.</b> Matrices and Matrix Algebra</summary><ul>
-    &emsp;<b>3.1</b> <a href > Operations on Matrices</a> <br>
-    &emsp;<b>3.2</b> <a href > Inverses; Algebraic Properties of Matrices</a> <br>
-    &emsp;<b>3.3</b> <a href > Elementary Matrices; A Method for Finding $A^{-1}$</a> <br>
-    &emsp;<b>3.4</b> <a href > Subspaces and Linear Independence</a> <br>
-    &emsp;<b>3.5</b> <a href > The Geometry of Linear Systems</a> <br>
-    &emsp;<b>3.6</b> <a href > Matrices with Special Forms</a> <br>
-    &emsp;<b>3.7</b> <a href > Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</a> <br>
-    &emsp;<b>3.8</b> <a href > Partitioned Matrices and Parallel Processing*</a> <br>
+    &emsp;<b>3.1</b> <a href="#31-operations-on-matrices" > Operations on Matrices</a> <br>
+    &emsp;<b>3.2</b> <a href="#32-inverses-algebraic-properties-of-matrices" > Inverses; Algebraic Properties of Matrices</a> <br>
+    &emsp;<b>3.3</b> <a href="#33-elementary-matrices-a-method-for-finding-a-1" > Elementary Matrices; A Method for Finding $A^{-1}$</a> <br>
+    &emsp;<b>3.4</b> <a href="#34-subspaces-and-linear-independence" > Subspaces and Linear Independence</a> <br>
+    &emsp;<b>3.5</b> <a href="#35-the-geometry-of-linear-systems" > The Geometry of Linear Systems</a> <br>
+    &emsp;<b>3.6</b> <a href="#36-matrices-with-special-forms" > Matrices with Special Forms</a> <br>
+    &emsp;<b>3.7</b> <a href="#37-matrix-factorizations-rmtextitlu-decompositions" > Matrix Factorizations; $\rm{\textit{LU}}$-Decomposition</a> <br>
+    &emsp;<b>3.8</b> <a href="#" > Partitioned Matrices and Parallel Processing*</a> <br>
     </li></ul></details>
 
     <details closed>
