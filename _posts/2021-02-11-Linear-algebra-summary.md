@@ -617,13 +617,13 @@ mathjax: true
 <fieldset>
 <legend class="box-header"><b>Finding an $LU$-Decomposition of a matrix</b></legend>
 <ul style="list-style:none">
-    <li><span id="notion-highlight-2"><b>Step 1</b></span><br> Reduce $A$ to row echelon form $U$ without using row interchanges, keeping track of the multipliers used to introduce the leading 1's and the multiplers used to introduce zeros below the leading 1's.</li>
+    <li><span id="notion-highlight-2"><b>&emsp;&emsp;Step 1</b></span><br> &emsp;Reduce $A$ to row echelon form $U$ without using row interchanges, keeping track of the multipliers used to introduce the leading 1's and the multiplers used to introduce zeros below the leading 1's.</li>
 
-    <li><span id="notion-highlight-2"><b>Step 2</b></span><br> In each position below the main diagonal of $L$, place the reciprocal of the multipliers that introduced the leading 1 in that position in $U$.</li>
+    <li><span id="notion-highlight-2"><b>&emsp;&emsp;Step 2</b></span><br>&emsp; In each position below the main diagonal of $L$, place the reciprocal of the multipliers that introduced the leading 1 in that position in $U$.</li>
 
-    <li><span id="notion-highlight-2"><b>Step 3</b></span><br> In each position along the main diagonal of $L$, place the negative of the multipliers used to introduce the zero in that position in $U$.</li>
+    <li><span id="notion-highlight-2"><b>&emsp;&emsp;Step 3</b></span><br>&emsp; In each position along the main diagonal of $L$, place the negative of the multipliers used to introduce the zero in that position in $U$.</li>
 
-    <li><span id="notion-highlight-2"><b>Step 4</b></span><br> Form the decomposition $A=LU$.
+    <li><span id="notion-highlight-2"><b>&emsp;&emsp;Step 4</b></span><br> &emsp;Form the decomposition $A=LU$.
 </li></ul></fieldset>
 
 ---
