@@ -150,7 +150,7 @@ mathjax: true
 </li><li>A <span id="notion-highlight-1"><b>submatrix</b></span> (or <span id="notion-highlight-1"><b>block</b></span>) of a matrix $A$  is defined to be an array obrtained by deleting any combination of rows and columns from $A$ .
 </li><li>The column vectors of a matrix $A$ that lie in the column positions where the leading 1's occur in the row echelon forms of $A$ are called the <span id="notion-highlight-1"><b>pivot columns</b></span> of $A$.
 </li><li>The zero vector in $\mathbb{R}^n$ is called the <span id="notion-highlight-1"><b>trivial solution</b></span> of a homogeneous linear system with $n$ unknowns. All other solutions, if any, are called <span id="notion-highlight-1"><b>nontrivial solutions</b></span>.
-</li></ul></details>
+</li></ul></details> 
 
 <details closed><summary><b>Theorems</b></summary><ul>
 <li>A homogeneous linear system has only the trivial solution or it has infinitely many solutions; there are no other possibilities.
@@ -163,9 +163,9 @@ mathjax: true
     </li><li>*proof*
 
             If a homogeneous linear system $Ax=0$ has $m$ equations and $n$ unknowns with $m<n$, then the number of nonzero rows of the reduced row echelon form of $A$ is less than $n$. Thus there is at least one free variables  $\blacksquare$
-</li></ul></details>
-
-<br><fieldset>
+</li></ul></details><br />
+<br />
+<fieldset>
 <legend id="notion-highlight-1"><b>Gauss Elimination</b></legend>
 &emsp;&emsp;<span id="notion-highlight-2"><b>Step 1.</b></span>
 
