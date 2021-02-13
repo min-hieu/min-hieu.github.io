@@ -613,7 +613,7 @@ mathjax: true
 
         <span id="notion-highlight-1"><b>Step 4</b></span>. Substitute the now-known vector $y$ into [this equation]() and solve for $x$.
 </li></ul></details>
-
+<p></p>
 <fieldset>
 <legend class="box-header"><b>Finding an $LU$-Decomposition of a matrix</b></legend>
 <ul style="list-style:none">
