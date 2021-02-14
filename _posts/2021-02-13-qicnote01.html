@@ -56,10 +56,18 @@ for a Turing Machine.</p>
     operator can be using a combination of only two gates: AND and OR gate <i><a href="https://math.stackexchange.com/questions/1481376/proof-of-functional-completeness-of-logical-operators">
         (functional completeness of logical operators)</a></i>. Moreover, these logic gates has been used by electrical engineers well before Turing's work. So, if this model is
     so useful, why didn't Turing used it in his original paper? According to Peter Shor, since circuits are only designed for finite size inputs, computation that is independent
-    of the input size (like which the Turing Machine was designed for) is impossible by definition. But, he also pointed out that this "bug" can also be a "feature" for the 
-circuits model. Consider the infamous <b>Halting Problem</b>:</p>
+    of the input size (like which the Turing Machine was designed for) is impossible by definition. However, this unique "bug" of the curcuits model can also be seen as a feature
+    to solve problems that are considered as "incomputable" by Turing Machine. Consider the infamous <b>Halting Problem</b>:</p>
 <p align="center"> $\textrm{Does a Turing Machine with a program given as } P \textrm{ and input } i \textrm{ halt? }$</p>
-
+    <p align="justify">&emsp;In other words, given two program, A and B, can we tell that if A(B) halts before the universe collapse. We can show this is incomputable by proof 
+        of contradiction:</p>
+    <p>$$ \textrm{Assuming the Halting Problem is computable, there exist an Turing Machine }M\textrm{ which solve the problem. Now we can tell that any input }i\textrm{ halts or not. 
+        We can make another program }M_{1}\textrm{ that have the following properties:}  $$</p>
+    <ul>
+        <li>$\textrm{run forever if }M(i)\textrm{ halts for some input }i$</li>
+        <li>$\textrm{halts if }M(i)\textrm{ run forever for some input }i$</li>
+    </ul>
+    <p>$\textrm{Then we find that }M(M_{1}(M_{1})) \textrm{ fails to tell us whether }M_{1}(M_{1})\textrm{ halts or not. Thus, we arrive at a contradiction.}$</p>
 
 <h2 id="#computation-must-be-robust-against-noise">Computation must be robust against Noise</h2>
 
