@@ -61,16 +61,16 @@ for a Turing Machine.</p>
 <p align="center"> $\textrm{Does a Turing Machine with a program given as } P \textrm{ and input } i \textrm{ halt? }$</p>
     <p align="justify">&emsp;In other words, given two program, A and B, can we tell that if A(B) halts before the universe collapse. We can show this is incomputable by proof 
         of contradiction:</p>
-    <p>Assuming the Halting Problem is computable, there exist an Turing Machine $M$ which solve the problem. Now we can tell that any input $i$ halts or not. 
+    <p style="color: rgb(121, 121, 121)">Assuming the Halting Problem is computable, there exist an Turing Machine $M$ which solve the problem. Now we can tell that any input $i$ halts or not. 
         We can make another program $M_{1}$ that have the following properties:</p>
     <ul>
-        <li>run forever if $M(i)$ halts for some input $i$</li>
-        <li>halts if $M(i)$ run forever for some input $i$</li>
+        <li style="color: rgb(121, 121, 121)">run forever if $M(i)$ halts for some input $i$</li>
+        <li style="color: rgb(121, 121, 121)">halts if $M(i)$ run forever for some input $i$</li>
     </ul>
-    <p>Then we find that $M(M_{1}(M_{1}))$ fails to tell us whether $M_{1}(M_{1})$ halts or not. Thus, we arrive at a contradiction.$\tag*{$\blacksquare$}$</p>
-<p align="justify">This can be solved with a family of circuits: circuits with $2^{P\cdot i}$ input and output $1$ if the TM halts and 0 if it doesn't. The trick is: for every
+    <p style="color: rgb(121, 121, 121)">Then we find that $M(M_{1}(M_{1}))$ fails to tell us whether $M_{1}(M_{1})$ halts or not. Thus, we arrive at a contradiction.$\tag*{$\blacksquare$}$</p>
+<p align="justify">&emsp;This can be solved with a family of circuits: circuits with $2^{P\cdot i}$ input and output $1$ if the TM halts and 0 if it doesn't. The trick is: for every
     set of input and output, there is a different family of circuits, and it can hide the incomputability information within those circuits.</p> 
-<p align="justify">Actually, in <b>1994</b> when Peter Shor came up with his algorithm, he used a quantum turing machine in which the head is in coherent superposition as it 
+<p align="justify">&emsp;Actually, in <b>1994</b> when Peter Shor came up with his algorithm, he used a quantum turing machine in which the head is in coherent superposition as it 
 is moving along the tape. It was this that many Phyisicts would reject the idea due to its insanely difficult engineerign design. Therefore, the circuits model was mostly 
 used for Quantum Computing since we can have a few qubit in coherent superpostion going through different gates. Well you might still argue that this is still impossible to
  build even with today's technology but back then it was $log(\textrm{impossible})$ compare to the QTM</p>
