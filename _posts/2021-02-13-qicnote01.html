@@ -52,7 +52,7 @@ for a Turing Machine.</p>
 </a></div>
 <p style="text-align: center;"><i>Overview of Turing Machine, consisting of an infinite tape, a head that can be made of finite automata and the ability to read and 
     write on the tape.</i></p>
-<p align="justify">&emsp;So, what is the circuit model? Well, all freshmen in Computer Science are taught in the first class of Discrete Mathematics that the fundamental boolean
+<p align="justify">&emsp;So, what is the circuit model? Well, all freshmen in Computer Science are taught in their first class of Discrete Mathematics that the fundamental boolean
     operator can be using a combination of only two gates: AND and OR gate <i><a href="https://math.stackexchange.com/questions/1481376/proof-of-functional-completeness-of-logical-operators">
         (functional completeness of logical operators)</a></i>. Moreover, these logic gates has been used by electrical engineers well before Turing's work. So, if this model is
     so useful, why didn't Turing used it in his original paper? According to Peter Shor, since circuits are only designed for finite size inputs, computation that is independent
@@ -68,6 +68,17 @@ for a Turing Machine.</p>
         <li>halts if $M(i)$ run forever for some input $i$</li>
     </ul>
     <p>Then we find that $M(M_{1}(M_{1}))$ fails to tell us whether $M_{1}(M_{1})$ halts or not. Thus, we arrive at a contradiction.$\tag*{$\blacksquare$}$</p>
+<p align="justify">This can be solved with a family of circuits: circuits with $2^{P\cdoti}$ input and output $1$ if the TM halts and 0 if it doesn't. The trick is: for every
+    set of input and output, there is a different family of circuits, and it can hide the incomputability information within those circuits.</p> 
+<p align="justify">Actually, in <b>1994</b> when Peter Shor came up with his algorithm, he used a quantum turing machine in which the head is in coherent superposition as it 
+is moving along the tape. It was this that many Phyisicts would reject the idea due to its insanely difficult engineerign design. Therefore, the circuits model was mostly 
+used for Quantum Computing since we can have a few qubit in coherent superpostion going through different gates. Well you might argue that this is still impossible to build even
+today but back then it was $log(\textrm{impossible})$ compare to the QTM</p>
+
+
+<h2 id="#history-of-quantum-mechanics-and-quantum-computations">History of quantum mechanics and quantum computation</h2>
+    
+<h2 id="#information-is-quantum">Information is Quantum</h2>
 
 <h2 id="#computation-must-be-robust-against-noise">Computation must be robust against Noise</h2>
 
