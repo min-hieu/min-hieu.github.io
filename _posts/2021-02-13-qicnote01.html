@@ -61,13 +61,13 @@ for a Turing Machine.</p>
 <p align="center"> $\textrm{Does a Turing Machine with a program given as } P \textrm{ and input } i \textrm{ halt? }$</p>
     <p align="justify">&emsp;In other words, given two program, A and B, can we tell that if A(B) halts before the universe collapse. We can show this is incomputable by proof 
         of contradiction:</p>
-    <p>$$ \text{Assuming the Halting Problem is computable, there exist an Turing Machine }M\text{ which solve the problem. Now we can tell that any input }i\text{ halts or not. 
-        We can make another program }M_{1}\textrm{ that have the following properties:}  $$</p>
+    <p>Assuming the Halting Problem is computable, there exist an Turing Machine $M$ which solve the problem. Now we can tell that any input $i$ halts or not. 
+        We can make another program $M_{1}$ that have the following properties:</p>
     <ul>
-        <li>$\textrm{run forever if }M(i)\textrm{ halts for some input }i$</li>
-        <li>$\textrm{halts if }M(i)\textrm{ run forever for some input }i$</li>
+        <li>run forever if $M(i)$ halts for some input $i$</li>
+        <li>halts if $M(i)$ run forever for some input $i$</li>
     </ul>
-    <p>$\textrm{Then we find that }M(M_{1}(M_{1})) \textrm{ fails to tell us whether }M_{1}(M_{1})\textrm{ halts or not. Thus, we arrive at a contradiction.}$</p>
+    <p>Then we find that $M(M_{1}(M_{1}))$ fails to tell us whether $M_{1}(M_{1})$ halts or not. Thus, we arrive at a contradiction.$\tag*{$\blacksquare$}$</p>
 
 <h2 id="#computation-must-be-robust-against-noise">Computation must be robust against Noise</h2>
 
