@@ -40,21 +40,24 @@ mathjax: true
     <li>Soap Bubbles and Pegs (my favourite, read the paper by Scott Aaronson for more info)</li>
     <li style="list-style:none">&emsp;$\vdots$</li>
 </ul>
+
 <p align="justify">&emsp;In <b>1936</b> Turing came up with the famous <i>Turing Universal Computation</i>. At that time, Turing was interested in solving some obscure problems related
 with the decision problems and he noticed that some model of computation are universal, in other word, they can sufficiently simulate other models of computation.
 However, there is one more model which was mainly used for Quantum Computing that I didn't mention, the curcuit model. Actually, the cucuit model was consider as 
-    <i>"super universal"</i>, meaning not only it can sufficiently simulate Turing Machien, it could also do computation that would be considered to be impossible
+    <i>"super universal"</i>, meaning not only it can sufficiently simulate Turing Machine, it could also do computation that would be considered to be impossible
 for a Turing Machine.</p>
-<div class="clickable-image"><a href="/assets/images/Turing Machine.png" style="max-height: 30vh;" >
+<div class="clickable-image"><a href="/assets/images/Turing Machine.png" style="max-height: 25vh;" >
     <img src="/assets/images/Turing Machine.png" alt-text="cringe comic" data-echo="/assets/images/Turing Machine.png" />
 </a></div>
 <p style="text-align: center;"><i>Overview of Turing Machine, consisting of an infinite tape, a head that can be made of finite automata and the ability to read and 
     write on the tape.</i></p>
-
-<h2 id="#history-of-quantum-mechanics-and-quantum-computations">History of quantum mechanics and quantum computation</h2>
-
-
-<h2 id="#information-is-quantum">Information is Quantum</h2>
+<p align="justify">&emsp;So, what is the circuit model? Well, all freshmen in Computer Science are taught in the first class of Discrete Mathematics that the fundamental boolean
+    operator can be using a combination of only two gates: AND and OR gate <i><a href="https://math.stackexchange.com/questions/1481376/proof-of-functional-completeness-of-logical-operators">
+        (functional completeness of logical operators)</a></i>. Moreover, these logic gates has been used by electrical engineers well before Turing's work. So, if this model is
+    so useful, why didn't Turing used it in his original paper? According to Peter Shor, since circuits are only designed for finite size inputs, computation that is independent
+    of the input size (like which the Turing Machine was designed for) is impossible by definition. But, he also pointed out that this "bug" can also be a "feature" for the 
+circuits model. Consider the infamous <b>Halting Problem</b>:</p>
+<quote> Does a Turing Machine with a program given as $P$ and input $i$ halt?</quote>
 
 
 <h2 id="#computation-must-be-robust-against-noise">Computation must be robust against Noise</h2>
