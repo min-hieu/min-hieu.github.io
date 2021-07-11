@@ -1,0 +1,9 @@
+$bg-color: #f9fcfa;
+
+#blog-container {
+	background-color: $bg-color;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	height: 18vh;
+}

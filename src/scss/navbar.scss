@@ -1,0 +1,9 @@
+$bg-color: #f9fcfa;
+
+nav {
+	background-color: $bg-color;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 13vh;
+}

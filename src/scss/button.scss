@@ -1,0 +1,80 @@
+$nav-btn-color-bottom: #ffc3e1;
+$nav-btn-color-top: #ff2a34;
+
+a .NavBtn-root {
+  width: fit-content;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 1.5vw;
+	border-style: solid;
+	border-width: 2px;
+	border-color: $nav-btn-color-top;
+	background: white;
+  transform-style: preserve-3d;
+	padding: 1.5vh 1.5vw;
+	margin: 3vh 2vw;
+	align-items: center;
+}
+
+a .NavBtn-root:hover {
+	background: linear-gradient($nav-btn-color-bottom, $nav-btn-color-top);
+	border-style: none;
+	cursor: url(../assets/finger-pointer.png) 0 0, auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a .NavBtn-child {
+	display: inline-block;
+  transform: translateZ(30px);
+  box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.0);
+  background-color: transparent;
+	margin: 0 auto;
+	font-size: 1.5vw;
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+	background-image: linear-gradient(0, $nav-btn-color-top, $nav-btn-color-bottom);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+}
+
+a:hover {
+	cursor: inherit; 
+}
+
+a .NavBtn-root:hover > * {
+	cursor: url(../assets/finger-pointer.png) 0 0, auto;
+}
+
+a .NavBtn-root:hover > .NavBtn-child{
+	background-image: linear-gradient(0, white, white);	
+}
+
+a .NavBtn-root:active > .NavBtn-child{
+	animation: btnClick 0.3s ease-out;
+	cursor: url(../assets/finger-clicked.png) 0 0, auto;
+}
+
+@keyframes btnClick {
+	0% {
+		font-size: 1.5vw;
+		padding: 0.75vh 0.75vw;
+	}
+	50% {
+		font-size: 1vw;
+	}	
+}
+
+.disable-select {
+		user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+}
