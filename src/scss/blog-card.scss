@@ -2,23 +2,39 @@ $nav-btn-color-bottom: #4ecdff;
 $nav-btn-color-top: #077bff;
 
 a .Blogcard-root {
-  width: 15vw;
+  width: 25vw;
 	height: 15vh;
 	display:flex;
 	flex-flow: row wrap;
 	border-radius: 1.5vw;
-	border-style: solid;
-	border-width: 2px;
-	border-color: $nav-btn-color-top;
-	background: white;
+	border-style: none;
   transform-style: preserve-3d;
 	align-items: center;
+
+	&::before {
+		content: '';
+		background-image: var(--bgImage);
+		background-size: cover;
+		background-position: top center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0.15;
+		border-radius: 1.5vw;
+	}
 }
 
 a .Blogcard-root:hover {
-	background: linear-gradient($nav-btn-color-bottom, $nav-btn-color-top);
+  width: 15vw;
+	height: 15vh;
 	border-style: none;
 	cursor: url(../assets/finger-pointer.png) 0 0, auto;
+
+	&::before {
+		opacity: 0.8;
+	}
 }
 
 a:link {
@@ -26,32 +42,56 @@ a:link {
 }
 
 a .Blogcard-child {
+	position: relative;
 	display: inline-block;
   transform: translateZ(30px);
-  box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.0);
-  background-color: transparent;
 	margin: 0 auto;
 	font-size: 1.5vw;
 	font-family: "Comic Sans MS";
 	font-weight: bold;
-	background-image: linear-gradient(0, $nav-btn-color-top, $nav-btn-color-bottom);
 	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-text-fill-color: transparent;
 }
 
 a:hover {
 	cursor: inherit; 
 }
 
+
 a .Blogcard-root:hover > * {
 	cursor: url(../assets/finger-pointer.png) 0 0, auto;
 }
 
-a .Blogcard-root:hover > .Blogcard-child{
-	background-image: linear-gradient(0, white, white);	
+.blogcard-title {
+	color: black;
+}
+
+a .Blogcard-root:hover > .Blogcard-child .blogcard-title{
+	display: none;
+}
+
+.blogcard-desc {
+	display: none;
+}
+
+a .Blogcard-root:hover > .Blogcard-child .blogcard-desc{
+	display: block;
+	color: white;
+	
+}
+
+.blogcard-overImage {
+	display: none;
+}
+
+a .Blogcard-root:hover > .Blogcard-child .blogcard-overImage{
+	display: block;
+	width: 10vw;
+	position: absolute;
+	bottom: 2vh;
+	left: 0;
+	margin: 0;
+	background-image: var(--overImage);
+	background-size: 100%;
 }
 
 a .Blogcard-root:active > .Blogcard-child{

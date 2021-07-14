@@ -1,4 +1,4 @@
-import logo from './assets/pepe.gif';
+import logo from './assets/pepe-low.gif';
 import './scss/App.scss';
 
 function Home() {
