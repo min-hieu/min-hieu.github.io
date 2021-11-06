@@ -1,9 +1,8 @@
 import './scss/App.scss';
 import Navbar from './components/navbar.js';
 import Home from './Home.js';
-import Blogs from './Blogs.js';
-import { BrowserRouter as Router, Route, Switch } from 
-	'react-router-dom';
+import NewSession from './containers/session/new/NewSession';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
 				<Navbar />
 				<Switch>
 					<Route exact path="/"> <Home /> </Route>
-					<Route path="/blogs"> <Blogs /> </Route>
+					<Route exact path="/createSession"> <createSession /> </Route>
 				</Switch>
 			</div>
 		</Router>

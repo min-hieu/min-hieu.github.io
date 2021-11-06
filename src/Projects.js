@@ -5,12 +5,12 @@ import placeholder2 from "./assets/placeholder2.jpg"
 import placeholder3 from "./assets/placeholder3.jpg"
 import banana from "./assets/banana.png"
 
-function Blogs() {
+function Projects() {
 	return (
 		<div>
 			<div id="blog-header">
 				<h1 style={{color: 'black'}}>
-					Yep, testing title for page!
+					This is the project page
 				</h1>
 			</div>
 			<div id='blog-container'>
@@ -18,7 +18,7 @@ function Blogs() {
 				 bgImage={placeholder} overImage={banana}/>
 				<Blogcard title='Testing Title 2' link='fuck1' desc='testing' 
 				 bgImage={placeholder2} overImage={banana}/>
-				<Blogcard title='Starting Over' link='20210210' desc='testing' 
+				<Blogcard title='Testing Title 3' link='fuck1' desc='testing' 
 				 bgImage={placeholder3} overImage={banana}/>
 			</div>
 		</div>
@@ -26,4 +26,4 @@ function Blogs() {
 }
 
 
-export default Blogs;
+export default Projects;

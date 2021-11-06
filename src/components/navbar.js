@@ -6,9 +6,9 @@ function Navbar() {
   return (
 	  <nav class="menu">
 			<NavButton text="Home" link="/" />
-			<NavButton text="projects"/>
+			<NavButton text="projects" link="/projects"/>
 			<NavButton text="blogs" link="/blogs"/>
-			<NavButton text="about"/>
+			<NavButton text="about" link="/about"/>
 		</nav>
   );
 }
