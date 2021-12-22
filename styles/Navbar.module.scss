@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,500;1,700&display=swap');
+
+.container {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  height: 100%;
+}
+
+.titleContainer {
+  margin-left: 2vw;
+  margin-top: 2vw;
+}
+
+.title {
+  font-size: 3vw;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  line-height: 3vw;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5vw;
+  font-family: "Lato", sans-serif;
+  font-weight: light;
+}
+
+.btnContainer {
+  margin-left: 1.5vw;
+  margin-bottom: 2vw;
+  position: absolute;
+  bottom: 0;
+}
+
+.navBtn {
+  font-size: 1.7vw;
+  margin-top: 1vw;
+  font-family: "Lato", sans-serif;
+  font-weight: regular;
+  display: block;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.navPressed {
+  background: red;
+  font-size: 1.7vw;
+  margin-top: 1vw;
+  font-family: "Lato", sans-serif;
+  font-weight: regular;
+  display: block;
+  border-radius: 1vw;
+  padding: 0.5vw 1vw;
+  width: fit-content;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/Navbar.module.css';
+import styles from '../styles/Navbar.module.scss';
 import Btn from './button';
 
 const pages = [
