@@ -1,0 +1,71 @@
+@use "constants" as g;
+
+$left-width: calc(0.64 * g.$content-pad-width);
+$right-width: calc(g.$content-pad-width - $left-width);
+
+.container {
+  width: g.$content-width;
+  padding: g.$content-padding;
+  padding-top: calc(g.$content-padding + 1vw);
+  height: 100vh;
+  float: right;
+  background-color: g.$about-col;
+}
+
+.title {
+  padding-bottom: 0.5rem;
+  font-size: 3.5vw;
+  font-family: g.$sans-wide;
+  font-weight: 700;
+  width: 30vw;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.leftContainer {
+  float: left;
+  width: $left-width;
+  padding-right: 1rem;
+  text-align: justify;
+}
+
+.rightContainer {
+  float: right;
+  width: $right-width;
+}
+
+.text {
+  font-family: g.$sans-thin;
+  font-weight: 300;
+  font-size: 2.1vw;
+}
+
+.text.b {
+  font-weight: 700;
+}
+
+.contact {
+  position: absolute;
+  padding-right: 1rem;
+  width: $left-width;
+  text-align: right;
+  bottom: 2.4vw;
+}
+
+.hand {
+  position: absolute;
+  bottom: 1vw;
+  left: calc(g.$navbar-width + 3vw);
+  font-size: 4vw;
+  animation: 1s ease-in 0s infinite bounce;
+}
+
+@keyframes bounce {
+  20% {
+      transform: translateX(-4vw);
+  }
+  100%{
+      transform: translateX(0vw);
+  }
+}

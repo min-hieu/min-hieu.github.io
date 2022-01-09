@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300;0,500;1,700&display=swap');
+@use "constants" as g;
 
 .container {
   background: white;
   position: fixed;
   top: 0;
   left: 0;
-  width: 15vw;
+  width: g.$navbar-width;
   height: 100%;
 }
 
@@ -16,7 +16,7 @@
 
 .title {
   font-size: 3vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: g.$sans-wide;
   display: block;
   line-height: 3vw;
   font-weight: bold;
@@ -24,12 +24,12 @@
 
 .subtitle {
   font-size: 1.5vw;
-  font-family: "Lato", sans-serif;
+  font-family: g.$sans-thin;
   font-weight: light;
 }
 
 .btnContainer {
-  margin-left: 1.5vw;
+  margin-left: .85vw;
   margin-bottom: 2vw;
   position: absolute;
   bottom: 0;
@@ -38,8 +38,8 @@
 .navBtn {
   font-size: 1.7vw;
   margin-top: 1vw;
-  font-family: "Lato", sans-serif;
-  font-weight: regular;
+  font-family: g.$sans-thin;
+  font-weight: 200;
   display: block;
   border-radius: 1vw;
   padding: 0.5vw 1vw;
@@ -48,14 +48,8 @@
 }
 
 .navPressed {
-  background: red;
-  font-size: 1.7vw;
-  margin-top: 1vw;
-  font-family: "Lato", sans-serif;
-  font-weight: regular;
-  display: block;
-  border-radius: 1vw;
-  padding: 0.5vw 1vw;
-  width: fit-content;
-  cursor: pointer;
+  @extend .navBtn;
+  -moz-box-shadow:    inset 0 0 10px #e0e0e0;
+  -webkit-box-shadow: inset 0 0 10px #e0e0e0;
+  box-shadow:         inset 0 0 10px #e0e0e0;
 }

@@ -1,0 +1,17 @@
+@use "constants" as g;
+
+.container {
+  width: g.$content-width;
+  padding: g.$content-padding;
+  background-color: g.$neutral-col;
+  float: right;
+  min-height: 100vh;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: g.$sans-wide;
+  font-weight: 700;
+}

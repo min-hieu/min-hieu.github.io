@@ -1,0 +1,26 @@
+// sans font - Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// sans font - Open Sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+// serif font - Cormorant Garamond
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+// monospace font - inconsolata
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+// korean font - Noto Sans Korean
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+$navbar-width: 15vw;
+$content-width: calc(100vw - $navbar-width);
+
+$content-padding: 5vw;
+$content-pad-width: calc($content-width - 2 * $content-padding);
+
+$sans-wide: 'Montserrat', sans-serif;
+$sans-thin: "Open Sans", sans-serif;
+$monospace: "Inconsolata", sans-serif;
+$serif: "Cormorant Garamond", serif;
+$korean: "Noto Sans", sans-serif;
+
+$about-col: #fff8e7;
+$neutral-col: #d4d4d4;

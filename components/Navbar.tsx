@@ -13,7 +13,7 @@ const pages = [
         id: "blogs"
     },
     {
-        name: "🕹 Project",
+        name: "🕹 Projects",
         id: "projects"
     },
     {
@@ -31,19 +31,19 @@ const pages = [
 ]
 
 
-const Navbar = ({ currentPage }) => {
+const Navbar = ({ thisPage }) => {
 
     const router = useRouter();
 
     const handleClick = (path) =>
         router.push(path);
 
-    const tabs = (currentPage) => (
+    const tabs = (thisPage) => (
         pages.map(page => (
             <Btn text={page.name}
                 click={(e)=>handleClick(page.id)}
                 cls={
-                    currentPage == page.id ? styles.navPressed : styles.navBtn
+                    thisPage == page.id ? styles.navPressed : styles.navBtn
                 }
             />
         ))
@@ -58,7 +58,7 @@ const Navbar = ({ currentPage }) => {
                 <span className={styles.title}>Oasis</span>
             </div>
             <div className={styles.btnContainer}>
-                { tabs(currentPage) }
+                { tabs(thisPage) }
                 <Btn text="📞 Contact" cls={styles.navBtn}/>
             </div>
         </div>
