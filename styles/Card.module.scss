@@ -1,20 +1,26 @@
 @use "constants" as g;
 
 .container {
-  width: 30vw;
+  width: 30%;
   height: 20vw;
 }
 
 .background {
   width: 100%;
   height: 80%;
-  background-color: black;
+  background-color: grey;
   border-radius: 0.75rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.05rem;
 }
 
 .title {
-  height: 20%;
-  line-height: 100%;
-  text-align: center;
+  height: max(20%, 2rem);
+  margin: auto 0;
+  display: flex;
   font-family: g.$monospace;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
 }

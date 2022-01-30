@@ -1,95 +1,152 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/blogs";
-exports.ids = ["pages/blogs"];
+exports.id = 55;
+exports.ids = [55];
 exports.modules = {
 
-/***/ "./styles/Blog.module.scss":
-/*!*********************************!*\
-  !*** ./styles/Blog.module.scss ***!
-  \*********************************/
+/***/ 645:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"container\": \"Blog_container__SO8k1\",\n\t\"title\": \"Blog_title___OFu6\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvQmxvZy5tb2R1bGUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2Vic2l0ZS8uL3N0eWxlcy9CbG9nLm1vZHVsZS5zY3NzPzc3NGUiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiY29udGFpbmVyXCI6IFwiQmxvZ19jb250YWluZXJfX1NPOGsxXCIsXG5cdFwidGl0bGVcIjogXCJCbG9nX3RpdGxlX19fT0Z1NlwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./styles/Blog.module.scss\n");
+// Exports
+module.exports = {
+	"container": "Blog_container__SO8k1",
+	"title": "Blog_title___OFu6",
+	"cardContainer": "Blog_cardContainer__Mx18H"
+};
+
 
 /***/ }),
 
-/***/ "./styles/Card.module.scss":
-/*!*********************************!*\
-  !*** ./styles/Card.module.scss ***!
-  \*********************************/
+/***/ 180:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"container\": \"Card_container__uGlsq\",\n\t\"background\": \"Card_background__caDxc\",\n\t\"title\": \"Card_title__DWd03\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvQ2FyZC5tb2R1bGUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWJzaXRlLy4vc3R5bGVzL0NhcmQubW9kdWxlLnNjc3M/MjdlNiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJjb250YWluZXJcIjogXCJDYXJkX2NvbnRhaW5lcl9fdUdsc3FcIixcblx0XCJiYWNrZ3JvdW5kXCI6IFwiQ2FyZF9iYWNrZ3JvdW5kX19jYUR4Y1wiLFxuXHRcInRpdGxlXCI6IFwiQ2FyZF90aXRsZV9fRFdkMDNcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./styles/Card.module.scss\n");
+// Exports
+module.exports = {
+	"container": "Card_container__uGlsq",
+	"background": "Card_background__caDxc",
+	"title": "Card_title__DWd03"
+};
+
 
 /***/ }),
 
-/***/ "./styles/Navbar.module.scss":
-/*!***********************************!*\
-  !*** ./styles/Navbar.module.scss ***!
-  \***********************************/
-/***/ ((module) => {
-
-eval("// Exports\nmodule.exports = {\n\t\"container\": \"Navbar_container__n_MIF\",\n\t\"titleContainer\": \"Navbar_titleContainer__8OwAG\",\n\t\"title\": \"Navbar_title__J_BSP\",\n\t\"subtitle\": \"Navbar_subtitle__O9307\",\n\t\"btnContainer\": \"Navbar_btnContainer__U_DSY\",\n\t\"navBtn\": \"Navbar_navBtn__z9hsf\",\n\t\"navPressed\": \"Navbar_navPressed__pBjVl\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvTmF2YmFyLm1vZHVsZS5zY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2Vic2l0ZS8uL3N0eWxlcy9OYXZiYXIubW9kdWxlLnNjc3M/ZDcwMyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJjb250YWluZXJcIjogXCJOYXZiYXJfY29udGFpbmVyX19uX01JRlwiLFxuXHRcInRpdGxlQ29udGFpbmVyXCI6IFwiTmF2YmFyX3RpdGxlQ29udGFpbmVyX184T3dBR1wiLFxuXHRcInRpdGxlXCI6IFwiTmF2YmFyX3RpdGxlX19KX0JTUFwiLFxuXHRcInN1YnRpdGxlXCI6IFwiTmF2YmFyX3N1YnRpdGxlX19POTMwN1wiLFxuXHRcImJ0bkNvbnRhaW5lclwiOiBcIk5hdmJhcl9idG5Db250YWluZXJfX1VfRFNZXCIsXG5cdFwibmF2QnRuXCI6IFwiTmF2YmFyX25hdkJ0bl9fejloc2ZcIixcblx0XCJuYXZQcmVzc2VkXCI6IFwiTmF2YmFyX25hdlByZXNzZWRfX3BCalZsXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./styles/Navbar.module.scss\n");
-
-/***/ }),
-
-/***/ "./components/Card.tsx":
-/*!*****************************!*\
-  !*** ./components/Card.tsx ***!
-  \*****************************/
+/***/ 262:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/Card.module.scss */ \"./styles/Card.module.scss\");\n/* harmony import */ var _styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Card = ()=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n            className: (_styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1___default().container),\n            __source: {\n                fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Card.tsx\",\n                lineNumber: 6,\n                columnNumber: 7\n            },\n            __self: undefined,\n            children: [\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                    className: (_styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1___default().background),\n                    __source: {\n                        fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Card.tsx\",\n                        lineNumber: 7,\n                        columnNumber: 9\n                    },\n                    __self: undefined\n                }),\n                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                    className: (_styles_Card_module_scss__WEBPACK_IMPORTED_MODULE_1___default().title),\n                    __source: {\n                        fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Card.tsx\",\n                        lineNumber: 8,\n                        columnNumber: 9\n                    },\n                    __self: undefined,\n                    children: \"small title\"\n                })\n            ]\n        })\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0NhcmQudHN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUErQztBQUUvQyxLQUFLLENBQUNDLElBQUksT0FBUyxDQUFDO0lBQ2xCLE1BQU07d0ZBRURDLENBQUc7WUFBQ0MsU0FBUyxFQUFFSCwyRUFBZ0I7Ozs7Ozs7O3FGQUM3QkUsQ0FBRztvQkFBQ0MsU0FBUyxFQUFFSCw0RUFBaUI7Ozs7Ozs7O3FGQUNoQ0UsQ0FBRztvQkFBQ0MsU0FBUyxFQUFFSCx1RUFBWTs7Ozs7Ozs4QkFBRSxDQUU5Qjs7Ozs7QUFJUixDQUFDO0FBRUQsaUVBQWVDLElBQUksRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3dlYnNpdGUvLi9jb21wb25lbnRzL0NhcmQudHN4PzdhMzQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHN0eWxlcyBmcm9tIFwiLi4vc3R5bGVzL0NhcmQubW9kdWxlLnNjc3NcIlxuXG5jb25zdCBDYXJkID0gKCkgPT4ge1xuICByZXR1cm4gKFxuICAgIDw+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLmNvbnRhaW5lcn0+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuYmFja2dyb3VuZH0vPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLnRpdGxlfT5cbiAgICAgICAgICBzbWFsbCB0aXRsZVxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvPlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IENhcmQ7XG4iXSwibmFtZXMiOlsic3R5bGVzIiwiQ2FyZCIsImRpdiIsImNsYXNzTmFtZSIsImNvbnRhaW5lciIsImJhY2tncm91bmQiLCJ0aXRsZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Card.tsx\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ Blog)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: ./components/Navbar.jsx + 1 modules
+var Navbar = __webpack_require__(998);
+// EXTERNAL MODULE: ./styles/Card.module.scss
+var Card_module = __webpack_require__(180);
+var Card_module_default = /*#__PURE__*/__webpack_require__.n(Card_module);
+;// CONCATENATED MODULE: ./components/Card.tsx
+
+
+function Card({ thumbnail , title  }) {
+    const backgroundImg = thumbnail ? {
+        background: `url(${thumbnail})`
+    } : {
+        background: `url()`
+    };
+    return(/*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: (Card_module_default()).container,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    className: (Card_module_default()).background,
+                    style: backgroundImg
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    className: (Card_module_default()).title,
+                    children: title
+                })
+            ]
+        })
+    }));
+};
+
+// EXTERNAL MODULE: ./styles/Blog.module.scss
+var Blog_module = __webpack_require__(645);
+var Blog_module_default = /*#__PURE__*/__webpack_require__.n(Blog_module);
+;// CONCATENATED MODULE: ./pages/blogs/index.jsx
+
+
+
+
+const blog_metadata = [
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    },
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    },
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    },
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    },
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    },
+    {
+        thumbnail: null,
+        title: 'this is a test title'
+    }, 
+];
+const CardList = ({ metadata  })=>{
+    return metadata.map(({ thumbnail , title  }, idx)=>/*#__PURE__*/ jsx_runtime_.jsx(Card, {
+            thumbnail: thumbnail,
+            title: title
+        }, idx)
+    );
+};
+function Blog() {
+    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Navbar/* default */.Z, {
+                thisPage: "blogs"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (Blog_module_default()).container,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: (Blog_module_default()).title,
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                            children: "💭 I'm thinking about..."
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: (Blog_module_default()).cardContainer,
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(CardList, {
+                            metadata: blog_metadata
+                        })
+                    })
+                ]
+            })
+        ]
+    }));
+};
+
 
 /***/ }),
 
-/***/ "./components/Navbar.tsx":
-/*!*******************************!*\
-  !*** ./components/Navbar.tsx ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/Navbar.module.scss */ \"./styles/Navbar.module.scss\");\n/* harmony import */ var _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./button */ \"./components/button.tsx\");\n\n\n\n\n\nconst pages = [\n    {\n        name: \"🏠 Home\",\n        id: \"\"\n    },\n    {\n        name: \"📚 Blogs\",\n        id: \"blogs\"\n    },\n    {\n        name: \"🕹 Projets\",\n        id: \"projects\"\n    },\n    {\n        name: \"🤖 About\",\n        id: \"about\"\n    },\n    {\n        name: \"📄 Publications\",\n        id: \"publications\"\n    },\n    {\n        name: \"💼 CV\",\n        id: \"cv\"\n    }, \n];\nconst Navbar = ({ thisPage: thisPage1  })=>{\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();\n    const handleClick = (path)=>router.push(path)\n    ;\n    const tabs = (thisPage)=>pages.map((page)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n                text: page.name,\n                click: (e)=>handleClick(page.id)\n                ,\n                cls: thisPage == page.id ? (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().navPressed) : (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().navBtn),\n                __source: {\n                    fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                    lineNumber: 43,\n                    columnNumber: 13\n                },\n                __self: undefined\n            })\n        )\n    ;\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n        className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().container),\n        __source: {\n            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n            lineNumber: 53,\n            columnNumber: 9\n        },\n        __self: undefined,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().titleContainer),\n                __source: {\n                    fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                    lineNumber: 54,\n                    columnNumber: 13\n                },\n                __self: undefined,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                        className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().subtitle),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                            lineNumber: 55,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: \"This is\"\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                        className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().title),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                            lineNumber: 56,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: \"Hieu's\"\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                        className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().title),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                            lineNumber: 57,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: \"Digital\"\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                        className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().title),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                            lineNumber: 58,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: \"Oasis\"\n                    })\n                ]\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                className: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().btnContainer),\n                __source: {\n                    fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                    lineNumber: 60,\n                    columnNumber: 13\n                },\n                __self: undefined,\n                children: [\n                    tabs(thisPage1),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_button__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n                        text: \"📞 Contact\",\n                        cls: (_styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().navBtn),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/Navbar.tsx\",\n                            lineNumber: 62,\n                            columnNumber: 17\n                        },\n                        __self: undefined\n                    })\n                ]\n            })\n        ]\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL05hdmJhci50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBeUI7QUFDYztBQUNVO0FBQ3ZCO0FBRTFCLEtBQUssQ0FBQ0ksS0FBSyxHQUFHLENBQUM7SUFDWCxDQUFDO1FBQ0dDLElBQUksRUFBRSxDQUFRO1FBQ1hDLEVBQUQsRUFBRSxDQUFFO0lBQ1YsQ0FBQztJQUNELENBQUM7UUFDR0QsSUFBSSxFQUFFLENBQVM7UUFDWkMsRUFBRCxFQUFFLENBQU87SUFDZixDQUFDO0lBQ0QsQ0FBQztRQUNHRCxJQUFJLEVBQUUsQ0FBVztRQUNkQyxFQUFELEVBQUUsQ0FBVTtJQUNsQixDQUFDO0lBQ0QsQ0FBQztRQUNHRCxJQUFJLEVBQUUsQ0FBUztRQUNaQyxFQUFELEVBQUUsQ0FBTztJQUNmLENBQUM7SUFDRCxDQUFDO1FBQ0dELElBQUksRUFBRSxDQUFnQjtRQUNuQkMsRUFBRCxFQUFFLENBQWM7SUFDdEIsQ0FBQztJQUNELENBQUM7UUFDR0QsSUFBSSxFQUFFLENBQU07UUFDVEMsRUFBRCxFQUFFLENBQUk7SUFDWixDQUFDO0FBQ0wsQ0FBQztBQUdELEtBQUssQ0FBQ0MsTUFBTSxJQUFJLENBQUMsQ0FBQ0MsUUFBUSxFQUFSQSxTQUFRLEVBQUMsQ0FBQyxHQUFLLENBQUM7SUFFOUIsS0FBSyxDQUFDQyxNQUFNLEdBQUdSLHNEQUFTO0lBRXhCLEtBQUssQ0FBQ1MsV0FBVyxJQUFJQyxJQUFJLEdBQ3JCRixNQUFNLENBQUNHLElBQUksQ0FBQ0QsSUFBSTs7SUFFcEIsS0FBSyxDQUFDRSxJQUFJLElBQUlMLFFBQVEsR0FDbEJKLEtBQUssQ0FBQ1UsR0FBRyxFQUFDQyxJQUFJLHdFQUNUWiwrQ0FBRztnQkFBQ2EsSUFBSSxFQUFFRCxJQUFJLENBQUNWLElBQUk7Z0JBQ2hCWSxLQUFLLEdBQUdDLENBQUMsR0FBR1IsV0FBVyxDQUFDSyxJQUFJLENBQUNULEVBQUU7O2dCQUMvQmEsR0FBRyxFQUNDWCxRQUFRLElBQUlPLElBQUksQ0FBQ1QsRUFBRSxHQUFHSiw4RUFBaUIsR0FBR0EsMEVBQWE7Ozs7Ozs7Ozs7SUFNdkUsTUFBTSx1RUFDRG9CLENBQUc7UUFBQ0MsU0FBUyxFQUFFckIsNkVBQWdCOzs7Ozs7OztrRkFDM0JvQixDQUFHO2dCQUFDQyxTQUFTLEVBQUVyQixrRkFBcUI7Ozs7Ozs7O3lGQUNoQ3dCLENBQUk7d0JBQUNILFNBQVMsRUFBRXJCLDRFQUFlOzs7Ozs7O2tDQUFFLENBQU87O3lGQUN4Q3dCLENBQUk7d0JBQUNILFNBQVMsRUFBRXJCLHlFQUFZOzs7Ozs7O2tDQUFFLENBQU07O3lGQUNwQ3dCLENBQUk7d0JBQUNILFNBQVMsRUFBRXJCLHlFQUFZOzs7Ozs7O2tDQUFFLENBQU87O3lGQUNyQ3dCLENBQUk7d0JBQUNILFNBQVMsRUFBRXJCLHlFQUFZOzs7Ozs7O2tDQUFFLENBQUs7Ozs7a0ZBRXZDb0IsQ0FBRztnQkFBQ0MsU0FBUyxFQUFFckIsZ0ZBQW1COzs7Ozs7OztvQkFDN0JXLElBQUksQ0FBQ0wsU0FBUTt5RkFDZEwsK0NBQUc7d0JBQUNhLElBQUksRUFBQyxDQUFXO3dCQUFDRyxHQUFHLEVBQUVqQiwwRUFBYTs7Ozs7Ozs7Ozs7O0FBSXhELENBQUM7QUFFRCxpRUFBZUssTUFBTSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2Vic2l0ZS8uL2NvbXBvbmVudHMvTmF2YmFyLnRzeD8xYjgzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyB1c2VSb3V0ZXIgfSBmcm9tICduZXh0L3JvdXRlcic7XG5pbXBvcnQgc3R5bGVzIGZyb20gJy4uL3N0eWxlcy9OYXZiYXIubW9kdWxlLnNjc3MnO1xuaW1wb3J0IEJ0biBmcm9tICcuL2J1dHRvbic7XG5cbmNvbnN0IHBhZ2VzID0gW1xuICAgIHtcbiAgICAgICAgbmFtZTogXCLwn4+gIEhvbWVcIixcbiAgICAgICAgaWQ6IFwiXCJcbiAgICB9LFxuICAgIHtcbiAgICAgICAgbmFtZTogXCLwn5OaIEJsb2dzXCIsXG4gICAgICAgIGlkOiBcImJsb2dzXCJcbiAgICB9LFxuICAgIHtcbiAgICAgICAgbmFtZTogXCLwn5W5IFByb2pldHNcIixcbiAgICAgICAgaWQ6IFwicHJvamVjdHNcIlxuICAgIH0sXG4gICAge1xuICAgICAgICBuYW1lOiBcIvCfpJYgQWJvdXRcIixcbiAgICAgICAgaWQ6IFwiYWJvdXRcIlxuICAgIH0sXG4gICAge1xuICAgICAgICBuYW1lOiBcIvCfk4QgUHVibGljYXRpb25zXCIsXG4gICAgICAgIGlkOiBcInB1YmxpY2F0aW9uc1wiXG4gICAgfSxcbiAgICB7XG4gICAgICAgIG5hbWU6IFwi8J+SvCBDVlwiLFxuICAgICAgICBpZDogXCJjdlwiXG4gICAgfSxcbl1cblxuXG5jb25zdCBOYXZiYXIgPSAoeyB0aGlzUGFnZSB9KSA9PiB7XG5cbiAgICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTtcblxuICAgIGNvbnN0IGhhbmRsZUNsaWNrID0gKHBhdGgpID0+XG4gICAgICAgIHJvdXRlci5wdXNoKHBhdGgpO1xuXG4gICAgY29uc3QgdGFicyA9ICh0aGlzUGFnZSkgPT4gKFxuICAgICAgICBwYWdlcy5tYXAocGFnZSA9PiAoXG4gICAgICAgICAgICA8QnRuIHRleHQ9e3BhZ2UubmFtZX1cbiAgICAgICAgICAgICAgICBjbGljaz17KGUpPT5oYW5kbGVDbGljayhwYWdlLmlkKX1cbiAgICAgICAgICAgICAgICBjbHM9e1xuICAgICAgICAgICAgICAgICAgICB0aGlzUGFnZSA9PSBwYWdlLmlkID8gc3R5bGVzLm5hdlByZXNzZWQgOiBzdHlsZXMubmF2QnRuXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgLz5cbiAgICAgICAgKSlcbiAgICApO1xuXG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jb250YWluZXJ9PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy50aXRsZUNvbnRhaW5lcn0+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPXtzdHlsZXMuc3VidGl0bGV9PlRoaXMgaXM8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPXtzdHlsZXMudGl0bGV9PkhpZXUnczwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e3N0eWxlcy50aXRsZX0+RGlnaXRhbDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e3N0eWxlcy50aXRsZX0+T2FzaXM8L3NwYW4+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuYnRuQ29udGFpbmVyfT5cbiAgICAgICAgICAgICAgICB7IHRhYnModGhpc1BhZ2UpIH1cbiAgICAgICAgICAgICAgICA8QnRuIHRleHQ9XCLwn5OeIENvbnRhY3RcIiBjbHM9e3N0eWxlcy5uYXZCdG59Lz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICk7XG59XG5cbmV4cG9ydCBkZWZhdWx0IE5hdmJhcjtcbiJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZVJvdXRlciIsInN0eWxlcyIsIkJ0biIsInBhZ2VzIiwibmFtZSIsImlkIiwiTmF2YmFyIiwidGhpc1BhZ2UiLCJyb3V0ZXIiLCJoYW5kbGVDbGljayIsInBhdGgiLCJwdXNoIiwidGFicyIsIm1hcCIsInBhZ2UiLCJ0ZXh0IiwiY2xpY2siLCJlIiwiY2xzIiwibmF2UHJlc3NlZCIsIm5hdkJ0biIsImRpdiIsImNsYXNzTmFtZSIsImNvbnRhaW5lciIsInRpdGxlQ29udGFpbmVyIiwic3BhbiIsInN1YnRpdGxlIiwidGl0bGUiLCJidG5Db250YWluZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Navbar.tsx\n");
-
-/***/ }),
-
-/***/ "./components/button.tsx":
-/*!*******************************!*\
-  !*** ./components/button.tsx ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Btn = ({ text , cls , click  })=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n            className: cls,\n            onClick: click,\n            __source: {\n                fileName: \"/Users/charlie/Desktop/min-hieu.github.io/components/button.tsx\",\n                lineNumber: 3,\n                columnNumber: 9\n            },\n            __self: undefined,\n            children: text\n        })\n    })\n;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Btn);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2J1dHRvbi50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBLEtBQUssQ0FBQ0EsR0FBRyxJQUFJLENBQUMsQ0FBQ0MsSUFBSSxHQUFFQyxHQUFHLEdBQUVDLEtBQUssRUFBQyxDQUFDO3VGQUV4QkMsQ0FBSTtZQUFDQyxTQUFTLEVBQUVILEdBQUc7WUFBRUksT0FBTyxFQUFFSCxLQUFLOzs7Ozs7O3NCQUFHRixJQUFJOzs7O0FBR25ELGlFQUFlRCxHQUFHLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWJzaXRlLy4vY29tcG9uZW50cy9idXR0b24udHN4P2M0YjkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgQnRuID0gKHsgdGV4dCwgY2xzLCBjbGljayB9KSA9PiBcbiAgICA8PlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9e2Nsc30gb25DbGljaz17Y2xpY2t9Pnt0ZXh0fTwvc3Bhbj5cbiAgICA8Lz5cblxuZXhwb3J0IGRlZmF1bHQgQnRuO1xuIl0sIm5hbWVzIjpbIkJ0biIsInRleHQiLCJjbHMiLCJjbGljayIsInNwYW4iLCJjbGFzc05hbWUiLCJvbkNsaWNrIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/button.tsx\n");
-
-/***/ }),
-
-/***/ "./pages/blogs/index.tsx":
-/*!*******************************!*\
-  !*** ./pages/blogs/index.tsx ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Navbar_tsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Navbar.tsx */ \"./components/Navbar.tsx\");\n/* harmony import */ var _components_Card_tsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Card.tsx */ \"./components/Card.tsx\");\n/* harmony import */ var _styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/Blog.module.scss */ \"./styles/Blog.module.scss\");\n/* harmony import */ var _styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nconst Blog = ()=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Navbar_tsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                thisPage: \"blogs\",\n                __source: {\n                    fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                    lineNumber: 8,\n                    columnNumber: 7\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n                className: (_styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container),\n                __source: {\n                    fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                    lineNumber: 9,\n                    columnNumber: 7\n                },\n                __self: undefined,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                        className: (_styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3___default().title),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                            lineNumber: 10,\n                            columnNumber: 9\n                        },\n                        __self: undefined,\n                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                            __source: {\n                                fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                                lineNumber: 11,\n                                columnNumber: 11\n                            },\n                            __self: undefined,\n                            children: \"I'm thinking about...\"\n                        })\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                        className: (_styles_Blog_module_scss__WEBPACK_IMPORTED_MODULE_3___default().cardContainer),\n                        __source: {\n                            fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                            lineNumber: 13,\n                            columnNumber: 9\n                        },\n                        __self: undefined,\n                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Card_tsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                            __source: {\n                                fileName: \"/Users/charlie/Desktop/min-hieu.github.io/pages/blogs/index.tsx\",\n                                lineNumber: 14,\n                                columnNumber: 11\n                            },\n                            __self: undefined\n                        })\n                    })\n                ]\n            })\n        ]\n    }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9ibG9ncy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBZ0Q7QUFDSjtBQUNNO0FBRWxELEtBQUssQ0FBQ0csSUFBSSxPQUFTLENBQUM7SUFDbEIsTUFBTTs7aUZBRURILDhEQUFNO2dCQUFDSSxRQUFRLEVBQUMsQ0FBTzs7Ozs7Ozs7a0ZBQ3ZCQyxDQUFHO2dCQUFDQyxTQUFTLEVBQUVKLDJFQUFnQjs7Ozs7Ozs7eUZBQzdCRyxDQUFHO3dCQUFDQyxTQUFTLEVBQUVKLHVFQUFZOzs7Ozs7O3VHQUN6Qk8sQ0FBSTs7Ozs7OztzQ0FBQyxDQUFxQjs7O3lGQUU1QkosQ0FBRzt3QkFBQ0MsU0FBUyxFQUFFSiwrRUFBb0I7Ozs7Ozs7dUdBQ2pDRCw0REFBSTs7Ozs7Ozs7Ozs7OztBQUtmLENBQUM7QUFFRCxpRUFBZUUsSUFBSSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2Vic2l0ZS8uL3BhZ2VzL2Jsb2dzL2luZGV4LnRzeD8xMWM4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBOYXZiYXIgZnJvbSAnLi4vLi4vY29tcG9uZW50cy9OYXZiYXIudHN4J1xuaW1wb3J0IENhcmQgZnJvbSAnLi4vLi4vY29tcG9uZW50cy9DYXJkLnRzeCdcbmltcG9ydCBzdHlsZXMgZnJvbSAnLi4vLi4vc3R5bGVzL0Jsb2cubW9kdWxlLnNjc3MnXG5cbmNvbnN0IEJsb2cgPSAoKSA9PiB7XG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxOYXZiYXIgdGhpc1BhZ2U9XCJibG9nc1wiLz5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuY29udGFpbmVyfT5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy50aXRsZX0+XG4gICAgICAgICAgPHNwYW4+SSdtIHRoaW5raW5nIGFib3V0Li4uPC9zcGFuPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jYXJkQ29udGFpbmVyfT5cbiAgICAgICAgICA8Q2FyZCAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvPlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IEJsb2c7XG4iXSwibmFtZXMiOlsiTmF2YmFyIiwiQ2FyZCIsInN0eWxlcyIsIkJsb2ciLCJ0aGlzUGFnZSIsImRpdiIsImNsYXNzTmFtZSIsImNvbnRhaW5lciIsInRpdGxlIiwic3BhbiIsImNhcmRDb250YWluZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/blogs/index.tsx\n");
-
-/***/ }),
-
-/***/ "next/router":
-/*!******************************!*\
-  !*** external "next/router" ***!
-  \******************************/
+/***/ 853:
 /***/ ((module) => {
 
 "use strict";
@@ -97,10 +154,7 @@ module.exports = require("next/router");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 689:
 /***/ ((module) => {
 
 "use strict";
@@ -108,10 +162,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-runtime":
-/*!************************************!*\
-  !*** external "react/jsx-runtime" ***!
-  \************************************/
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
@@ -126,7 +177,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/blogs/index.tsx"));
+var __webpack_exports__ = __webpack_require__.X(0, [998], () => (__webpack_exec__(262)));
 module.exports = __webpack_exports__;
 
 })();

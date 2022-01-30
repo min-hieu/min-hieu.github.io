@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Navbar from '../components/Navbar.tsx'
+import Navbar from '../components/Navbar.jsx'
 import styles from '../styles/About.module.scss'
 import profile from '../assets/hieu.png'
 

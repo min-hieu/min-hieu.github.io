@@ -10,8 +10,17 @@
 
 .title {
   width: 100%;
+  margin-bottom: 2rem;
   text-align: center;
   font-size: 2rem;
   font-family: g.$sans-wide;
   font-weight: 700;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vh;
 }
