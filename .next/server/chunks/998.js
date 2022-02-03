@@ -118,8 +118,7 @@ const Canvas = ()=>{
         size
     ]);
     return(/*#__PURE__*/ jsx_runtime_.jsx("canvas", {
-        ref: canvasRef,
-        ...props
+        ref: canvasRef
     }));
 };
 function Navbar({ thisPage: thisPage1  }) {

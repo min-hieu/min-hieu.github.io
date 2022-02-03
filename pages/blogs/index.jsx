@@ -30,7 +30,7 @@ const blog_metadata = [
 ]
 
 const CardList = ({ metadata }) => {
-  return metadata.map(({thumbnail, title}, idx) => 
+  return metadata.map(({thumbnail, title}, idx) =>
     <Card key={idx} thumbnail={thumbnail} title={title} />
   )
 }

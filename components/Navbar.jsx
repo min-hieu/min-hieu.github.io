@@ -45,7 +45,7 @@ function useWindowSize() {
           height: window.innerHeight,
         });
       }
-    
+
       window.addEventListener("resize", handleResize);
       handleResize();
       return () => window.removeEventListener("resize", handleResize);
@@ -58,7 +58,7 @@ const Canvas = () => {
   const canvasRef = useRef(null);
   const size = useWindowSize();
   const [angle, setAngle] = useState(0);
-  
+
   const draw = (ctx,img,an) => {
     setAngle((angle + 20) % (Math.PI * 2));
     ctx.save();
@@ -67,11 +67,11 @@ const Canvas = () => {
     ctx.drawImage(img, 100, 100);
     ctx.restore();
   }
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    
+
     canvas.width = size.width * 0.15 * 2;
     canvas.height = size.width * 0.3;
 
@@ -80,9 +80,9 @@ const Canvas = () => {
 
     draw(ctx,img);
 
-  }, [ size ]) 
+  }, [ size ])
 
-  return <canvas ref={canvasRef} {...props}/>
+  return <canvas ref={canvasRef}/>
 }
 
 
