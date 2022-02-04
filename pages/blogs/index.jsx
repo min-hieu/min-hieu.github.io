@@ -27,6 +27,30 @@ const blog_metadata = [
     thumbnail: null,
     title: 'this is a test title'
   },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
+  {
+    thumbnail: null,
+    title: 'this is a test title'
+  },
 ]
 
 const CardList = ({ metadata }) => {
