@@ -5,22 +5,32 @@
   height: 20vw;
 }
 
-.background {
+.bgContainer {
   width: 100%;
   height: 80%;
-  background-color: grey;
   border-radius: 0.75rem;
   border-style: solid;
   border-color: black;
   border-width: 0.15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  overflow: hidden;
+}
+
+.bgImg {
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100%;
 }
 
 .title {
   height: max(20%, 2rem);
-  margin: auto 0;
   display: flex;
+  margin: auto 0;
   font-family: g.$monospace;
-  font-size: 1rem;
+  font-size: min(.9rem, 1.5vw);
   align-items: center;
   justify-content: center;
 }

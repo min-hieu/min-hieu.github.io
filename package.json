@@ -11,9 +11,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "firebase": "^9.6.1",
     "firebase-functions": "^3.16.0",
-    "next": "12.0.7",
+    "next": "^12.0.10",
+    "notion-client": "^4.15.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-notion": "^0.10.0",

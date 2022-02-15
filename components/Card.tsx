@@ -6,15 +6,19 @@ interface cardProp {
 }
 
 export default function Card({ thumbnail, title }: cardProp) {
-  const backgroundImg = 
+  const bgStyle = 
     thumbnail 
-	? {background: `url(${thumbnail})`} 
-	: {background: `url()`}
+	? {backgroundImage: `url(${thumbnail})`} 
+	: {backgroundImage: `url()`}
   
+
+  console.log(thumbnail)
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.background} style={backgroundImg}/>
+        <div className={styles.bgContainer} >
+          <img src={thumbnail} className={styles.bgImg}/>
+        </div>
         <div className={styles.title}>
           {title}
         </div>

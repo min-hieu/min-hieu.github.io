@@ -1,7 +1,7 @@
-import { useSpring, animated, easings } from 'react-spring';
 import { useRouter } from 'next/router';
 import styles from '../styles/Navbar.module.scss';
 import Btn from './button';
+import Boat from './Boat';
 
 const pages = [
     {
@@ -29,27 +29,6 @@ const pages = [
         id: "cv"
     },
 ]
-
-const Boat = () => {
-    const transform = useSpring({
-        loop: { reverse: true },
-        from: {
-            rotateZ: -10,
-            width: "5vw",
-            left: "8vw",
-            top: "10vw",
-            position: 'absolute',
-        },
-        to: {
-            rotateZ: 10
-        },
-        config: {
-            duration: 1000,
-            easing: easings.easeInQuad,
-        },
-    })
-    return <animated.img src='/canoe.png' style={transform}/>
-}
 
 export default function Navbar({ thisPage }){
 
