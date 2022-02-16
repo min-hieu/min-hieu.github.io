@@ -2,36 +2,30 @@ import { Collection, CollectionRow, NotionRenderer } from 'react-notion-x';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar';
-import Card from '../../components/Card';
 import styles from '../../styles/Blog.module.scss';
 
+export async function getServerSideProps(ctx) {
+  const blogPage = await axios.get('/api/notionAPI')
+  const blogData = blogPage
 
-const CardList = ({ metadata }) => {
-  return metadata.map((page, idx) =>
-    <Card key={idx} thumbnail={page?.thumbnail ? page.thumbnail : '/noimage.png'} title={page?.title} />
-  )
+  return {
+    props: {
+      data: blogData
+    }, 
+  }
 }
 
-
-export default function Blog() {
+export default function Blog(props) {
   const [metadata, setMetadata] = useState(null)
   const [recordMap, setRecordMap] = useState(null)
+  console.log(props)
 
   const fetchNotion = () => axios.get('/api/notionAPI')
 
   useEffect(() => {
     fetchNotion().then(({ data })=>{
       const pages = data.data.block
-
       setRecordMap(data.data)
-
-      setMetadata(Object.keys(pages).map((id) => 
-        pages[id].value.type === "page" ? {
-          thumbnail: pages[id].value.format?.page_icon,
-          title: pages[id].value.properties.title[0][0]
-        } : null).slice(1)
-      )
-
     })
   }, [])
 

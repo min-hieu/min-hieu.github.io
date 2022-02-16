@@ -25,8 +25,8 @@ const pages = [
         id: "publications"
     },
     {
-        name: "💼 CV",
-        id: "cv"
+        name: "💼 Resume",
+        id: "resume"
     },
 ]
 
