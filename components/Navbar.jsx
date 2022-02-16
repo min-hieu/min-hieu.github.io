@@ -6,7 +6,7 @@ import Boat from './Boat';
 const pages = [
     {
         name: "🏠 Home",
-        id: ""
+        id: "/"
     },
     {
         name: "📚 Blogs",

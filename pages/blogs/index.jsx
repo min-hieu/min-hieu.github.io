@@ -4,17 +4,6 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar';
 import styles from '../../styles/Blog.module.scss';
 
-export async function getServerSideProps(ctx) {
-  const blogPage = await axios.get('/api/notionAPI')
-  const blogData = blogPage
-
-  return {
-    props: {
-      data: blogData
-    }, 
-  }
-}
-
 export default function Blog(props) {
   const [metadata, setMetadata] = useState(null)
   const [recordMap, setRecordMap] = useState(null)
