@@ -5,28 +5,28 @@ import Boat from './Boat';
 
 const pages = [
     {
-        name: "🏠 Home",
-        id: "/"
+      name: "🏠 Home",
+      id: "/"
     },
     {
-        name: "📚 Blogs",
-        id: "blogs"
+      name: "📚 Blogs",
+      id: "/blogs"
     },
     {
-        name: "🕹 Projects",
-        id: "projects"
+      name: "🕹 Projects",
+      id: "/projects"
     },
     {
-        name: "🤖 About",
-        id: "about"
+      name: "🤖 About",
+      id: "/about"
     },
     {
-        name: "📄 Publications",
-        id: "publications"
+      name: "📄 Publications",
+      id: "/publications"
     },
     {
-        name: "💼 Resume",
-        id: "resume"
+      name: "💼 Resume",
+      id: "/resume"
     },
 ]
 

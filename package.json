@@ -14,6 +14,7 @@
     "axios": "^0.26.0",
     "next": "^12.0.10",
     "notion-client": "^4.15.0",
+    "prism-themes": "^1.9.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",

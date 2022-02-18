@@ -4,20 +4,19 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar';
 import styles from '../../styles/Blog.module.scss';
 
-export default function Blog(props) {
-  const [metadata, setMetadata] = useState(null)
-  const [recordMap, setRecordMap] = useState(null)
-  console.log(props)
+export async function getServerSideProps() {
+  const API_URL = 'http://localhost:3000/api/blogs'
 
-  const fetchNotion = () => axios.get('/api/notionAPI')
+  const res = await fetch(API_URL)
+  const fetchedData = await res.json()
+  const data = fetchedData.data
 
-  useEffect(() => {
-    fetchNotion().then(({ data })=>{
-      const pages = data.data.block
-      setRecordMap(data.data)
-    })
-  }, [])
+  return {
+    props: { recordMap: data }
+  }
+}
 
+export default function Blog({ recordMap }) {
   if (recordMap) {
     return (
       <>

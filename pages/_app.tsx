@@ -6,7 +6,7 @@ import 'react-notion-x/src/styles.css'
 import '../styles/customNotion.scss'
 
 // used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prism-themes/themes/prism-gruvbox-dark.css'
 
 // used for collection views (optional)
 import 'rc-dropdown/assets/index.css'

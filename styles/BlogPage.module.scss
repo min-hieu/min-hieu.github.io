@@ -1,0 +1,13 @@
+@use "constants" as g;
+
+.container {
+  width: g.$content-width;
+  display: flex;
+  justify-content: center;
+  float: right;
+}
+
+.notionContainer {
+  width: min(70vw, 45rem);
+  margin: 10vh 0;
+}

@@ -1,12 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/about": "pages/about.html",
-  "/api": "pages/api.js",
-  "/api/notionAPI": "pages/api/notionAPI.js",
-  "/blogs": "pages/blogs.html",
-  "/": "pages/index.html",
-  "/publications": "pages/publications.html",
-  "/resume": "pages/resume.html",
   "/_document": "pages/_document.js"
 }
