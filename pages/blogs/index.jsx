@@ -4,8 +4,9 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar';
 import styles from '../../styles/Blog.module.scss';
 
+const API_URL = `${process.env.BASE_URL}/api/blogs`
+
 export async function getServerSideProps() {
-  const API_URL = 'http://localhost:3000/api/blogs'
 
   const res = await fetch(API_URL)
   const fetchedData = await res.json()
@@ -31,7 +32,7 @@ export default function Blog({ recordMap }) {
             darkMode={false}
             showTableOfContent={true}
             customImages={true}
-            mapPageUrl={id=>`http://localhost:3000/blogs/${id}`}
+            mapPageUrl={id=>`${process.env.BASE_URL}/${id}`}
             components={{
               image: ({
                 src,

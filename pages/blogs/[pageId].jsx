@@ -1,11 +1,22 @@
-import { Code, Equation, NotionRenderer } from 'react-notion-x'
+import { 
+  TableOfContent, 
+  Code,
+  Page,
+  Equation,
+  CollectionRow,
+  CollectionView,
+  NotionRenderer
+} from 'react-notion-x'
+import { getBlockTitle } from 'notion-utils'
 import styles from '../../styles/BlogPage.module.scss'
 import Navbar from '../../components/Navbar.jsx'
+
+const baseURL = `${process.env.BASE_URL}/api/blogs/`
 
 export async function getServerSideProps(ctx) {
   const { pageId } = ctx.query
 
-  const API_URL = `http://localhost:3000/api/blogs/${pageId}`
+  const API_URL = baseURL + pageId
 
   const res = await fetch(API_URL)
   const fetchedData = await res.json()
@@ -18,11 +29,17 @@ export async function getServerSideProps(ctx) {
 
 export default function BlogPage({ recordMap }) {
 
+  const keys = Object.keys(recordMap?.block || {})
+  const block = recordMap?.block?.[keys[0]]?.value
+
+  const title = getBlockTitle(block, recordMap)
+
   return (
     <>
       <Navbar />
       <div className={styles.container}>
         <div className={styles.notionContainer}>
+          <span className={styles.notionTitle}>{ title }</span>
           <NotionRenderer
             recordMap={recordMap}
             mapPageUrl={id=>`http://localhost:3000/blogs/${id}`}
@@ -30,7 +47,10 @@ export default function BlogPage({ recordMap }) {
             darkMode={false}
             components={{
               equation: Equation,
-              code: Code
+              code: Code,
+              page: Page,
+              collectionView: CollectionView,
+              collectionRow: CollectionRow,
             }}
           />
         </div>
