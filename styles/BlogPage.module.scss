@@ -10,6 +10,7 @@
 .notionContainer {
   display: flex;
   width: min(70vw, 45rem);
+  line-height: 1.5;
   margin: 10vh 0;
   justify-content: center;
   flex-direction: column;
@@ -21,7 +22,7 @@
   font-size: 2.5em;
   font-family: g.$sans-wide;
   font-weight: 800;
-  line-height: 0.8;
+  line-height: 1;
   margin-top: 2vh;
   margin-bottom: 3vh;
 }

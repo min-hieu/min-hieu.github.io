@@ -1,5 +1,6 @@
 import { Collection, CollectionRow, NotionRenderer } from 'react-notion-x';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import axios from 'axios';
 import Navbar from '../../components/Navbar';
 import styles from '../../styles/Blog.module.scss';
@@ -21,6 +22,9 @@ export default function Blog({ recordMap }) {
   if (recordMap) {
     return (
       <>
+        <Head>
+          <title>Hieu's Thought</title>
+        </Head>
         <Navbar thisPage="blogs"/>
         <div className={styles.container}>
           <div className={styles.title}>
