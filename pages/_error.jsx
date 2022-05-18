@@ -4,7 +4,7 @@ function Error({ statusCode }) {
   
   return (
     <div className={styles.container}>
-      <iframe src="https://archive.org/embed/DukeNukem" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+      <iframe src="https://archive.org/embed/DukeNukem" width="560" height="384" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
       <span className={styles.errorMsg}>
         {statusCode
           ? `An error ${statusCode} occurred on server `

@@ -32,7 +32,7 @@ export default function Blog({ recordMap }) {
             darkMode={false}
             showTableOfContent={true}
             customImages={true}
-            mapPageUrl={id=>`${process.env.BASE_URL}/${id}`}
+            mapPageUrl={id=>`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${id}`}
             components={{
               image: ({
                 src,

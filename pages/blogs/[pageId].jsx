@@ -11,12 +11,11 @@ import { getBlockTitle } from 'notion-utils'
 import styles from '../../styles/BlogPage.module.scss'
 import Navbar from '../../components/Navbar.jsx'
 
-const BLOG_URL = `${process.env.BASE_URL}/api/blogs`
-
 export async function getServerSideProps(ctx) {
   const { pageId } = ctx.query
 
-  const API_URL = `${BLOG_URL}/${pageId}`
+  const API_URL = `${process.env.BASE_URL}/api/blogs/${pageId}`
+  console.log(`api_url: ${API_URL}`);
 
   const res = await fetch(API_URL)
   const fetchedData = await res.json()
@@ -42,7 +41,7 @@ export default function BlogPage({ recordMap }) {
           <span className={styles.notionTitle}>{ title }</span>
           <NotionRenderer
             recordMap={recordMap}
-            mapPageUrl={id=>`${BLOG_URL}/${id}`}
+            mapPageUrl={id=>`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${id}`}
             fullPage={false}
             darkMode={false}
             components={{
