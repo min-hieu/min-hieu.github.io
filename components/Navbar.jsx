@@ -28,6 +28,10 @@ const pages = [
       name: "💼 Resume",
       id: "/resume"
     },
+    {
+      name: "📞 Contact",
+      id: "/contact"
+    },
 ]
 
 export default function Navbar({ thisPage }){
@@ -60,7 +64,6 @@ export default function Navbar({ thisPage }){
             <Boat />
             <div className={styles.btnContainer}>
                 { tabs(thisPage) }
-                <Btn text="📞 Contact" cls={styles.navBtn}/>
             </div>
         </div>
    );

@@ -1,19 +1,26 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Navbar from '../components/Navbar'
+import wip from '../public/wip.png'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Hieu's Digital Oasis</title>
         <meta name="description" content="Hieu's Personal Website, stayput robots!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main} />
       <Navbar thisPage="/" />
-    </div>
+      <div className={styles.container}>
+        <Image 
+          src={wip}
+          alt="work in progress" 
+        />
+      </div>
+    </>
   )
 }
 

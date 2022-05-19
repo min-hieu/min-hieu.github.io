@@ -1,13 +1,20 @@
+@use "constants" as g;
+
 .container {
-  padding: 0 2rem;
+  position: absolute;
+  right: 0;
+  display: flex;
+  height: 100%;
+  width: g.$content-width;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .main {
-  background: grey;
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
+  background: grey;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,9 +22,9 @@
 
 .footer {
   display: flex;
+  border-top: 1px solid #eaeaea;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }
