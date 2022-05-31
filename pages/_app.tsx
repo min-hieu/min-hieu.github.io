@@ -8,9 +8,6 @@ import '../styles/customNotion.scss'
 // used for code syntax highlighting (optional)
 import 'prism-themes/themes/prism-gruvbox-dark.css'
 
-// used for collection views (optional)
-import 'rc-dropdown/assets/index.css'
-
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css'
 

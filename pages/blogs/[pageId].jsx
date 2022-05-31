@@ -1,15 +1,12 @@
 import { 
   TableOfContent, 
-  Code,
   Page,
-  Equation,
-  CollectionRow,
-  CollectionView,
   NotionRenderer
 } from 'react-notion-x'
 import { getBlockTitle } from 'notion-utils'
 import styles from '../../styles/BlogPage.module.scss'
 import Navbar from '../../components/Navbar.jsx'
+import dynamic from 'next/dynamic'
 
 export async function getServerSideProps(ctx) {
   const { pageId } = ctx.query
@@ -25,6 +22,18 @@ export async function getServerSideProps(ctx) {
     props: { recordMap: data}
   }
 }
+
+const Code = dynamic(() =>
+  import('react-notion-x/build/third-party/code').then((m) => m.Code)
+)
+const Collection = dynamic(() =>
+  import('react-notion-x/build/third-party/collection').then(
+    (m) => m.Collection
+  )
+)
+const Equation = dynamic(() =>
+  import('react-notion-x/build/third-party/equation').then((m) => m.Equation)
+)
 
 export default function BlogPage({ recordMap }) {
 
@@ -45,11 +54,9 @@ export default function BlogPage({ recordMap }) {
             fullPage={false}
             darkMode={false}
             components={{
-              equation: Equation,
-              code: Code,
               page: Page,
-              collectionView: CollectionView,
-              collectionRow: CollectionRow,
+              Equation,
+              Code,
             }}
           />
         </div>

@@ -1,6 +1,8 @@
-import { Collection, CollectionRow, NotionRenderer } from 'react-notion-x';
+import { NotionRenderer } from 'react-notion-x';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import axios from 'axios';
 import Navbar from '../../components/Navbar';
 import styles from '../../styles/Blog.module.scss';
@@ -17,6 +19,15 @@ export async function getServerSideProps() {
     props: { recordMap: data }
   }
 }
+
+const Code = dynamic(() =>
+  import('react-notion-x/build/third-party/code').then((m) => m.Code)
+)
+const Collection = dynamic(() =>
+  import('react-notion-x/build/third-party/collection').then(
+    (m) => m.Collection
+  )
+)
 
 export default function Blog({ recordMap }) {
   if (recordMap) {
@@ -35,38 +46,10 @@ export default function Blog({ recordMap }) {
             fullPage={false}
             darkMode={false}
             showTableOfContent={true}
-            customImages={true}
             mapPageUrl={id=>`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${id}`}
             components={{
-              image: ({
-                src,
-                alt,
-
-                height,
-                width,
-
-                className,
-                style,
-                loading,
-                decoding,
-                
-                ref,
-                onLoad
-              }) => (
-                <img
-                className={className}
-                style={style}
-                src={src}
-                ref={ref}
-                width={width}
-                height={height}
-                loading='lazy'
-                alt={alt}
-                decoding='async'
-              />
-              ),
-              collection: Collection,
-              collectionRow: CollectionRow
+              nextImage: Image,
+              Collection,
             }}
           />
         </div>

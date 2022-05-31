@@ -13,12 +13,12 @@
   "dependencies": {
     "axios": "^0.26.0",
     "next": "^12.0.10",
-    "notion-client": "^4.15.0",
+    "notion-client": "^6.12.9",
     "prism-themes": "^1.9.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-notion-x": "^4.15.0",
+    "react-notion-x": "^6.12.9",
     "react-pdf": "^5.7.1",
     "react-spring": "^9.4.2",
     "sass": "^1.45.1"

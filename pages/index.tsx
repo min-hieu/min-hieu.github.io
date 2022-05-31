@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Navbar from '../components/Navbar'
-import wip from '../public/wip.png'
 
 const Home: NextPage = () => {
   return (
@@ -16,8 +15,9 @@ const Home: NextPage = () => {
       <Navbar thisPage="/" />
       <div className={styles.container}>
         <Image 
-          src={wip}
+          src="/wip.png"
           alt="work in progress" 
+          layout="fill"
         />
       </div>
     </>
