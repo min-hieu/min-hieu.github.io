@@ -1,0 +1,20 @@
+{
+  "blogs/[pageId].jsx -> react-notion-x/build/third-party/code": {
+    "id": "blogs/[pageId].jsx -> react-notion-x/build/third-party/code",
+    "files": [
+      "static/chunks/node_modules_react-notion-x_build_third-party_code_js.js"
+    ]
+  },
+  "blogs/[pageId].jsx -> react-notion-x/build/third-party/collection": {
+    "id": "blogs/[pageId].jsx -> react-notion-x/build/third-party/collection",
+    "files": [
+      "static/chunks/node_modules_react-notion-x_build_third-party_collection_js.js"
+    ]
+  },
+  "blogs/[pageId].jsx -> react-notion-x/build/third-party/equation": {
+    "id": "blogs/[pageId].jsx -> react-notion-x/build/third-party/equation",
+    "files": [
+      "static/chunks/node_modules_react-notion-x_build_third-party_equation_js.js"
+    ]
+  }
+}
