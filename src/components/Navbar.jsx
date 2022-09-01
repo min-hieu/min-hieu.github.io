@@ -1,70 +1,100 @@
-import { useRouter } from 'next/router';
-import styles from '../styles/Navbar.module.scss';
-import Btn from './button';
-import Boat from './Boat';
+import * as React from 'react';
+import * as styles from '../styles/Navbar.module.scss';
+import { StaticImage } from "gatsby-plugin-image";
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import DarkToggle from './DarkToggle';
 
 const pages = [
     {
-      name: "🏠 Home",
-      id: "/"
+      icon: "../icons/house.svg",
+      title: "Home",
+      path: "/"
     },
     {
-      name: "📚 Blogs",
-      id: "/blogs"
+      icon: "../icons/pen.svg",
+      title: "Blogs",
+      path: "/blogs"
     },
     {
-      name: "🕹 Projects",
-      id: "/projects"
+      icon: "../icons/cup.svg",
+      title: "Projects",
+      path: "/projects"
     },
     {
-      name: "🤖 About",
-      id: "/about"
+      icon: "../icons/cup.svg",
+      title: "Publications",
+      path: "/publications"
     },
     {
-      name: "📄 Publications",
-      id: "/publications"
+      icon: "../icons/nav.svg",
+      title: "Resume",
+      path: "/resume"
     },
     {
-      name: "💼 Resume",
-      id: "/resume"
-    },
-    {
-      name: "📞 Contact",
-      id: "/contact"
+      icon: "../icons/nav.svg",
+      title: "Contact",
+      path: "/contact"
     },
 ]
 
-export default function Navbar({ thisPage }){
 
-    const router = useRouter();
+export default function Navbar({ thisPathName, light, setLight }){
 
-    const handleClick = (path) =>
-        router.push(path);
+  const [toggleNav, setToggleNav] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 950px)' })
 
-    const tabs = (thisPage) => (
-        pages.map((page,idx) => (
-            <Btn text={page.name}
-                key={idx}
-                click={()=>handleClick(page.id)}
-                cls={
-                    thisPage == page.id ? styles.navPressed : styles.navBtn
-                }
-            />
-        ))
-    );
+  useEffect(()=>console.log(styles.navToggler),[isTabletOrMobile])
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.titleContainer}>
-                <span className={styles.subtitle}>This is</span>
-                <span className={styles.title}>Hieu's</span>
-                <span className={styles.title}>Digital</span>
-                <span className={styles.title}>Oasis</span>
-            </div>
-            <Boat />
-            <div className={styles.btnContainer}>
-                { tabs(thisPage) }
-            </div>
+  const tabs = 
+    pages.map((page,idx) => (
+      <div className={light ? styles.navBtn : styles.navBtnDark}>
+        <span 
+          key={idx} 
+          path={page.path} 
+        >
+          {page.title}
+        </span>
+      </div>
+    ));
+
+  const navToggler = 
+    <>
+      <div 
+        className={`${styles.navIconContainer} ${styles.navToggler}`}
+        onClick={()=>setToggleNav(!toggleNav)}
+      >
+        <div className={light ? styles.navIcon : styles.navIconDark }>
+          <StaticImage 
+            src="../icons/nav.svg"
+            path="/about" 
+            alt="nav-icon"
+          />
         </div>
-   );
+      </div>
+      {toggleNav ? 
+        <div className={
+          light 
+            ? styles.btnContainerMobile 
+            : styles.btnContainerMobileDark}
+        >
+            { tabs }
+        </div> : null
+      }
+    </>
+
+
+  return (
+      <div className={light ? styles.container : styles.containerDark}>
+        <div className={light ? styles.navLight : styles.navDark}>
+          <DarkToggle light={!light} setLight={setLight} />
+        </div>
+        { isTabletOrMobile ? 
+          navToggler : 
+          <div className={styles.btnContainer}>
+              { tabs }
+          </div>
+        }
+      </div>
+ );
 }

@@ -1,7 +1,7 @@
 @use "constants" as g;
 
 .pdfContainer {
-  width: g.$content-width;
+  width: 100%;
   user-select: none;
   position: absolute;  
   right: 0;

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `mysite`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Hieu's Digital Oasis`,
+    siteUrl: `https://www.min-hieu.github.io`
   },
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

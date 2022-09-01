@@ -2041,12 +2041,10 @@ function getForwards(collectedScripts) {
 
 exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=default */ "./.cache/dev-404-page.js?export=default")),
-  "component---src-pages-404-js": () => __webpack_require__.e(/*! import() | component---src-pages-404-js */ "component---src-pages-404-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.js?export=default */ "./src/pages/404.js?export=default")),
   "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=default */ "./src/pages/index.js?export=default"))
 };
 exports.head = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-jshead */ "component---cache-dev-404-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=head */ "./.cache/dev-404-page.js?export=head")),
-  "component---src-pages-404-js": () => __webpack_require__.e(/*! import() | component---src-pages-404-jshead */ "component---src-pages-404-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.js?export=head */ "./src/pages/404.js?export=head")),
   "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-jshead */ "component---src-pages-index-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=head */ "./src/pages/index.js?export=head"))
 };
 
@@ -7851,7 +7849,7 @@ function o(){return o=Object.assign?Object.assign.bind():function(t){for(var e=1
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;

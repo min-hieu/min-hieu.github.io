@@ -1,71 +1,112 @@
 @use "constants" as g;
 
 .container {
-  width: g.$navbar-width;
-  height: 100%;
+  width: 100%;
+  height: g.$navbar-height;
   position: fixed;
   top: 0;
   left: 0;
-  background: white;
+  user-select: false;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.titleContainer {
-  position: absolute;
-  top: 0;
-  margin-left: 2vw;
-  margin-top: 2vw;
+.containerDark {
+  @extend .container;
 }
 
-.navBarIcon {
-  width: 5vw;
-  position: absolute;
-  left: 8vw;
-  top: 9.5vw;
+.navToggler {
+  margin-right: calc(g.$navbar-height * 0.4);
 }
 
-.canvas {
-  position: absolute;
-  transform-origin: top left;
-  transform: scale(0.5);
-  opacity: 0.3;
-  background: green;
+.navLight {
+  width: calc(g.$navbar-height * 0.25);
+  margin-left: calc(g.$navbar-height * 0.4);
 }
 
-.title {
-  display: block;
-  font-size: 3vw;
-  font-family: g.$sans-wide;
-  line-height: 3vw;
-  font-weight: bold;
+.navDark {
+  @extend .navLight;
+  filter: invert(100%);
 }
 
-.subtitle {
-  font-size: 1.5vw;
-  font-family: g.$sans-thin;
-  font-weight: light;
+.navIconContainer {
+  border-style: solid;
+  border-radius: 1vw;
+  border-color: whitesmoke;
+  height: calc(g.$navbar-height * 0.45);
+  width: calc(g.$navbar-height * 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navIcon {
+  width: calc(g.$navbar-height * 0.25);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navIconDark {
+  @extend .navIcon;
+  filter: invert(100%);
 }
 
 .btnContainer {
-  position: absolute;
-  bottom: 0;
-  margin-left: .85vw;
-  margin-bottom: 2vw;
+  display: flex;
+  gap: calc(g.$navbar-height / 5);
+  flex-direction: row;
+  align-items: center;
+  margin-right: calc(g.$navbar-height * 0.4);
+}
+
+.btnContainerMobile {
+  position: fixed;
+  top: g.$navbar-height;
+  right: calc(g.$navbar-height * 0.4);
+  display: flex;
+  gap: calc(g.$navbar-height / 5);
+  flex-direction: column;
+  align-items: flex-end;
+  background: g.$neutral-col;
+  padding: calc(g.$navbar-height / 5);
+}
+
+.btnContainerMobileDark {
+  @extend .btnContainerMobile;
+  background: g.$neutral-col-dark;
 }
 
 .navBtn {
+  border-style: solid;
   border-radius: 1vw;
+  border-color: transparent;
   width: fit-content;
+  height: calc(g.$navbar-height * 0.3);
   display: block;
   cursor: pointer;
-  font-size: 1.7vw;
-  margin-top: 1vw;
-  font-family: g.$sans-thin;
-  font-weight: 200;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(g.$navbar-height * 0.2);
+  font-family: g.$monospace;
+  font-weight: 400;
   padding: 0.5vw 1vw;
+  margin: 0 0.2vw;
+  color: g.$font-col-light;
+}
+
+.navBtnDark {
+  @extend .navBtn;
+  color: g.$font-col-dark;
 }
 
 .navBtn:hover {
-  background: #f0f0f0;
+  border-color: #dadada;
 }
 
 .navPressed {

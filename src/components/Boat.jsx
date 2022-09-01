@@ -1,3 +1,4 @@
+import React from 'react'
 import { useSpring, animated, easings } from 'react-spring';
 
 export default function Boat() {
