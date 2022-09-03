@@ -105,6 +105,14 @@
   color: g.$font-col-dark;
 }
 
+.navBtnPressed {
+  border-color: black;
+}
+
+.navBtnPressedDark {
+  border-color: white;
+}
+
 .navBtn:hover {
   border-color: #dadada;
 }

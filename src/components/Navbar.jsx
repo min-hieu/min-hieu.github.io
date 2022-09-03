@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import DarkToggle from './DarkToggle';
+import {navigate} from 'gatsby';
 
 const pages = [
     {
@@ -14,17 +15,12 @@ const pages = [
     {
       icon: "../icons/pen.svg",
       title: "Blogs",
-      path: "/blogs"
+      path: "/blog/"
     },
     {
       icon: "../icons/cup.svg",
       title: "Projects",
-      path: "/projects"
-    },
-    {
-      icon: "../icons/cup.svg",
-      title: "Publications",
-      path: "/publications"
+      path: "/project"
     },
     {
       icon: "../icons/nav.svg",
@@ -39,7 +35,7 @@ const pages = [
 ]
 
 
-export default function Navbar({ thisPathName, light, setLight }){
+export default function Navbar({ thisPage, light, setLight }){
 
   const [toggleNav, setToggleNav] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 950px)' })
@@ -48,10 +44,15 @@ export default function Navbar({ thisPathName, light, setLight }){
 
   const tabs = 
     pages.map((page,idx) => (
-      <div className={light ? styles.navBtn : styles.navBtnDark}>
+      <div className={
+        `${light ? styles.navBtn : styles.navBtnDark}
+         ${thisPage == page.path ? 
+           (light ? styles.navBtnPressed : styles.navBtnPressedDark)
+           : null}`
+        }>
         <span 
           key={idx} 
-          path={page.path} 
+          onClick={() => navigate(page.path)} 
         >
           {page.title}
         </span>

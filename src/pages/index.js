@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState } from "react"
 import * as styles from '../styles/Home.module.scss'
 import Navbar from '../components/Navbar'
+import { Link } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -9,7 +10,7 @@ const IndexPage = () => {
 
   return (
     <div className={light ? styles.mainCon : styles.mainConDark}>
-      <Navbar location="/" light={light} setLight={setLight}/>
+      <Navbar thisPage="/" light={light} setLight={setLight}/>
       <div className={styles.main}>
         <div className={styles.left}>
         </div>
