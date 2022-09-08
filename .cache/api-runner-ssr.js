@@ -3,6 +3,10 @@ var plugins = [{
       plugin: require('/Users/charlie/Desktop/min-hieu.github.io/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
+      name: 'default-site-plugin',
+      plugin: require('/Users/charlie/Desktop/min-hieu.github.io/gatsby-ssr.js'),
+      options: {"plugins":[]},
+    },{
       name: 'partytown',
       plugin: require('/Users/charlie/Desktop/min-hieu.github.io/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},

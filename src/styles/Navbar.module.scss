@@ -1,8 +1,10 @@
 @use "constants" as g;
 
+$navU: g.$navbar-height;
+
 .container {
   width: 100%;
-  height: g.$navbar-height;
+  height: $navU;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,12 +20,12 @@
 }
 
 .navToggler {
-  margin-right: calc(g.$navbar-height * 0.4);
+  margin-right: calc($navU * 0.4);
 }
 
 .navLight {
-  width: calc(g.$navbar-height * 0.25);
-  margin-left: calc(g.$navbar-height * 0.4);
+  width: calc($navU * 0.25);
+  margin-left: calc($navU * 0.4);
 }
 
 .navDark {
@@ -31,19 +33,29 @@
   filter: invert(100%);
 }
 
+$ofs: calc($navU * 0.02); 
+$ofs2: calc($ofs * 2);
+$ofs4: calc($ofs * 4);
+$ofs4n: calc($ofs * -4);
 .navIconContainer {
   border-style: solid;
-  border-radius: 1vw;
+  border-radius: calc($navU * 0.05);
   border-color: whitesmoke;
-  height: calc(g.$navbar-height * 0.45);
-  width: calc(g.$navbar-height * 0.45);
+  height: calc($navU * 0.45);
+  width: calc($navU * 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: $ofs;
+}
+
+.navIconContainer:active {
+  box-shadow: inset $ofs2 $ofs2 $ofs4 $ofs4n black;
+  padding: $ofs2 0 0 $ofs2;
 }
 
 .navIcon {
-  width: calc(g.$navbar-height * 0.25);
+  width: calc($navU * 0.25);
   user-select: none;
   display: flex;
   align-items: center;
@@ -57,22 +69,22 @@
 
 .btnContainer {
   display: flex;
-  gap: calc(g.$navbar-height / 5);
+  gap: calc($navU / 5);
   flex-direction: row;
   align-items: center;
-  margin-right: calc(g.$navbar-height * 0.4);
+  margin-right: calc($navU * 0.4);
 }
 
 .btnContainerMobile {
   position: fixed;
-  top: g.$navbar-height;
-  right: calc(g.$navbar-height * 0.4);
+  top: $navU;
+  right: calc($navU * 0.4);
   display: flex;
-  gap: calc(g.$navbar-height / 5);
+  gap: calc($navU / 5);
   flex-direction: column;
   align-items: flex-end;
   background: g.$neutral-col;
-  padding: calc(g.$navbar-height / 5);
+  padding: calc($navU / 5);
 }
 
 .btnContainerMobileDark {
@@ -85,14 +97,14 @@
   border-radius: 1vw;
   border-color: transparent;
   width: fit-content;
-  height: calc(g.$navbar-height * 0.3);
+  height: calc($navU * 0.3);
   display: block;
   cursor: pointer;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(g.$navbar-height * 0.2);
+  font-size: calc($navU * 0.2);
   font-family: g.$monospace;
   font-weight: 400;
   padding: 0.5vw 1vw;

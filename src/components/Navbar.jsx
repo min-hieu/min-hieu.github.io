@@ -10,12 +10,12 @@ const pages = [
     {
       icon: "../icons/house.svg",
       title: "Home",
-      path: "/"
+      path: ""
     },
     {
       icon: "../icons/pen.svg",
       title: "Blogs",
-      path: "/blog/"
+      path: "/blog"
     },
     {
       icon: "../icons/cup.svg",
@@ -44,15 +44,17 @@ export default function Navbar({ thisPage, light, setLight }){
 
   const tabs = 
     pages.map((page,idx) => (
-      <div className={
-        `${light ? styles.navBtn : styles.navBtnDark}
-         ${thisPage == page.path ? 
-           (light ? styles.navBtnPressed : styles.navBtnPressedDark)
-           : null}`
-        }>
+      <div 
+        className={
+          `${light ? styles.navBtn : styles.navBtnDark}
+           ${thisPage == page.path ? 
+             (light ? styles.navBtnPressed : styles.navBtnPressedDark)
+             : null}`
+        }
+        onClick={() => navigate(page.path)} 
+      >
         <span 
           key={idx} 
-          onClick={() => navigate(page.path)} 
         >
           {page.title}
         </span>
@@ -88,7 +90,7 @@ export default function Navbar({ thisPage, light, setLight }){
   return (
       <div className={light ? styles.container : styles.containerDark}>
         <div className={light ? styles.navLight : styles.navDark}>
-          <DarkToggle light={!light} setLight={setLight} />
+          {true ? null : <DarkToggle light={!light} setLight={setLight} /> }
         </div>
         { isTabletOrMobile ? 
           navToggler : 
