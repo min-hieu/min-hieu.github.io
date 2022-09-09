@@ -6760,12 +6760,28 @@ var trimResultTransformer = function trimResultTransformer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "centerCon": () => (/* binding */ centerCon),
+/* harmony export */   "indexMain": () => (/* binding */ indexMain),
+/* harmony export */   "left": () => (/* binding */ left),
 /* harmony export */   "mainCon": () => (/* binding */ mainCon),
-/* harmony export */   "mainConDark": () => (/* binding */ mainConDark)
+/* harmony export */   "mainConDark": () => (/* binding */ mainConDark),
+/* harmony export */   "page": () => (/* binding */ page),
+/* harmony export */   "para": () => (/* binding */ para),
+/* harmony export */   "paraDark": () => (/* binding */ paraDark),
+/* harmony export */   "right": () => (/* binding */ right),
+/* harmony export */   "section": () => (/* binding */ section)
 /* harmony export */ });
 // Exports
 var mainCon = "Home-module--mainCon--8u+pr";
 var mainConDark = "Home-module--mainConDark--WOn8E";
+var centerCon = "Home-module--centerCon--cfz7s";
+var indexMain = "Home-module--indexMain--J8mlQ";
+var para = "Home-module--para--Tz1pg";
+var paraDark = "Home-module--paraDark--f27rs";
+var section = "Home-module--section--XJCtH";
+var left = "Home-module--left--NH3DV";
+var right = "Home-module--right--WVadU";
+var page = "Home-module--page--LJ0e6";
 
 
 /***/ }),
@@ -9702,8 +9718,8 @@ function DarkToggle({
       opacity: 1
     },
     springConfig: {
-      mass: 3,
-      tension: 250,
+      mass: 2,
+      tension: 400,
       friction: 25
     }
   };
@@ -9744,7 +9760,7 @@ function DarkToggle({
     style: { ...svgContainerProps,
       cursor: "pointer"
     },
-    onClick: () => setLight(prev => !prev)
+    onClick: () => setLight(v => !v)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("mask", {
     id: "mask"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", {
@@ -9863,16 +9879,8 @@ const Layout = ({
 }) => {
   const {
     0: light,
-    1: setLightDirect
+    1: setLight
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getInitialColorMode);
-
-  const setLight = value => {
-    setLightDirect(value); // Persist it on update
-
-    window.localStorage.setItem('color-mode', !light);
-    console.log("color-mode: ", window.localStorage.getItem('color-mode'));
-  };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LightContext.Provider, {
     value: {
       light,
@@ -9918,7 +9926,7 @@ __webpack_require__.r(__webpack_exports__);
 const pages = [{
   icon: "../icons/house.svg",
   title: "Home",
-  path: ""
+  path: "/"
 }, {
   icon: "../icons/pen.svg",
   title: "Blogs",
@@ -9973,7 +9981,10 @@ function Navbar({
     className: light ? _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_1__.container : _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_1__.containerDark
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: light ? _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_1__.navLight : _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_1__.navDark
-  },  true ? null : /*#__PURE__*/0), isTabletOrMobile ? navToggler : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  },  false ? 0 : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DarkToggle__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    light: !light,
+    setLight: setLight
+  })), isTabletOrMobile ? navToggler : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: _styles_Navbar_module_scss__WEBPACK_IMPORTED_MODULE_1__.btnContainer
   }, tabs));
 }

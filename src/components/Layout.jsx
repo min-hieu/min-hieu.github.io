@@ -22,22 +22,16 @@ const getInitialColorMode = () => {
   return true;
 }
 
-export const LightContext = React.createContext();
+export const LightContext = createContext();
 
 export const Layout = ({ children }) => {
-  const [light, setLightDirect] = useState(getInitialColorMode);
-  const setLight = (value) => {
-    setLightDirect(value);
-    // Persist it on update
-    window.localStorage.setItem('color-mode', !light);
-    console.log("color-mode: ", window.localStorage.getItem('color-mode'));
-  };
+  const [light, setLight] = useState(getInitialColorMode);
 
   return (
     <LightContext.Provider value={{ light, setLight }}>
       <div className={light ? styles.mainCon : styles.mainConDark}>
-        <Navbar thisPage={'/'} light={light} setLight={setLight}/>
         {children}
+        <Navbar light={light} setLight={setLight}/>
       </div>
     </LightContext.Provider>
   );

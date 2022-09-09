@@ -18,7 +18,7 @@ export default function DarkToggle ({ light, setLight }){
       cy: 0,
       opacity: 1
     },
-    springConfig: { mass: 3, tension: 250, friction: 25 }
+    springConfig: { mass: 2, tension: 400, friction: 25 }
   };
   const { r, transform, cx, cy, opacity } = light
     ? properties["moon"]
@@ -48,7 +48,7 @@ export default function DarkToggle ({ light, setLight }){
         stroke-linecap="round"
         stroke-linejoin="round"
         style={{ ...svgContainerProps, cursor: "pointer" }}
-        onClick={() => setLight((prev) => !prev)}
+        onClick={() => setLight((v) => !v)}
       >
         <mask id="mask">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />

@@ -80,16 +80,18 @@ $ofs4n: calc($ofs * -4);
   top: $navU;
   right: calc($navU * 0.4);
   display: flex;
-  gap: calc($navU / 5);
+  gap: calc($navU / 10);
+  border-radius: calc($navU / 8);
   flex-direction: column;
-  align-items: flex-end;
-  background: g.$neutral-col;
-  padding: calc($navU / 5);
+  align-items: center;
+  padding: calc($navU / 10);
+  background-color: rgba(0, 0, 0, .05);  
+  backdrop-filter: blur(5px);
 }
 
 .btnContainerMobileDark {
   @extend .btnContainerMobile;
-  background: g.$neutral-col-dark;
+  background-color: rgba(255, 255, 255, .15);  
 }
 
 .navBtn {
@@ -117,6 +119,20 @@ $ofs4n: calc($ofs * -4);
   color: g.$font-col-dark;
 }
 
+.navBtnMobile {
+  @extend .navBtn;
+  width: 100%;
+  height: calc(min(10vmax, 10vh) * 0.5);
+  box-sizing: border-box;
+}
+
+.navBtnMobileDark {
+  @extend .navBtnDark;
+  width: 100%;
+  height: calc(min(10vmax, 10vh) * 0.5);
+  box-sizing: border-box;
+}
+
 .navBtnPressed {
   border-color: black;
 }
@@ -126,7 +142,11 @@ $ofs4n: calc($ofs * -4);
 }
 
 .navBtn:hover {
-  border-color: #dadada;
+  backdrop-filter: invert(10%);
+}
+
+.navBtnDark:hover {
+  backdrop-filter: invert(40%);
 }
 
 .navPressed {

@@ -1,11 +1,6 @@
 @use "constants" as g;
 
-.container {
-  width: g.$content-width;
-  padding: g.$content-padding;
-  background-color: g.$neutral-col;
-  float: right;
-  min-height: 100vh;
+.main {
 }
 
 .title {

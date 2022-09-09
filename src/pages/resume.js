@@ -1,26 +1,21 @@
 import * as React from "react"
 import * as styles from '../styles/Home.module.scss'
 import { useContext } from "react"
-import { LightContext, Layout } from '../components/Layout'
+import { LightContext } from '../components/Layout'
 
-const PageContent = () => {
+const BlogPage = () => {
   const { light } = useContext(LightContext);
 
-  console.log(light);
   return (
-    <div className={light ? styles.main : styles.mainDark}>
+    <div>
       <div className={styles.left}>
+        Bruh
       </div>
       <div className={styles.right}>
+        BruhSume
       </div>
     </div>
   )
 }
 
-const ResumePage = () =>
-  <Layout>
-    <PageContent/>
-  </Layout>
-
-
-export default ResumePage;
+export default BlogPage;

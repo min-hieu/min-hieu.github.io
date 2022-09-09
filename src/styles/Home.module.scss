@@ -7,9 +7,47 @@
   background: white;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .mainConDark {
   @extend .mainCon;
   background: black;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vmin;
+}
+
+.indexMain {
+  padding-top: 10vmin;
+  width: 120vmin;
+  position: relative;
+  top: g.$navbar-height;
+  display: flex;
+  flex-direction: row;
+}
+
+.indexMainMobile {
+  @extend .indexMain;
+  width: 80vmin;
+}
+
+$left-width: 30%;
+
+.left {
+  width: $left-width;
+}
+
+.right {
+  width: calc(100% - $left-width);
+}
+
+.page {
+  position: absolute;
+  top: g.$navbar-height;
 }

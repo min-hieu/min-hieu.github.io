@@ -10,7 +10,7 @@ const pages = [
     {
       icon: "../icons/house.svg",
       title: "Home",
-      path: ""
+      path: "/"
     },
     {
       icon: "../icons/pen.svg",
@@ -35,7 +35,7 @@ const pages = [
 ]
 
 
-export default function Navbar({ thisPage, light, setLight }){
+export default function Navbar({ light, setLight }){
 
   const [toggleNav, setToggleNav] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 950px)' })
@@ -47,7 +47,26 @@ export default function Navbar({ thisPage, light, setLight }){
       <div 
         className={
           `${light ? styles.navBtn : styles.navBtnDark}
-           ${thisPage == page.path ? 
+           ${"blog" == page.path ? 
+             (light ? styles.navBtnPressed : styles.navBtnPressedDark)
+             : null}`
+        }
+        onClick={() => navigate(page.path)} 
+      >
+        <span 
+          key={idx} 
+        >
+          {page.title}
+        </span>
+      </div>
+    ));
+
+  const tabsMobile = 
+    pages.map((page,idx) => (
+      <div 
+        className={
+          `${light ? styles.navBtnMobile : styles.navBtnMobileDark}
+           ${"blog" == page.path ? 
              (light ? styles.navBtnPressed : styles.navBtnPressedDark)
              : null}`
         }
@@ -81,7 +100,7 @@ export default function Navbar({ thisPage, light, setLight }){
             ? styles.btnContainerMobile 
             : styles.btnContainerMobileDark}
         >
-            { tabs }
+            { tabsMobile }
         </div> : null
       }
     </>
@@ -90,7 +109,7 @@ export default function Navbar({ thisPage, light, setLight }){
   return (
       <div className={light ? styles.container : styles.containerDark}>
         <div className={light ? styles.navLight : styles.navDark}>
-          {true ? null : <DarkToggle light={!light} setLight={setLight} /> }
+          {false ? null : <DarkToggle light={!light} setLight={setLight} /> }
         </div>
         { isTabletOrMobile ? 
           navToggler : 

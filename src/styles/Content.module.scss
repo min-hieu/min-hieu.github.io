@@ -1,0 +1,30 @@
+@use "constants" as g;
+
+.para {
+  font-size: 2.3vmin;
+  font-family: g.$sans-thin;
+  font-weight: 200;
+  color: #000;
+  line-height: 3vmin;
+}
+
+.paraDark {
+  @extend .para;
+  color: #fff;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.centerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
