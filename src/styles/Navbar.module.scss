@@ -15,6 +15,19 @@ $navU: g.$navbar-height;
   justify-content: space-between;
 }
 
+.navBg {
+  width: 100%;
+  height: $navU;
+  position: fixed;
+  background-color: rgba(255, 255, 255, .05);  
+  backdrop-filter: blur(5px);
+}
+
+.navBgDark {
+  @extend .navBg;
+  background-color: rgba(0, 0, 0, .05);  
+}
+
 .containerDark {
   @extend .container;
 }
@@ -79,7 +92,7 @@ $ofs4n: calc($ofs * -4);
   width: calc($navU * 1.5);
   border-radius: calc($navU / 8);
   position: fixed;
-  top: $navU;
+  top: calc($navU * 1.2);
   right: calc($navU * 0.4);
   display: flex;
   gap: calc($navU / 10);

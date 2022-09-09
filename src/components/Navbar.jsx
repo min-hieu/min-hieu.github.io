@@ -105,6 +105,8 @@ export default function Navbar({ light, setLight }){
 
 
   return (
+    <>
+      <div className={light ? styles.navBg : styles.navBgDark} />
       <div className={light ? styles.container : styles.containerDark}>
         <div className={light ? styles.navLight : styles.navDark}>
           {false ? null : <DarkToggle light={!light} setLight={setLight} /> }
@@ -116,5 +118,6 @@ export default function Navbar({ light, setLight }){
           </div>
         }
       </div>
+    </>
  );
 }
