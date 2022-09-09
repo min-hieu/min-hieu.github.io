@@ -76,12 +76,13 @@ $ofs4n: calc($ofs * -4);
 }
 
 .btnContainerMobile {
+  width: calc($navU * 1.5);
+  border-radius: calc($navU / 8);
   position: fixed;
   top: $navU;
   right: calc($navU * 0.4);
   display: flex;
   gap: calc($navU / 10);
-  border-radius: calc($navU / 8);
   flex-direction: column;
   align-items: center;
   padding: calc($navU / 10);

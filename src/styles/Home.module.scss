@@ -1,14 +1,16 @@
 @use "constants" as g;
 
 .mainCon {
+  width: 100vw;
+  height: fit-content;
+  min-height: 80vh;
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  background: white;
   justify-content: center;
+  padding-bottom: 20vh;
 }
 
 .mainConDark {
@@ -23,18 +25,31 @@
   padding: 4vmin;
 }
 
+.profileImageMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vmin;
+}
+
+.heightLimiter {
+  max-width: 25vh;
+}
+
 .indexMain {
-  padding-top: 10vmin;
   width: 120vmin;
   position: relative;
   top: g.$navbar-height;
   display: flex;
   flex-direction: row;
+  padding-top: 10vmin;
 }
 
 .indexMainMobile {
   @extend .indexMain;
   width: 80vmin;
+  flex-direction: column;
+  padding-top: 0;
 }
 
 $left-width: 30%;

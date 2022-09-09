@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import DarkToggle from './DarkToggle';
-import {navigate} from 'gatsby';
+import { navigate } from 'gatsby';
 
 const pages = [
     {
@@ -39,8 +39,6 @@ export default function Navbar({ light, setLight }){
 
   const [toggleNav, setToggleNav] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 950px)' })
-
-  useEffect(()=>console.log(styles.navToggler),[isTabletOrMobile])
 
   const tabs = 
     pages.map((page,idx) => (
