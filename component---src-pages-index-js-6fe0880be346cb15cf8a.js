@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[678],{6558:function(e,t,l){l.r(t);var n=l(7294),s=l(7768),u=l(4283);t.default=function(){(0,n.useContext)(u.B).light;return n.createElement("div",null,n.createElement("div",{className:s.left},"Bruh"),n.createElement("div",{className:s.right},"BruhLog"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-6fe0880be346cb15cf8a.js.map

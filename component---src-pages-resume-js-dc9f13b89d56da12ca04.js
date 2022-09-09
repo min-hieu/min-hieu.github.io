@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[903],{9023:function(e,t,u){u.r(t);var l=u(7294),n=u(7768),s=u(4283);t.default=function(){(0,l.useContext)(s.B).light;return l.createElement("div",null,l.createElement("div",{className:n.left},"Bruh"),l.createElement("div",{className:n.right},"BruhSume"))}}}]);
+//# sourceMappingURL=component---src-pages-resume-js-dc9f13b89d56da12ca04.js.map
