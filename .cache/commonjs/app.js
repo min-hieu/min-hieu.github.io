@@ -5,6 +5,8 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.notCalledFunction = notCalledFunction;
 
+require("@gatsbyjs/webpack-hot-middleware/client");
+
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));

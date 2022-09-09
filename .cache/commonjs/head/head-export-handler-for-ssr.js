@@ -85,10 +85,12 @@ function headHandlerForSSR({
     const seenIds = new Map();
 
     for (const node of headNodes) {
+      var _node$attributes;
+
       const {
         rawTagName
       } = node;
-      const id = node.attributes.id;
+      const id = (_node$attributes = node.attributes) === null || _node$attributes === void 0 ? void 0 : _node$attributes.id;
 
       if (!VALID_NODE_NAMES.includes(rawTagName)) {
         warnForInvalidTags(rawTagName);

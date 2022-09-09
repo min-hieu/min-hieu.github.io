@@ -36,10 +36,10 @@ const onHeadRendered = () => {
   const seenIds = new Map();
 
   for (const node of hiddenRoot.childNodes) {
-    var _node$attributes$id;
+    var _node$attributes, _node$attributes$id;
 
     const nodeName = node.nodeName.toLowerCase();
-    const id = (_node$attributes$id = node.attributes.id) === null || _node$attributes$id === void 0 ? void 0 : _node$attributes$id.value;
+    const id = (_node$attributes = node.attributes) === null || _node$attributes === void 0 ? void 0 : (_node$attributes$id = _node$attributes.id) === null || _node$attributes$id === void 0 ? void 0 : _node$attributes$id.value;
 
     if (!_constants.VALID_NODE_NAMES.includes(nodeName)) {
       (0, _utils.warnForInvalidTags)(nodeName);
