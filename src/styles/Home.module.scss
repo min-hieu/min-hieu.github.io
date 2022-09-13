@@ -66,3 +66,101 @@ $left-width: 30%;
   position: absolute;
   top: g.$navbar-height;
 }
+
+.newsCon {
+  overflow: hidden;
+}
+
+.showMoreCon {
+  height: 5vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: g.$monospace;
+  font-weight: 200;
+  font-size: .9rem;
+  color: g.$font-col-light;
+  background: linear-gradient(0, g.$font-col-dark, transparent);
+}
+
+.showMoreConDark {
+  @extend .showMoreCon;
+  background: linear-gradient(0, g.$font-col-light, transparent);
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.showMore {
+  border-radius: 1vh;
+  height: 3vh;
+  width: 3vh;
+  display: flex;
+  position: relative;
+  bottom: -2vh;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.showMoreDark {
+  @extend .showMore;
+  filter: invert(100%);
+}
+
+.card {
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 0 2vw;
+  gap: 2vh;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .7rem;
+  font-family: g.$monospace;
+  font-weight: 200;
+  color: g.$font-col-light;
+}
+
+.dateDark {
+  @extend .date;
+  color: g.$font-col-dark;
+}
+
+.mid {
+  @extend .date;
+  font-size: .9rem;
+}
+
+.midDark {
+  @extend .dateDark;
+  font-size: .9rem;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: g.$sans-thin;
+  font-weight: 200;
+  color: g.$font-col-light;
+}
+
+.titleDark {
+  @extend .title;
+  color: g.$font-col-dark;
+}

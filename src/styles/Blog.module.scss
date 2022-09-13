@@ -1,21 +1,87 @@
 @use "constants" as g;
 
 .main {
+  max-width: 100vw;
+  width: 120vmin;
+  position: relative;
+  top: g.$navbar-height;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vmin;
+}
+
+.card {
+  height: 10vh;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 0 5vw;
+  gap: 2vh;
+}
+
+.meta {
+  display: flex;
+  position: relative;
+  top: -0.25rem;
+  flex-direction: column;
+}
+
+.tagCon {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.tag {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-family: g.$monospace;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .7rem;
+  font-family: g.$monospace;
+  font-weight: 200;
+  color: g.$font-col-light;
+}
+
+.dateDark {
+  @extend .date;
+  color: g.$font-col-dark;
+}
+
+.mid {
+  @extend .date;
+  font-size: .9rem;
+}
+
+.midDark {
+  @extend .dateDark;
+  font-size: .9rem;
 }
 
 .title {
   width: 100%;
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-family: g.$sans-wide;
   font-weight: 700;
+  color: g.$font-col-light;
 }
 
-.cardContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2vh;
+.titleDark {
+  @extend .title;
+  color: g.$font-col-dark;
 }
+

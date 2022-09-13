@@ -1,6 +1,8 @@
 @use "constants" as g;
 
 $fsize: max(2.3vmin, 1rem);
+$hsize: calc(max(2.3vmin, 1rem) * 2);
+$hssize: calc(max(2.3vmin, 1rem) * 1.25);
 
 .para {
   width: 100%;
@@ -16,10 +18,57 @@ $fsize: max(2.3vmin, 1rem);
   color: #fff;
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  padding-left: 6vw;
+  align-items: center;
+  font-size: $hsize;
+  font-family: g.$monospace;
+  font-weight: 600;
+  color: #000;
+  line-height: calc($hsize * 3 / 2);
+}
+
+.headerDark {
+  @extend .header;
+  color: #fff;
+}
+
+.headerS {
+  width: 100%;
+  display: flex;
+  padding-left: 2vw;
+  align-items: center;
+  font-size: $hssize;
+  font-family: g.$monospace;
+  font-weight: 600;
+  color: #000;
+  line-height: calc($hssize * 3 / 2);
+}
+
+.headerSDark {
+  @extend .headerS;
+  color: #fff;
+}
+
 .section {
   width: 100%;
   display: flex;
   flex-direction: row;
+}
+
+.div {
+  margin-top: 0.3vw;
+  margin-bottom: 0.3vw;
+  width: calc(100vw - 10vw);
+  height: 0.06rem;
+  background: black;
+}
+
+.divDark {
+  @extend .div;
+  background: white;
 }
 
 .centerCon {
