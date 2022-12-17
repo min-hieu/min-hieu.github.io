@@ -1,0 +1,70 @@
+.card {
+  height: 10vh;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 0 5vw;
+  gap: 2vh;
+}
+
+.meta {
+  display: flex;
+  position: relative;
+  top: -0.25rem;
+  flex-direction: column;
+}
+
+.tagCon {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.tag {
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-family: var(--font-mono);
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .7rem;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  color: var(--col-dark);
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .9rem;
+  font-family: var(--font-mono);
+  font-weight: 200;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-wide);
+  font-weight: 700;
+  color: var(--col-text);
+}
+
+.search {
+  font-size: 1.2rem;
+  font-family: var(--font-wide);
+  font-weight: 700;
+}

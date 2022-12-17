@@ -1,0 +1,35 @@
+---
+import type { PaginationLink } from "../types/shared";
+
+interface Props {
+  prevUrl?: PaginationLink;
+  nextUrl?: PaginationLink;
+}
+
+const { prevUrl, nextUrl } = Astro.props;
+---
+{
+  (prevUrl || nextUrl) && (
+  <nav class="main">
+    {prevUrl && (
+      <a class="link" href={prevUrl.url} rel="prefetch">
+        {prevUrl.srLabel && <span class="sr-only">{prevUrl.srLabel}</span>}
+        {prevUrl.text ? prevUrl.text : "Previous"}
+      </a>
+    )}
+    {nextUrl && (
+      <a class="link" href={nextUrl.url} rel="prefetch">
+        {nextUrl.srLabel && <span class="sr-only">{nextUrl.srLabel}</span>}
+        {nextUrl.text ? nextUrl.text : "Next"}
+      </a>
+    )}
+  </nav>
+  )
+}
+
+<style>
+.link {
+  margin: auto;
+  color: var(--col-font);
+}
+</style>

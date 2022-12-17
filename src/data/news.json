@@ -1,0 +1,36 @@
+{
+  "news_data" : [
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      },
+      {
+          "date":"10/05/03",
+          "title":"this is the best day"
+      }
+  ]
+}

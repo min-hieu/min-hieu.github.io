@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {
+  NewsCard,
+  NewsCon,
+  HeaderS,
+  ParaDiv,
+  Section,
+  Division,
+  Socials,
+} from '../components/Home.jsx';
+import { Image, Picture } from '@astrojs/image/components';
+
+const meta = {
+  title: "min(Hieu)",
+  description: "Welcome Home!",
+}
+
+import data from "../data/news.json";
+---
+
+<Layout meta={meta}>
+  <div class="indexMain">
+    <div class="left">
+      <div class="profileImage">
+        <img
+          src="/me.webp" alt="me"
+        />
+      </div>
+      <ParaDiv center={true}>
+        <div>Me in Busan 2022.</div>
+        <Socials/>
+      </ParaDiv>
+    </div>
+    <div class="right">
+      <ParaDiv>
+          Hi! Thanks for being interested in my website. <br/>
+          My name is <b>Hieu</b> and I am a currently a sophomore 
+          in the department of computer science and electrical 
+          engineering at KAIST, Korea. I am highly motivated about 
+          learning new things in the domain of <b>computer graphics & 
+            machine learning</b>. I look foward to research opportunities 
+          in both industry and academia! <br/>
+          Outside my specialty, I also love reading books 
+          , making art, and most recently, cooking! <br/>
+      </ParaDiv>
+      <br/>
+      <HeaderS text="News"/>
+      <Division />
+      <NewsCon limit={5} size={data.news_data.length} client:load>
+        {
+          data.news_data.map((news) => (
+            <NewsCard date={news.date} title={news.title}/>
+          ))
+        }
+      </NewsCon>
+    </div>
+  </div>
+</Layout>
+
+<style>
+.indexMain {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5vmin;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  padding: 4vmin;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+</style>

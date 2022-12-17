@@ -1,0 +1,140 @@
+.para {
+  width: 100%;
+  font-size: var(--fsize);
+  font-family: var(--font-thin);
+  font-weight: 200;
+  color: #000;
+  line-height: calc(var(--fsize) * 3 / 2);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  padding-left: 6vw;
+  align-items: center;
+  font-size: var(--hsize);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #000;
+  line-height: calc(var(--hsize) * 3 / 2);
+}
+
+.headerS {
+  width: 100%;
+  display: flex;
+  padding-left: 2vw;
+  align-items: center;
+  font-size: var(--hssize);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #000;
+  line-height: calc(var(--hssize) * 3 / 2);
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.div {
+  margin-top: 0.3vw;
+  margin-bottom: 0.3vw;
+  width: calc(100vw - 10vw);
+  height: 0.06rem;
+  background: black;
+}
+
+.centerCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.card {
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 0 2vw;
+  gap: 2vh;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .7rem;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  color: var(--col-text);
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .9rem;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  color: var(--col-text);
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--font-thin);
+  font-weight: 200;
+  color: var(--col-text);
+}
+
+.newsCon {
+  overflow: hidden;
+}
+
+.showMoreCon {
+  height: 5vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-size: .9rem;
+  color: var(--col-font);
+  background: linear-gradient(0, #fff, transparent);
+}
+
+.showMore {
+  border-radius: 1vh;
+  height: 3vh;
+  width: 3vh;
+  display: flex;
+  position: relative;
+  bottom: -2vh;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+

@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+}
+
+const { href, title, body } = Astro.props;
+const pages = [
+  {
+    title:  "Home",
+    path:   "/",
+  },
+  {
+    title:  "Blogs",
+    path:   "/blogs",
+  },
+  {
+    title:  "CV",
+    path:   "/CV",
+  },
+]
+---
+
+<div>
+  <div class="navBg" />
+  <div class="container">
+    <div class="btnContainer">
+      {pages.map((p, pid) => (
+        <a href={p.path} class='navBtn'>
+          {p.title}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+
+.container {
+  width: 100vw;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  user-select: false;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnContainer {
+  display: flex;
+  gap: calc(var(--nav-height) / 5);
+  flex-direction: row;
+  align-items: center;
+  margin-right: calc(var(--nav-height) * 0.4);
+}
+
+.navBg {
+  width: 100vw;
+  height: var(--nav-height);
+  position: fixed;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);  
+  backdrop-filter: blur(5px);
+}
+
+.navBtn {
+  border-style: solid;
+  border-radius: 0.7rem;
+  border-color: transparent;
+  width: fit-content;
+  height: calc(var(--nav-height) * 0.3);
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--nav-height) * 0.2);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  padding: 0.8rem 0.6rem;
+  margin: 0 0.2rem;
+  color: var(--col-text);
+  text-decoration: none;
+}
+
+.navBtn:hover {
+  background-color: #d9d9d9;
+  /* backdrop-filter: invert(10%); */
+}
+
+</style>
