@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { HiChevronDoubleUp, HiChevronDoubleDown } from "react-icons/hi";
-import { RiGithubLine, RiLinkedinBoxFill } from "react-icons/ri"
+import { RiArrowDownFill }    from "@react-icons/all-files/ri/RiArrowDownFill";
+import { RiArrowUpFill }  from "@react-icons/all-files/ri/RiArrowUpFill";
+import { RiGithubLine }         from "@react-icons/all-files/ri/RiGithubLine";
+import { RiLinkedinBoxFill }    from "@react-icons/all-files/ri/RiLinkedinBoxFill";
 import '../styles/home.css';
 
 
@@ -36,7 +38,7 @@ const NewsCon = props => {
             className={ "showMore" }
             onClick={()=>setShow(!show)}
           >
-            { show ? <HiChevronDoubleUp/> : <HiChevronDoubleDown/> }
+            { show ? <RiArrowUpFill/> : <RiArrowDownFill/> }
           </div>
         </div>
         : null
