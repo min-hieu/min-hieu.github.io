@@ -13,9 +13,10 @@
 
 :root {
   --col-text:    #000;
-  --col-dark:    #fff;
+  --col-dark:    #000;
   --col-bg:      #fff;
   --col-accent:  #fff;
+  --col-fade:    #d9d9d9;
 
   --nav-height:   5rem;
 

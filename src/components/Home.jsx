@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { RiArrowDownFill }    from "@react-icons/all-files/ri/RiArrowDownFill";
-import { RiArrowUpFill }  from "@react-icons/all-files/ri/RiArrowUpFill";
-import { RiGithubLine }         from "@react-icons/all-files/ri/RiGithubLine";
-import { RiLinkedinBoxFill }    from "@react-icons/all-files/ri/RiLinkedinBoxFill";
+import { RiArrowUpFill }      from "@react-icons/all-files/ri/RiArrowUpFill";
+import { RiGithubLine }       from "@react-icons/all-files/ri/RiGithubLine";
+import { RiLinkedinBoxFill }  from "@react-icons/all-files/ri/RiLinkedinBoxFill";
 import '../styles/home.css';
 
 

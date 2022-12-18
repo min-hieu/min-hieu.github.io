@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { Tag, BlogCard, SearchBar } from '../../components/Blog.jsx';
+import { BlogMain } from '../../components/Blog.jsx';
 import { Header, Division } from '../../components/Home.jsx';
 import type { GetStaticPaths } from "../types/shared";
 import type { Post } from "../types/post";
@@ -36,11 +36,10 @@ const paginationProps = {
 };
 ---
 
+<script>
+console.log({page})
+</script>
+
 <Layout meta={meta}>
-  <Header text="Blogs" search={SearchBar}/>
-  <br/>
-  <Division />
-  {page.data.map((p) => (
-    <BlogCard date={p.date} title={p.title}/>
-  ))}
+  <BlogMain pages={page.data} client:load/>
 </Layout>
