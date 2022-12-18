@@ -1,0 +1,79 @@
+.pdfCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  user-select: none;
+  padding-top: 2rem;
+  font-family: var(--font-mono);
+}
+
+.pdfNumCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 0.8rem;
+  user-select: none;
+}
+
+.pdfNum {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  color: var(--col-text);
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+svg {
+  height: 100%;
+}
+
+.btn {
+  font-size: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+
+.btn:hover {
+  background: var(--col-fade);
+  filter: invert(80%);
+}
+
+.downCon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding-bottom: 0.6rem;
+}
+
+.downBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  color: var(--col-text);
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 0.08rem;
+  width: 6rem;
+  height: 1.5rem;
+  align-text: center;
+  box-sizing: border-box;
+  border-color: var(--col-fade);
+}
+
+.downBtn:hover {
+  background: var(--col-fade);
+  filter: invert(80%);
+  border-style: none;
+}
