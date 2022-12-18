@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { CVMain } from '../components/CV.jsx'
+
+const meta = {
+  title: "min(Hieu)",
+  description: "Hieu's CV",
+}
+---
+
+<Layout meta={meta}>
+  this is cv page
+  <CVMain client:load/>
+</Layout>
+
+<style>
+</style>
