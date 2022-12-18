@@ -23,34 +23,38 @@ const CVMain = () => {
 
   return (
     <div>
-      <div className="downCon">
-        <a className="downBtn" href={pdfPath}>
-          download
-        </a>
-      </div>
-      <div className="pdfNumCon">
-        <div 
-          className="btn" 
-          onClick={()=>
-            {pageNum == 0 
-            ? setPageNum(numPages-1) 
-            : setPageNum(pageNum-1)}
-          }
-        >
-          <RiArrowLeftFill />
-        </div>
-        <div className="pdfNum">
-          {pageNum+1}/<b>{numPages}</b>
-        </div>
-        <div 
-          className="btn"
-          onClick={()=>
-            setPageNum((pageNum+1)%numPages)
-          }
-        >
-          <RiArrowRightFill />
-        </div>
-      </div>
+      {numPages ?
+        <>
+          <div className="downCon">
+            <a className="downBtn" href={pdfPath}>
+              download
+            </a>
+          </div>
+          <div className="pdfNumCon">
+            <div 
+              className="btn" 
+              onClick={()=>
+                {pageNum == 0 
+                ? setPageNum(numPages-1) 
+                : setPageNum(pageNum-1)}
+              }
+            >
+              <RiArrowLeftFill />
+            </div>
+            <div className="pdfNum">
+              {pageNum+1}/<b>{numPages}</b>
+            </div>
+            <div 
+              className="btn"
+              onClick={()=>
+                setPageNum((pageNum+1)%numPages)
+              }
+            >
+              <RiArrowRightFill />
+            </div>
+          </div>
+        </>
+      : null}
       <div className="pdfCon">
         <Document 
           file={pdfPath}
