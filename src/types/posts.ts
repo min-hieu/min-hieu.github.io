@@ -7,4 +7,9 @@ interface Post extends BaseFrontmatter {
   tags?: string[];
 }
 
-export type { Post };
+interface Tag {
+  value: string;
+  color: string;
+}
+
+export type { Post, Tag };

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-import Navbar from '../components/Navbar.astro'
+import Navbar from '../components/Navbar.astro';
+import { Division } from '../components/Home.jsx';
 
 export interface Props {
   title: string;
@@ -27,12 +28,21 @@ const { title, description } = Astro.props;
       </div>
       <Navbar />
     </div>
+    <Division />
+    <div class="fCon">
+      <div class="fLeft">
+        Nguyen Minh Hieu @ 2022
+      </div>
+      <div class="fRight">
+        <a>
+      </div>
+    </div>
   </body>
 </html>
 
 <style>
 .mainCon {
-  width: 100vw;
+  width: 95vw;
   height: fit-content;
   min-height: 80vh;
   position: absolute;
