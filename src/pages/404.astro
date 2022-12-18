@@ -3,7 +3,51 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Not Found Page">
-  <main>
-    lmao
-  </main>
+  <div class="errCon">
+    <div class="err1">
+      error 404
+    </div>
+    <div class="err2">
+      OOPS
+    </div>
+    <div class="err1">
+      there is nothing here...
+    </div>
+    <div class="err3">
+      except for 2048!
+    </div>
+    <iframe src="https://funhtml5games.com?embed=2048bit" style="width:530px;height:690px;border:none;" frameborder="0" scrolling="no"></iframe>
+  </div>
 </Layout>
+
+<style>
+.errCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  gap: 0.1rem;
+  height: 100%;
+}
+
+.err1 {
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.err2 {
+  font-weight: 1000;
+  font-size: 5rem;
+  padding: 0;
+  line-height: 5rem;
+}
+
+.err3 {
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+</style>
