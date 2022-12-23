@@ -1,5 +1,4 @@
 import React, { 
-  useContext,
   useState,
   useEffect,
 } from "react";
@@ -22,8 +21,8 @@ const TagWord = ({tag}) => {
   <div
     className="tagElemWord" 
     style={{
-      "backgroundColor":`${select ? tag.color : ''}`,
-      "color":`${select ? '#fff' : 'var(--col-text)'}`,
+      "backgroundColor":`${select ? tag.color : '#fff'}`,
+      "color":`${select ? '#fff' : '#000'}`,
       "fontWeight":`${select ? '500' : '200'}`
     }}
     onClick={()=>setSelect(!select)}
@@ -124,7 +123,7 @@ const BlogMain = ({ pageMeta, pageTag, tagColmap }) => {
           cols={p.tags.map(t => tagColmap.get(t))}
         />
        )
-     : searchOut.map((p,pid) =>
+     : searchOut.map((p,id) =>
         <BlogCard
           key={id}
           date={p.item.date}
