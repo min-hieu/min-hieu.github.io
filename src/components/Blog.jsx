@@ -1,5 +1,6 @@
-import React, { 
+import React, {
   useState,
+  useCallback,
   useEffect,
 } from "react";
 import { Division } from './Home.jsx';
@@ -8,39 +9,21 @@ import Fuse from 'fuse.js';
 
 import '../styles/blog.css';
 
-const Tag = ({color}) => (
-  <div className="tagElem" style={{"color":`${color}`}}>
+const Tag = ({ color }) => (
+  <div className="tagElem" style={{ "color": `${color}` }}>
     •
   </div>
 )
 
-const TagWord = ({tag}) => {
-  const [select, setSelect] = useState(false);
 
-  return (
-  <div
-    className="tagElemWord" 
-    style={{
-      "backgroundColor":`${select ? tag.color : '#fff'}`,
-      "color":`${select ? '#fff' : '#000'}`,
-      "fontWeight":`${select ? '500' : '200'}`
-    }}
-    onClick={()=>setSelect(!select)}
-  >
-    {tag.value}
-  </div>
-  );
-}
-
-
-const BlogCard = ({date, title, cols}) => {
+const BlogCard = ({ date, title, cols }) => {
   return (
     <>
       <div className="card">
         <div className="meta">
           <div className="tagCon">
-            {cols.map((c,i) =>
-              <Tag color={c} key={i}/>
+            {cols.map((c, i) =>
+              <Tag color={c} key={i} />
             )}
           </div>
           <div className="date">{date}</div>
@@ -53,91 +36,144 @@ const BlogCard = ({date, title, cols}) => {
   )
 }
 
-const BlogMain = ({ pageMeta, pageTag, tagColmap }) => {
+const useTag = (initTags, pageMap ) => {
+  const [tags, setTags] = useState(initTags);
+
+  const taggedPage = [...tags]
+    .filter(([k, v], _) => v.select)
+    .map(([k, v], _) => v.posts)
+    .reduce((postT, post) => [...new Set([...post, ...postT])], [])
+    .map(title => pageMap.get(title))
+
+  const toggleSelect = (k) => {
+    const v = tags.get(k);
+    v.select = !v.select;
+    console.log("before toggle", taggedPage);
+    setTags((p) => new Map(p).set(k, v));
+  }
+
+  return [tags, toggleSelect, taggedPage]
+}
+
+const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
   const [searchOut, setSearchOut] = useState([]);
-  const [tags, setTags] = useState([]);
+  const [tagSelect, toggleSelect, taggedPages] = useTag(tagMap, pageMap);
   const [query, setQuery] = useState("");
 
-  const fuse = new Fuse(pageMeta, {
-    keys: ["title", "date"],
+  const fuseTag = new Fuse(taggedPages, {
+    keys: ["frontmatter.title", "frontmatter.date", "frontmatter.tag"],
     includeMatches: true,
     minMatchCharLength: 2,
     threshold: 0.5,
   });
 
+  const fuseAll = new Fuse(allPages, {
+    keys: ["frontmatter.title", "frontmatter.date", "frontmatter.tag"],
+    includeMatches: true,
+    minMatchCharLength: 2,
+    threshold: 0.5,
+  });
+
+  // refresh search on tag selection
+  useEffect(() => {
+    console.log(taggedPages)
+    if (taggedPages.length) setSearchOut(fuseTag.search(query));
+    else setSearchOut(fuseAll.search(query));
+  }, [tagSelect])
+
   const doSearch = (e) => {
     const q = e.target.value;
     setQuery(q);
-    setSearchOut(fuse.search(q));
+    if (taggedPages.length) setSearchOut(fuseTag.search(q));
+    else setSearchOut(fuseAll.search(q));
   };
 
-  const SearchBar = (props) => (
+  const SearchBar = () => (
     <>
-    <div className="search">
-      <div className="icon">
-        <RiSearchLine/>
+      <div className="search">
+        <div className="icon">
+          <RiSearchLine />
+        </div>
+        <input
+          value={query}
+          placeholder="Search Me!"
+          className="searchPreview"
+          onChange={doSearch}
+          autoFocus
+        />
       </div>
-      <input
-        value={query}
-        placeholder="Search Me!"
-        className="searchPreview"
-        onChange={doSearch}
-        autoFocus
-      />
-    </div>
     </>
   )
 
-  const Tags = (props) => {
+  const TagWord = ({ tagk }) => {
+    const tag = tagSelect.get(tagk);
+    return (
+      <div
+        className="tagElemWord"
+        style={{
+          "backgroundColor": `${tag.select ? tag.color : '#fff'}`,
+          "color": `${tag.select ? '#fff' : '#000'}`,
+          "fontWeight": `${tag.select ? '500' : '200'}`
+        }}
+        onClick={() => toggleSelect(tag.value)}
+      >
+        {tag.value}
+      </div>
+    );
+  }
+
+  const Tags = () => {
     return (
       <div className="tag">
         <div className="tagText">tags |</div>
         <div className="tagGrid">
-        {pageTag.map((t,i) =>
-          <TagWord tag={t} key={2*i+1}/>
-        )}
+          {[...tagKeys].map((k, i) =>
+            <TagWord tagk={k} key={2 * i + 1} />
+          )}
         </div>
       </div>
     )
   }
 
-  return (
-  <>
-    <div className="headerBar">
-      <div className="centerCon">
-        <div className="header">
-          Blog
-        </div>
-      </div>
-      <SearchBar />
+  const PageCard = ({ page }) => (
+    <BlogCard
+      href={page.url}
+      date={page.frontmatter.date}
+      title={page.frontmatter.title}
+      cols={page.frontmatter.tags.map(t => tagMap.get(t).color)}
+    />
+  )
+
+  const NoPageFound = () => (
+    <div>
+      no page found.
     </div>
-    <Tags />
-    <br/>
-    <Division/>
-    {searchOut.length == 0 
-     ? pageMeta.map((p,id) =>
-        <BlogCard
-          key={id}
-          date={p.date}
-          title={p.title}
-          cols={p.tags.map(t => tagColmap.get(t))}
-        />
-       )
-     : searchOut.map((p,id) =>
-        <BlogCard
-          key={id}
-          date={p.item.date}
-          title={p.item.title}
-          cols={p.item.tags.map(t => tagColmap.get(t))}
-        />
-       )
-    }
-  </>
+  )
+
+  return (
+    <>
+      <div className="headerBar">
+        <div className="centerCon">
+          <div className="header">
+            Blog
+          </div>
+        </div>
+        <SearchBar />
+      </div>
+      <Tags />
+      <br />
+      <Division />
+      {query.length
+        ? searchOut.length
+          ? searchOut.map((p, i) => <PageCard key={i} page={p.item} />)
+          : <NoPageFound />
+        : taggedPages.length
+          ? taggedPages.map((p, i) => <PageCard key={i} page={p} />)
+          : allPages.map((p, i) => <PageCard key={i} page={p} />)
+      }
+    </>
   );
 }
-
-/* 
-*/
 
 export {
   Tag,

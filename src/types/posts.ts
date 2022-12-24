@@ -10,6 +10,8 @@ interface Post extends BaseFrontmatter {
 interface Tag {
   value: string;
   color: string;
+  posts: string[];
+  select: boolean;
 }
 
 export type { Post, Tag };

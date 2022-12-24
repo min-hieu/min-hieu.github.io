@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { BlogMain } from '../../components/Blog.jsx';
+import type { Post } from "../types/post";
+import {
+  sortMDByDate,
+  getTags,
+} from "../../utils";
+
+const meta = {
+  title: "Posts",
+  description: "A collection of posts by me for a starter Astro theme",
+};
+
+const allPages          = await Astro.glob<Post>("../blogs/*.mdx");
+const sortedPages       = sortMDByDate(allPages);
+const [tagMap, tagKeys] = getTags(sortedPages);
+const pageMap           = new Map();
+
+const pageMeta = sortedPages.map((p,idx) => {
+  pageMap.set(p.frontmatter.title, p);
+  return p;
+})
+---
+
+<Layout meta={meta}>
+  <BlogMain
+    client:load
+    pageMap={pageMap}
+    allPages={pageMeta}
+    tagMap={tagMap}
+    tagKeys={tagKeys}
+  />
+</Layout>
