@@ -1,8 +1,4 @@
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-} from "react";
+import React, { useState, useEffect } from "react";
 import { Division } from './Home.jsx';
 import { RiSearchLine } from "@react-icons/all-files/ri/RiSearchLine";
 import Fuse from 'fuse.js';
@@ -16,27 +12,29 @@ const Tag = ({ color }) => (
 )
 
 
-const BlogCard = ({ date, title, cols }) => {
+const BlogCard = ({ href, date, title, cols }) => {
   return (
     <>
-      <div className="card">
-        <div className="meta">
-          <div className="tagCon">
-            {cols.map((c, i) =>
-              <Tag color={c} key={i} />
-            )}
+      <a href={href}>
+        <div className="card">
+          <div className="meta">
+            <div className="tagCon">
+              {cols.map((c, i) =>
+                <Tag color={c} key={i} />
+              )}
+            </div>
+            <div className="date">{date}</div>
           </div>
-          <div className="date">{date}</div>
+          <div className="mid">|</div>
+          <div className="title">{title}</div>
         </div>
-        <div className="mid">|</div>
-        <div className="title">{title}</div>
-      </div>
+      </a>
       <Division />
     </>
   )
 }
 
-const useTag = (initTags, pageMap ) => {
+const useTag = (initTags, pageMap) => {
   const [tags, setTags] = useState(initTags);
 
   const taggedPage = [...tags]
@@ -144,8 +142,8 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
 
   const NoPageFound = () => (
     <div className="nopagefound">
-    <code><pre>
-    {`
+      <code><pre>
+        {`
        .-"-.          \n
      _/_-.-_\\_       \n
     / __} {__ \\      \n
@@ -155,7 +153,7 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
    \\           /     \n
  Can't Fuzz Nothin'
     `}
-    </pre></code>
+      </pre></code>
     </div>
   )
 

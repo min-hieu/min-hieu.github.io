@@ -6,13 +6,13 @@ import { RiLinkedinBoxFill }  from "@react-icons/all-files/ri/RiLinkedinBoxFill"
 import '../styles/home.css';
 
 
-const NewsCard = ({ date, title }) => { 
+const NewsCard = ({ date, title }) => {
   return (
     <>
-      <div className="card">
-        <div className={ "date" }>{date}</div>
-        <div className={ "mid" }>•</div>
-        <div className={ "title" }>{title}</div>
+      <div className="newsCard">
+        <div className="newsDate">{date}</div>
+        <div className="newsMid">•</div>
+        <div className="newsTitle">{title}</div>
       </div>
       <Division color="#dadada"/>
     </>
@@ -49,11 +49,11 @@ const NewsCon = props => {
 
 const Socials = () => (
   <>
-    <RiGithubLine 
+    <RiGithubLine
       className="icon"
       onClick={()=>goto("https://github.com/min-hieu/")}
     />
-    <RiLinkedinBoxFill 
+    <RiLinkedinBoxFill
       className="icon"
       onClick={()=>goto("https://www.linkedin.com/in/min-hieu/")}
     />
@@ -81,7 +81,7 @@ const Section = ({ children, center }) => {
 
 const Header = ({ text, center }) => {
   return (
-    <div className="centerCon"> 
+    <div className="centerCon">
       <div className={
         `header ${center ? "center" : ""}`
       }>
@@ -93,7 +93,7 @@ const Header = ({ text, center }) => {
 
 const HeaderS = ({ text, center }) => {
   return (
-    <div className="centerCon"> 
+    <div className="centerCon">
       <div className={
         `headerS ${center ? "center" : ""}`
       }>
@@ -106,7 +106,7 @@ const HeaderS = ({ text, center }) => {
 const Division = ({ color }) => {
   return (
     <div className="centerCon" >
-      <div 
+      <div
         className="div"
         style={{"background": `${color}`}}
       />
