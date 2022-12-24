@@ -48,7 +48,6 @@ const useTag = (initTags, pageMap ) => {
   const toggleSelect = (k) => {
     const v = tags.get(k);
     v.select = !v.select;
-    console.log("before toggle", taggedPage);
     setTags((p) => new Map(p).set(k, v));
   }
 
@@ -74,9 +73,8 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
     threshold: 0.5,
   });
 
-  // refresh search on tag selection
+  // refresh and search again on tag selection
   useEffect(() => {
-    console.log(taggedPages)
     if (taggedPages.length) setSearchOut(fuseTag.search(query));
     else setSearchOut(fuseAll.search(query));
   }, [tagSelect])
@@ -96,7 +94,7 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
         </div>
         <input
           value={query}
-          placeholder="Search Me!"
+          placeholder="Fuzzy Me!"
           className="searchPreview"
           onChange={doSearch}
           autoFocus
@@ -145,8 +143,19 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
   )
 
   const NoPageFound = () => (
-    <div>
-      no page found.
+    <div className="nopagefound">
+    <code><pre>
+    {`
+       .-"-.          \n
+     _/_-.-_\\_       \n
+    / __} {__ \\      \n
+   / //  "  \\\\ \\   \n
+  / / \\'---'/ \\ \\  \n
+  \\ \\_/'"""'\\_/ /  \n
+   \\           /     \n
+ Can't Fuzz Nothin'
+    `}
+    </pre></code>
     </div>
   )
 

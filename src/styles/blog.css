@@ -29,6 +29,14 @@
   cursor: pointer;
 }
 
+.nopagefound {
+  font-family: var(--font-mono);
+  whitespace: pre;
+  line-height: 0.6;
+  display: flex;
+  justify-content: center;
+}
+
 .search:hover {
   border-color: var(--col-text);
 }
