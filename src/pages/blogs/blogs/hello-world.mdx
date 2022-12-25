@@ -1,36 +1,65 @@
 ---
 layout: "../../../layouts/Blog.astro"
-title: Testing testing 123!
-date: 13/05/2022
-description: Hello world!!! This is an example blog post showcasing some of the cool stuff Astro Cactus theme can do.
-tags: ["example", "blog", "cool"]
+title: Hello World!
+date: 25/12/2022
+description: This is for calibrating blog style
+tags: ["misc", "test"]
 ---
 
-import { Image } from "@astrojs/image/components";
+# H1
+## H2
+### H3
 
-## Hello World
+## This is header
 
-Following is an example blog post written in an md file. You can find me @ src/pages/posts/hello-world.md. Here you can add/update/delete details and watch the changes live when running in develop mode.
+How does single line look like?
 
-<Image
-  src="https://picsum.photos/id/1025/550/460"
-  alt="A covered up pug in the woods"
-  width="400"
-  height="200"
-  position="center"
-/>
+How does paragraph look like? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Using some markdown elements
+## KaTeX
+Does inline equation $e^{j\theta} = \cos\theta + j\sin\theta$ work?
+Does math block work?
+$$
+\textbf{v} \times \textbf{u} =
+\begin{bmatrix}
+0 & -v_z & v_y \\
+v_z & 0 & -v_x \\
+-v_y & v_x & 0
+\end{bmatrix}
+\begin{bmatrix}
+u_x   \\
+u_y   \\
+u_z   \\
+\end{bmatrix}
+$$
 
-Here we have a simple js code block.
-
+## Code
 ```js
-let string = "JavaScript syntax highlighting";
+// Does this comment show?
+let string = () => {
+  console.log("javascript syntax highlighting")
+};
+string()
 ```
+```rust
+/* Does this comment show? */
+fn rust_func(i: i32) -> i32 {
+  println!("syntax highlight for rust");
+  if (i == 0) i;
+  return i + rust_func(i-1);
+}
+```
+```glsl
+// Does this comment show?
+uniform u_time;
 
-This is styled by Shiki, set via the [config](https://docs.astro.build/en/guides/markdown-content/#syntax-highlighting) for Astro.
-
-You can choose your own theme from this [library](https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes), which is currently set to Dracula, in the file `astro.config.mjs`.
+void main() {
+  /* glsl code here */
+  float x = 1.0 * u_time;
+  vec3 col = vec3(x);
+  gl_FragColor = vec4(col, 1.0);
+}
+```
 
 Here is a horizontal rule.
 
@@ -55,7 +84,4 @@ Here is a table:
 | Juicy Apples | 1.99  |        739 |
 | Bananas      | 1.89  |          6 |
 
-## Tailwind CSS Prose styling
-
-> I'm a simple blockquote.
-> I'm styled by Tailwind CSS prose plugin
+## The End.
