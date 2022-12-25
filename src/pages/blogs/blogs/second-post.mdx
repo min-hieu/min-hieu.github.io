@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Blog.astro"
+layout: "../../../layouts/Blog.astro"
 title: My Second Post
 date: 12/06/2022
 description: It's another post by me.
@@ -11,7 +11,7 @@ value: 128
 
 Do variables work {frontmatter.value * 2}?
 
-Does $\latex$ work?
+Does $\katex$ work?
 
 Does math block work?
 
@@ -19,11 +19,13 @@ $$
 e^{32} - 1 = 0
 $$
 
+does inline $e^{j\theta} = \cos\theta + j\sin\theta$ math work?
+
 ```python
 # example python
 
 def fib(x):
-  if x in [0,1,2]: 
+  if x in [0,1,2]:
     return 1
   return fib(x-1) + fib(x-2)
 ```
@@ -32,7 +34,7 @@ def fib(x):
 // example rust
 
 fn fib(x: i32) -> i32:
-  if x in [0,1,2]: 
+  if x in [0,1,2]:
     1
   fib(x-1) + fib(x-2)
 ```

@@ -1,8 +1,102 @@
 ---
 import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { Division } from "../components/Home.jsx";
+import { strToCol } from "../utils";
 
 const { frontmatter, headings } = Astro.props;
 ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <!-- katex -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/blogpage.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={ frontmatter.description }>
+  </head>
+  <body>
+    <div class="mainCon">
+      <div class="contentConBlog">
+        <div class="blogHeader">
+          <div class="blogTitle">
+            { frontmatter.title }
+          </div>
+          <div class="tags">
+            { frontmatter.tags.map(t =>
+              <div class="tagElem">
+              {t}
+              </div>
+            )}
+          </div>
+        </div>
+        <slot/>
+      </div>
+      <Navbar />
+    </div>
+    <Footer />
+  </body>
+</html>
 
-<Layout>
-</Layout>
+<style>
+.mainCon {
+  width: 100vw;
+  height: fit-content;
+  min-height: 80vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: white;
+  justify-content: center;
+  padding-bottom: 20vh;
+}
+
+.contentConBlog {
+  width: 40rem;
+  max-width: 85vw;
+  position: relative;
+  top: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vmin;
+}
+
+.blogHeader {
+  margin: 2rem 0;
+}
+
+.blogTitle {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-wide);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-item: center;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-size: .8rem;
+  gap: .5rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tagElem {
+  cursor: pointer;
+}
+
+</style>

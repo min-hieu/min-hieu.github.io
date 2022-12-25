@@ -8,7 +8,7 @@ export function sortMDByDate(posts: MDXInstance<Post>[] = []) {
   );
 }
 
-function strToCol(str: string) {
+export function strToCol(str: string) {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);

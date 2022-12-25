@@ -13,10 +13,14 @@
   "dependencies": {
     "@astrojs/image": "^0.12.1",
     "@astrojs/mdx": "^0.13.0",
+    "@astrojs/prefetch": "^0.1.1",
+    "@astrojs/sitemap": "^1.0.0",
     "@react-icons/all-files": "^4.1.0",
     "astro": "^1.6.15",
     "fuse.js": "^6.6.2",
     "react-pdf": "^6.2.0",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^5.1.1",
     "sharp": "^0.31.2"
   },
   "devDependencies": {

@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import { Division } from '../components/Home.jsx';
+import Footer from '../components/Footer.astro';
 
 export interface Props {
   title: string;
@@ -28,15 +29,7 @@ const { title, description } = Astro.props;
       </div>
       <Navbar />
     </div>
-    <Division />
-    <div class="fCon">
-      <div class="fLeft">
-        Nguyen Minh Hieu @ 2022
-      </div>
-      <div class="fRight">
-        <a>
-      </div>
-    </div>
+    <Footer />
   </body>
 </html>
 
@@ -45,7 +38,7 @@ const { title, description } = Astro.props;
   width: 100vw;
   height: fit-content;
   min-height: 80vh;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -55,7 +48,7 @@ const { title, description } = Astro.props;
 }
 
 .contentCon {
-  width: 60rem;
+  width: 50rem;
   max-width: 85vw;
   position: relative;
   top: var(--nav-height);

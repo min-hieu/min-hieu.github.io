@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import { Division } from '../components/Home.jsx';
+
+const pages = [
+  {
+    title:  "Home",
+    path:   "/",
+  },
+  {
+    title:  "Blogs",
+    path:   "/blogs",
+  },
+  {
+    title:  "CV",
+    path:   "/cv",
+  },
+]
+---
+
+<div class="footer">
+  <div class="fMainCon">
+    <Division color='#828282' />
+    <div class="fCon">
+      <div class="fLeft">
+        Nguyen Minh Hieu @ 2022
+      </div>
+      <div class="fRight">
+        <div class="fLink">
+          {pages.map((p, pid) => (
+            <div class="fLink">
+              {pid ? <div>•</div> : null}
+              <a rel="prefetch" href={p.path} class='navBtn'>
+                {p.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  <div />
+</div>
+
+<style>
+
+.fMainCon {
+  width: 50rem;
+  max-width: 85vw;
+}
+
+.footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fCon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.fRight {
+  align-text: left;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.fLeft {
+}
+
+.fLink {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+</style>
