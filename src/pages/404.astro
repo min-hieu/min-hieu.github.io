@@ -11,12 +11,20 @@ import Layout from '../layouts/Layout.astro';
       OOPS
     </div>
     <div class="err1">
-      there is nothing here...
+      <code><pre>
+    {`
+       .-"-.          \n
+     _/_-.-_\\_       \n
+    / __} {__ \\      \n
+   / //  "  \\\\ \\   \n
+  / / \\'---'/ \\ \\  \n
+  \\ \\_/'"""'\\_/ /  \n
+   \\           /     \n
+ Can't Find Nothin'
+    `}
+      </pre></code>
     </div>
-    <div class="err3">
-      except for 2048!
-    </div>
-    <iframe src="https://funhtml5games.com?embed=2048bit" style="width:530px;height:690px;border:none;" frameborder="0" scrolling="no"></iframe>
+
   </div>
 </Layout>
 
@@ -35,6 +43,7 @@ import Layout from '../layouts/Layout.astro';
   font-weight: 200;
   font-size: 1rem;
   padding: 0;
+  line-height: 0.4rem;
 }
 
 .err2 {

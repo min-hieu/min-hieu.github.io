@@ -8,21 +8,35 @@ h2 {
   margin: 1rem 0;
 }
 
-p {
-  font-family: var(--font-thin);
-  font-weight: 300;
-}
-
 .astro-code {
   margin: .5rem 0;
   padding: .5rem;
   border-color: var(--col-fade);
   border-style: solid;
   border-radius: .3rem;
-  border-width: .05rem;;
+  border-width: .05rem;
   font-size: 1rem;
 }
 
 .katex-html {
   font-size: 1rem;
+}
+
+ul ol {
+  padding-left: 1.25rem;
+}
+
+li, td, p {
+  font-family: var(--font-thin);
+  font-weight: 300;
+  margin: .25rem 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: scale-down;
+}
+
+hr {
+  margin: 1rem 0;
 }
