@@ -13,7 +13,7 @@ export function strToCol(str: string) {
   for (let i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
   }
-  return "hsl(" + (hash / (122*str.length) * 255) + ", 56%, 56%)";
+  return "hsl(" + (hash / (123*str.length) * 359) + ", 56%, 56%)";
 }
 
 export function getTags(posts: MDXInstance<Post>[]) {
