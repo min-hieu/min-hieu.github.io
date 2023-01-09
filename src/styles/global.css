@@ -26,9 +26,10 @@
   --font-korean:  'Noto Sans', sans-serif;
   --font-serif:   'Cormorant Garamond', serif;
 
-  --fsize: max(2.3vmin, 1rem);
-  --hsize: calc(max(2.3vmin, 1rem) * 2);
-  --hssize: calc(max(2.3vmin, 1rem) * 1.25);
+  --fsize: 1rem;
+  --fsizesmall: 0.8rem;
+  --hsize: 2rem;
+  --hssize: 1.25rem;
 }
 
 html,

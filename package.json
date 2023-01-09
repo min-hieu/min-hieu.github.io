@@ -19,6 +19,7 @@
     "astro": "^1.6.15",
     "fuse.js": "^6.6.2",
     "react-pdf": "^6.2.0",
+    "rehype-citation": "^0.4.0",
     "rehype-katex": "^6.0.2",
     "remark-math": "^5.1.1",
     "sharp": "^0.31.2"

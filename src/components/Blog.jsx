@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Division } from './Home.jsx';
 import { RiSearchLine } from "@react-icons/all-files/ri/RiSearchLine";
+import { RiFilePaper2Line } from "@react-icons/all-files/ri/RiFilePaper2Line";
 import Fuse from 'fuse.js';
 
 import '../styles/blog.css';
@@ -182,8 +183,27 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
   );
 }
 
+const CharlieImage = ({ src }) => {
+  return (
+    <div className="charlieImage">
+      <img src={src} />
+    </div>
+  )
+}
+
+const PaperPreview = ({ link, type }) => {
+  return (
+    <div className="paperPreview">
+      <RiFilePaper2Line />
+      {type === "arxiv" ? "arXiv" : "paper"}
+    </div>
+  )
+}
+
 export {
   Tag,
   BlogCard,
   BlogMain,
+  CharlieImage,
+  PaperPreview,
 }

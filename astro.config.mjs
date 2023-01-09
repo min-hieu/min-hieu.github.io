@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeCitation from 'rehype-citation';
 
 export default {
   site: 'https://min-hieu.github.io',
@@ -13,6 +14,28 @@ export default {
       theme: "github-light",
       wrap: true,
     },
+    remarkPlugins: [
+      'remark-math',
+    ],
+    rehypePlugins: [
+      ['rehype-katex', {
+        macros: {
+          '\\E': '\\mathbb{E}',
+          '\\C': '\\mathbb{C}',
+          '\\R': '\\mathbb{R}',
+          '\\N': '\\mathbb{N}',
+          '\\Q': '\\mathbb{Q}',
+          '\\bigO': '\\mathcal{O}',
+          '\\abs': '|#1|',
+          '\\set': '\\{ #1 \\}',
+          '\\indep': "{\\perp\\mkern-9.5mu\\perp}",
+          '\\nindep': "{\\not\\!\\perp\\!\\!\\!\\perp}",
+          "\\latex": "\\LaTeX",
+          "\\katex": "\\KaTeX",
+        }
+      }]
+    ],
+    extendDefaultPlugins: true,
   },
   integrations: [
     image({
@@ -25,6 +48,7 @@ export default {
       ],
       rehypePlugins: [
         rehypeKatex,
+        rehypeCitation,
       ],
     }),
     prefetch({

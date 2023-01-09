@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { RiArrowDownFill }    from "@react-icons/all-files/ri/RiArrowDownFill";
-import { RiArrowUpFill }      from "@react-icons/all-files/ri/RiArrowUpFill";
-import { RiGithubLine }       from "@react-icons/all-files/ri/RiGithubLine";
-import { RiLinkedinBoxFill }  from "@react-icons/all-files/ri/RiLinkedinBoxFill";
+import { RiArrowDownFill } from "@react-icons/all-files/ri/RiArrowDownFill";
+import { RiArrowUpFill } from "@react-icons/all-files/ri/RiArrowUpFill";
+import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine";
+import { RiLinkedinBoxFill } from "@react-icons/all-files/ri/RiLinkedinBoxFill";
 import '../styles/home.css';
 
 
@@ -14,7 +14,7 @@ const NewsCard = ({ date, title }) => {
         <div className="newsMid">•</div>
         <div className="newsTitle">{title}</div>
       </div>
-      <Division color="#dadada"/>
+      <Division color="#dadada" />
     </>
   )
 }
@@ -25,20 +25,20 @@ const NewsCon = props => {
     <>
       <div
         className="newsCon"
-        style={{"height": `${show ? 'fit-content' : 5*props.limit + 2.5 + 'vh'}`}}
+        style={{ "height": `${show ? 'fit-content' : 5 * props.limit + 2.5 + 'vh'}` }}
       >
-        { props.children }
+        {props.children}
       </div>
-      { props.size > props.limit ?
+      {props.size > props.limit ?
         <div
           className="showMoreCon"
-          style={{"top": `${show ? 0 : -5}vh`}}
+          style={{ "top": `${show ? 0 : -5}vh` }}
         >
           <div
-            className={ "showMore" }
-            onClick={()=>setShow(!show)}
+            className={"showMore"}
+            onClick={() => setShow(!show)}
           >
-            { show ? <RiArrowUpFill/> : <RiArrowDownFill/> }
+            {show ? <RiArrowUpFill /> : <RiArrowDownFill />}
           </div>
         </div>
         : null
@@ -51,11 +51,11 @@ const Socials = () => (
   <>
     <RiGithubLine
       className="icon"
-      onClick={()=>goto("https://github.com/min-hieu/")}
+      onClick={() => goto("https://github.com/min-hieu/")}
     />
     <RiLinkedinBoxFill
       className="icon"
-      onClick={()=>goto("https://www.linkedin.com/in/min-hieu/")}
+      onClick={() => goto("https://www.linkedin.com/in/min-hieu/")}
     />
   </>
 )
@@ -108,7 +108,7 @@ const Division = ({ color }) => {
     <div className="centerCon" >
       <div
         className="div"
-        style={{"background": `${color}`}}
+        style={{ "background": `${color}` }}
       />
     </div>
   )
