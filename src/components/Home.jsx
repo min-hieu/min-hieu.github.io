@@ -3,8 +3,16 @@ import { RiArrowDownFill } from "@react-icons/all-files/ri/RiArrowDownFill";
 import { RiArrowUpFill } from "@react-icons/all-files/ri/RiArrowUpFill";
 import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine";
 import { RiLinkedinBoxFill } from "@react-icons/all-files/ri/RiLinkedinBoxFill";
+import { RiArrowRightUpLine } from "@react-icons/all-files/ri/RiArrowRightUpLine";
 import '../styles/home.css';
 
+
+const ScholarBtn = ({ }) => (
+  <div>
+    Google Scholar
+    <RiArrowRightUpLine className='icon' />
+  </div>
+)
 
 const NewsCard = ({ date, title }) => {
   return (
@@ -13,6 +21,25 @@ const NewsCard = ({ date, title }) => {
         <div className="newsDate">{date}</div>
         <div className="newsMid">•</div>
         <div className="newsTitle">{title}</div>
+      </div>
+      <Division color="#dadada" />
+    </>
+  )
+}
+
+const BibCard = ({ image, title, author, year, journal }) => {
+  return (
+    <>
+      <div className="bibCard">
+        {image && <div className="bibImage">image</div>}
+        <div className="bibText">
+          <div className="bibTitle">{title}</div>
+          <div className="bibPublish">
+            <div className="bibPublisher">{journal}</div>
+            <div className="bibYear">{year}</div>
+          </div>
+          <div className="bibAuthor">{author}</div>
+        </div>
       </div>
       <Division color="#dadada" />
     </>
@@ -91,7 +118,7 @@ const Header = ({ text, center }) => {
   )
 }
 
-const HeaderS = ({ text, center }) => {
+const HeaderS = ({ text, center, scholar }) => {
   return (
     <div className="centerCon">
       <div className={
@@ -99,6 +126,7 @@ const HeaderS = ({ text, center }) => {
       }>
         {text}
       </div>
+      {scholar && <ScholarBtn />}
     </div>
   )
 }
@@ -116,6 +144,7 @@ const Division = ({ color }) => {
 
 export {
   NewsCard,
+  BibCard,
   NewsCon,
   ParaDiv,
   Section,
@@ -123,4 +152,5 @@ export {
   HeaderS,
   Division,
   Socials,
+  ScholarBtn,
 };

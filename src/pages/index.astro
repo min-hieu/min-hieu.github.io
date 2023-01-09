@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import {
   NewsCard,
+  BibCard,
   NewsCon,
   HeaderS,
   ParaDiv,
   Section,
   Division,
   Socials,
+  ScholarBtn,
 } from '../components/Home.jsx';
 import { Image, Picture } from '@astrojs/image/components';
 
@@ -16,7 +18,8 @@ const meta = {
   description: "Welcome Home!",
 }
 
-import data from "../data/news.json";
+import news_data from "../data/news.json";
+import bib_data from "../data/mybibtex.json";
 ---
 
 <Layout meta={meta}>
@@ -47,15 +50,26 @@ import data from "../data/news.json";
       <br/>
       <HeaderS text="News"/>
       <Division />
-      <NewsCon limit={5} size={data.news_data.length} client:load>
+      <NewsCon limit={5} size={news_data.news_data.length} client:visible>
         {
-          data.news_data.map((news) => (
-            <NewsCard date={news.date} title={news.title}/>
+          news_data.news_data.map((news) => (
+            <NewsCard date={news.date} title={news.title} client:visible/>
           ))
         }
       </NewsCon>
-      <HeaderS text="Publications"/>
+      <HeaderS text="Publications" />
       <Division />
+      {
+        bib_data.bibtex_data.map((bib) => (
+          <BibCard
+            title={bib.title}
+            author={bib.author}
+            year={bib.year}
+            journal={bib.journal}
+            client:visible
+          />
+        ))
+      }
     </div>
   </div>
 </Layout>

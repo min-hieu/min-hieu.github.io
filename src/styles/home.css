@@ -108,6 +108,69 @@
   overflow: hidden;
 }
 
+.bibCard {
+  height: 3rem;
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 0 2vw;
+  gap: 1rem;
+}
+
+.bibText {
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  text-align: left;
+  flex-direction: column;
+  margin: 0 2vw;
+  gap: 0.2rem;
+}
+
+.bibTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: var(--fsizesmall);
+  font-family: var(--font-thin);
+  font-weight: 700;
+  color: var(--col-text);
+}
+
+.bibAuthor {
+  display: flex;
+  font-size: .7rem;
+  font-family: var(--font-mono);
+  font-weight: 200;
+  color: var(--col-text);
+}
+
+.bibPublish {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  font-size: .7rem;
+  font-family: var(--font-thin);
+  font-weight: 200;
+  color: var(--col-text);
+  gap: 0.3rem;
+}
+
+.bibYear {
+}
+
+.bibPublisher {
+}
+
+.bibCon {
+  overflow: hidden;
+}
+
 .showMoreCon {
   height: 5vh;
   width: 100%;
