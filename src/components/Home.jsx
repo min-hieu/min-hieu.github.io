@@ -27,20 +27,24 @@ const NewsCard = ({ date, title }) => {
   )
 }
 
-const BibCard = ({ image, title, author, year, journal }) => {
+const BibCard = ({ image, title, author, year, journal, link }) => {
   return (
     <>
-      <div className="bibCard">
-        {image && <div className="bibImage">image</div>}
-        <div className="bibText">
-          <div className="bibTitle">{title}</div>
-          <div className="bibPublish">
-            <div className="bibPublisher">{journal}</div>
-            <div className="bibYear">{year}</div>
+      <a href={link}>
+        <div className="bibCard">
+          {image && <div className="bibImage">image</div>}
+          <div className="bibText">
+            <div className="bibTitle">{title}</div>
+            <div className="bibPublish">
+              <div className="bibPublisher">{journal}</div>
+              <div className="bibYear">{year}</div>
+            </div>
+            <div className="bibAuthor">
+              {author[0]}<b>{author[1]}</b>{author[2]}
+            </div>
           </div>
-          <div className="bibAuthor">{author}</div>
         </div>
-      </div>
+      </a>
       <Division color="#dadada" />
     </>
   )

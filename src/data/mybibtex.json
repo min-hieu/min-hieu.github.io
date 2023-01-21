@@ -3,9 +3,12 @@
     {
       "type"         : "article",
       "title"        : "Utilizing the ABC transporter for growth factor Production by fleQ Deletion Mutant of Pseudomonas fluorescens",
-      "author"       : "Fabia, Benedict-Uy and Bingwa, Joshua and Park, Jiyeon and Hieu, Nguyen-Minh and Ahn, Jung-Hoon",
+      "authorPre"    : "Fabia, Benedict-Uy and Bingwa, Joshua and Park, Jiyeon and ",
+      "authorMe"     : "Hieu, Nguyen-Minh",
+      "authorPost"   : " and Ahn, Jung-Hoon",
       "year"         : 2021,
-      "journal"      : "Biomedicines"
+      "journal"      : "Biomedicines",
+      "link"         : "https://www.mdpi.com/1151622"
     }
   ]
 }
