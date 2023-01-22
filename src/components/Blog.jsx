@@ -191,6 +191,13 @@ const CharlieImage = ({ src }) => {
   )
 }
 
+const CharlieEmbed = ({ src }) => {
+  return (
+    <iframe className="charlieEmbed" src={src}>
+    </iframe>
+  )
+}
+
 const PaperPreview = ({ link, type }) => {
   return (
     <div className="paperPreview">
@@ -205,5 +212,6 @@ export {
   BlogCard,
   BlogMain,
   CharlieImage,
+  CharlieEmbed,
   PaperPreview,
 }
