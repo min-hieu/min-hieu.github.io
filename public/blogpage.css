@@ -2,13 +2,29 @@
   margin: 0;
 }
 
+h1 {
+  font-family: 'linux-serif';
+  font-size: 1.65rem;
+  margin: 0.25rem 0;
+}
+
 h2 {
-  font-family: var(--font-wide);
-  font-size: 1.5rem;
-  margin: 1rem 0;
+  font-family: 'linux-serif';
+  font-size: 1.45rem;
+  margin: 0.25rem 0;
+}
+
+h3 {
+  font-family: 'linux-serif';
+  margin: 0.25rem 0;
+}
+
+th {
+  font-family: 'linux-serif';
 }
 
 .astro-code {
+  font-family: 'IBM Plex Mono', monospace;
   margin: .5rem 0;
   padding: .5rem;
   border-color: var(--col-fade);
@@ -27,9 +43,13 @@ ul ol {
 }
 
 li, td, p {
-  font-family: var(--font-thin);
+  font-family: 'linux-serif';
   font-weight: 300;
   margin: .25rem 0;
+}
+
+p {
+  text-align: justify;
 }
 
 img {

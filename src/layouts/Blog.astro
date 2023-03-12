@@ -27,15 +27,21 @@ const { frontmatter, headings } = Astro.props;
     <div class="mainCon">
       <div class="contentConBlog">
         <div class="blogHeader">
-          <div class="blogTitle">
-            { frontmatter.title }
-          </div>
           <div class="tags">
             { frontmatter.tags.map(t =>
               <div class="tagElem">
               {t}
               </div>
             )}
+          </div>
+          <div class="blogTitle">
+            { frontmatter.title }
+          </div>
+          <div class="blogAuthor">
+            Nguyen Minh Hieu
+          </div>
+          <div class="blogDate">
+            {frontmatter.date}
           </div>
         </div>
         <slot/>
@@ -77,9 +83,8 @@ const { frontmatter, headings } = Astro.props;
 .blogTitle {
   display: flex;
   justify-content: center;
-  font-family: var(--font-wide);
-  font-weight: 800;
-  font-size: 2rem;
+  font-family: 'linux-serif-bold';
+  font-size: 1.85rem;
 }
 
 .tags {
@@ -93,10 +98,25 @@ const { frontmatter, headings } = Astro.props;
   gap: .5rem;
   user-select: none;
   -webkit-user-select: none;
+  display: None;
 }
 
 .tagElem {
   cursor: pointer;
+}
+
+.blogAuthor {
+  font-family: 'linux-serif';
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.blogDate {
+  font-family: 'linux-serif';
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 </style>

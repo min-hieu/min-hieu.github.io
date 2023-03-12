@@ -191,10 +191,9 @@ const CharlieImage = ({ src }) => {
   )
 }
 
-const CharlieEmbed = ({ src }) => {
+const CharlieEmbed = ({ src, style }) => {
   return (
-    <iframe className="charlieEmbed" src={src}>
-    </iframe>
+    <iframe className="charlieEmbed" src={src} styles={style}></iframe>
   )
 }
 
