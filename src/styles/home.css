@@ -2,7 +2,7 @@
   width: 100%;
   font-size: var(--fsize);
   font-family: var(--font-thin);
-  font-weight: 200;
+  font-weight: 300;
   color: #000;
   line-height: calc(var(--fsize) * 3 / 2);
 }
@@ -74,7 +74,7 @@
   text-align: center;
   font-size: .7rem;
   font-family: var(--font-mono);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--col-text);
 }
 
@@ -85,7 +85,7 @@
   text-align: center;
   font-size: .9rem;
   font-family: var(--font-mono);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--col-text);
 }
 
@@ -100,7 +100,7 @@
   text-align: left;
   font-size: var(--fsizesmall);
   font-family: var(--font-thin);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--col-text);
 }
 
@@ -145,7 +145,7 @@
 .bibAuthor {
   font-size: .7rem;
   font-family: var(--font-mono);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--col-text);
 }
 
@@ -155,7 +155,7 @@
   align-items: left;
   font-size: .7rem;
   font-family: var(--font-thin);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--col-text);
   gap: 0.3rem;
 }
@@ -178,7 +178,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-weight: 200;
+  font-weight: 300;
   font-size: .9rem;
   color: var(--col-font);
   background: linear-gradient(0, #fff, transparent);
