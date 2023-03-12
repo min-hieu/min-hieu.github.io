@@ -116,7 +116,7 @@
   align-items: center;
   text-align: center;
   flex-direction: row;
-  margin: 1rem 2vw;
+  margin: .75rem .75rem;
   gap: 1rem;
 }
 
@@ -127,7 +127,7 @@
   align-items: left;
   text-align: left;
   flex-direction: column;
-  margin: 0 2vw;
+  margin: 0;
   gap: 0.2rem;
 }
 
