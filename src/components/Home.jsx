@@ -122,7 +122,7 @@ const Header = ({ text, center }) => {
   )
 }
 
-const HeaderS = ({ text, center, scholar }) => {
+const HeaderS = ({ text, center, side }) => {
   return (
     <div className="centerCon">
       <div className={
@@ -130,7 +130,7 @@ const HeaderS = ({ text, center, scholar }) => {
       }>
         {text}
       </div>
-      {scholar && <ScholarBtn />}
+      <div className='headerSside'>{side}</div>
     </div>
   )
 }

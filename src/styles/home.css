@@ -20,15 +20,23 @@
 }
 
 .headerS {
-  width: 100%;
+  width: fit-content;
   display: flex;
-  padding-left: 2vw;
+  padding: 0 2vw;
   align-items: center;
   font-size: var(--hssize);
   font-family: var(--font-mono);
   font-weight: 600;
   color: #000;
   line-height: calc(var(--hssize) * 3 / 2);
+}
+
+.headerSside {
+  width: 100%;
+  display: flex;
+  font-size: var(--fsizesmall);
+  font-family: var(--font-mono);
+  font-weight: 200;
 }
 
 .section {
@@ -143,8 +151,8 @@
 }
 
 .bibAuthor {
-  font-size: .7rem;
-  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-family: var(--font-thin);
   font-weight: 300;
   color: var(--col-text);
 }

@@ -1,6 +1,16 @@
 {
   "bibtex_data" : [
     {
+      "type"         : "journal",
+      "title"        : "SALAD: Part-Level Latent Diffusion for 3D Shape Generation and Manipulation",
+      "authorPre"    : "Juil Koo*, Seungwoo Yoo*, ",
+      "authorMe"     : "Minh Hieu Nguyen*",
+      "authorPost"   : ", and Minhyuk Sung",
+      "year"         : 2023,
+      "journal"      : "arXiv preprint arXiv:2303.12236",
+      "link"         : "https://arxiv.org/abs/2303.12236"
+    },
+    {
       "type"         : "article",
       "title"        : "Utilizing the ABC transporter for growth factor Production by fleQ Deletion Mutant of Pseudomonas fluorescens",
       "authorPre"    : "Fabia, Benedict-Uy and Bingwa, Joshua and Park, Jiyeon and ",
