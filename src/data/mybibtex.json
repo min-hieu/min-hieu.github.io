@@ -8,7 +8,17 @@
       "authorPost"   : ", and Minhyuk Sung",
       "year"         : 2023,
       "journal"      : "arXiv preprint arXiv:2303.12236",
-      "link"         : "https://arxiv.org/abs/2303.12236"
+      "image"        : "publication/salad.png",
+      "links"        : [
+        {
+          "title" : "ArXiv",
+          "href"  : "https://arxiv.org/abs/2303.12236"
+        },
+        {
+          "title" : "Project",
+          "href"  : "https://salad3d.github.io"
+        }
+      ]
     },
     {
       "type"         : "article",
@@ -18,7 +28,12 @@
       "authorPost"   : " and Ahn, Jung-Hoon",
       "year"         : 2021,
       "journal"      : "Biomedicines",
-      "link"         : "https://www.mdpi.com/1151622"
+      "links"        : [
+        {
+          "title" : "paper",
+          "href"  : "https://www.mdpi.com/1151622"
+        }
+      ]
     }
   ]
 }

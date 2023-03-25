@@ -139,6 +139,10 @@
   gap: 0.2rem;
 }
 
+.bibImage {
+  width: 20%;
+}
+
 .bibTitle {
   width: 100%;
   display: flex;
@@ -160,7 +164,8 @@
 .bibPublish {
   display: flex;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
+  justify-content: left;
   font-size: .7rem;
   font-family: var(--font-thin);
   font-weight: 300;
@@ -176,6 +181,24 @@
 
 .bibCon {
   overflow: hidden;
+}
+
+.bibLinkCon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  gap: .25rem;
+}
+
+.bibLink {
+  font-size: .75rem;
+  font-family: var(--font-thin);
+  color: white;
+  background: black;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.3rem;
 }
 
 .showMoreCon {

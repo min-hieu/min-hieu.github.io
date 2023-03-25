@@ -27,24 +27,27 @@ const NewsCard = ({ date, title }) => {
   )
 }
 
-const BibCard = ({ image, title, author, year, journal, link }) => {
+const BibCard = ({ image, title, author, year, journal, links }) => {
   return (
     <>
-      <a href={link}>
-        <div className="bibCard">
-          {image && <div className="bibImage">image</div>}
-          <div className="bibText">
-            <div className="bibTitle">{title}</div>
-            <div className="bibPublish">
-              <div className="bibPublisher">{journal}</div>
-              <div className="bibYear">{year}</div>
-            </div>
-            <div className="bibAuthor">
-              {author[0]}<b>{author[1]}</b>{author[2]}
-            </div>
+      <div className="bibCard">
+        {image && <img className="bibImage" src={image} />}
+        <div className="bibText">
+          <div className="bibTitle">{title}</div>
+          <div className="bibPublish">
+            <div className="bibPublisher">{journal}</div>
+            <div className="bibYear">{year}</div>
           </div>
+          <div className="bibAuthor">
+            {author[0]}<b>{author[1]}</b>{author[2]}
+          </div>
+          {links && <div className="bibLinkCon">
+            {links.map((li) =>
+              <a className="bibLink" href={li.href}>{li.title}</a>
+            )}
+          </div>}
         </div>
-      </a>
+      </div>
       <Division color="#dadada" />
     </>
   )
