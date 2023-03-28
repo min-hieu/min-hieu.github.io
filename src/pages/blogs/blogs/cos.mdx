@@ -1,0 +1,43 @@
+---
+layout: "../../../layouts/Blog.astro"
+title: Cross-Origin Policy
+date: 28/03/2023
+description: Cross-Origin Policy
+tags: ["fun", "web"]
+---
+
+## Same Origin Policy
+When embedding with iframe, embedded iframe can access parent's resources
+if the two websites has the same origin.
+```javascript
+parent.document.getElementById("secret-pwd")
+```
+Similar to `Users` abstraction in OS, browsers uses `Origins` as the abstraction
+for access. Good. Let's talk about cookies and how to make HTTP statefull securely.
+Since HTTP is stateless, to keep track of state, we uses session. The server keep
+track of the session and the user send cookies so that the server can use to match
+with the existing session. The cookies basically identify the user in the server.
+So how browser set cookie? The server first send HTTP Hear with `Set-cookie` value
+that tell the browser what the cookie format should be. This header contains some
+security measures like secure, expire, HttpOnly, etc. When a value is not set,
+browser will use the default scope setting rules. Let the `domain`
+value to be `login.site.com`, allowed domain would be `login.site.com` AND `.site.com`
+This mean that `login.site.com` can set the cookie of `.site.com`. CROSS-ORIGIN!
+Let's write some javascript to set some cookie
+```javascript
+document.cookie = 'name=value; expires=...';
+document.cookie = 'KLoginCookie=hello;Domains=.kaist.ac.kr";
+```
+to read a cookie:
+```javascript
+alert(document.cookie);
+```
+to delete cookie:
+```javascript
+document.cookie = 'expires=(sometime in the past)';
+```
+Let's see how this is a problem.
+1. Alice login at `login.site.com`. login.site.com sets session-id cookie for `.site.com`
+2. Alice visits `evil.site.com` which overwirtes the `.site.com` cookie.
+3. Alice submit her homework to `.site.com` which send her homework as evil cookie.
+

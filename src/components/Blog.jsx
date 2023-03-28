@@ -61,14 +61,14 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
   const fuseTag = new Fuse(taggedPages, {
     keys: ["frontmatter.title", "frontmatter.date", "frontmatter.tag"],
     includeMatches: true,
-    minMatchCharLength: 2,
+    minMatchCharLength: 1,
     threshold: 0.5,
   });
 
   const fuseAll = new Fuse(allPages, {
     keys: ["frontmatter.title", "frontmatter.date", "frontmatter.tag"],
     includeMatches: true,
-    minMatchCharLength: 2,
+    minMatchCharLength: 1,
     threshold: 0.5,
   });
 
