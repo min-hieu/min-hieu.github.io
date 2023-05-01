@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { RiArrowDownFill } from "@react-icons/all-files/ri/RiArrowDownFill";
 import { RiArrowUpFill } from "@react-icons/all-files/ri/RiArrowUpFill";
-import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine";
-import { RiLinkedinBoxFill } from "@react-icons/all-files/ri/RiLinkedinBoxFill";
 import { RiArrowRightUpLine } from "@react-icons/all-files/ri/RiArrowRightUpLine";
 import '../styles/home.css';
 
@@ -82,14 +80,20 @@ const NewsCon = props => {
 }
 
 const Socials = () => (
-  <>
-    <a href="https://github.com/min-hieu/">
-      <RiGithubLine className="icon"/>
+  <div className="socialCon">
+    <a href="https://github.com/min-hieu/"
+       className="icon">
+      [Github]
     </a>
-    <a href="https://www.linkedin.com/in/min-hieu/">
-      <RiLinkedinBoxFill className="icon"/>
+    <a href="https://www.linkedin.com/in/min-hieu/"
+       className="icon">
+      [LinkedIn]
     </a>
-  </>
+    <a href="https://scholar.google.com/citations?user=w8cjoQkAAAAJ&hl=en"
+       className="icon">
+      [Scholar]
+    </a>
+  </div>
 )
 
 
