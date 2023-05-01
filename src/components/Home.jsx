@@ -42,8 +42,8 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
             {author[0]}<b>{author[1]}</b>{author[2]}
           </div>
           {links && <div className="bibLinkCon">
-            {links.map((li) =>
-              <a className="bibLink" href={li.href}>{li.title}</a>
+            {links.map((li, i) =>
+              <a key={i} className="bibLink" href={li.href}>{li.title}</a>
             )}
           </div>}
         </div>
@@ -83,14 +83,12 @@ const NewsCon = props => {
 
 const Socials = () => (
   <>
-    <RiGithubLine
-      className="icon"
-      onClick={() => goto("https://github.com/min-hieu/")}
-    />
-    <RiLinkedinBoxFill
-      className="icon"
-      onClick={() => goto("https://www.linkedin.com/in/min-hieu/")}
-    />
+    <a href="https://github.com/min-hieu/">
+      <RiGithubLine className="icon"/>
+    </a>
+    <a href="https://www.linkedin.com/in/min-hieu/">
+      <RiLinkedinBoxFill className="icon"/>
+    </a>
   </>
 )
 
