@@ -25,63 +25,71 @@ import bib_data from "../data/mybibtex.json";
 
 <Layout meta={meta}>
   <div class="indexMain">
-    <div class="left">
-      <div class="profileImage">
-        <img
-          src="/charlie.JPG" alt="me"
-        />
-      </div>
-      <ParaDiv center={true}>
-        <Socials/>
-      </ParaDiv>
-    </div>
-    <div class="right">
-      <ParaDiv>
-          Hi! Thanks for visiting my website. <br/>
-          I'm <b>Hieu</b> and I am a currently a junior
-          in the department of computer science and electrical
-          engineering at KAIST, South Korea. My main research interest is
-          applying machine learning techniques to computer graphics. I
-          am always looking collaboration opportunities so feel free
-          to contact me!
-          <br/>
-          In my free time I also enjoy reading books
-          , making sily programs, and baking!<br/>
-      </ParaDiv>
-      <br/>
-      <HeaderS text="News"/>
-      <Division />
-      <NewsCon limit={5} size={news_data.news_data.length} client:visible>
-        {
-          news_data.news_data.map((news) => (
-            <NewsCard date={news.date} title={news.title} client:visible/>
-          ))
-        }
-      </NewsCon>
-      <HeaderS text="Publications" side="(* denotes equal contribution)"/>
-      <Division />
-      {
-        bib_data.bibtex_data.map((bib) => (
-          <BibCard
-            title={bib.title}
-            author={[bib.authorPre, bib.authorMe, bib.authorPost]}
-            year={bib.year}
-            journal={bib.journal}
-            links={bib.links}
-            image={bib.image}
-            client:visible
+    <div class="top">
+      <div class="left">
+        <div class="profileImage">
+          <img
+            src="/charlie.JPG" alt="me"
           />
-        ))
-      }
+        </div>
+        <ParaDiv center={true}>
+          <Socials/>
+        </ParaDiv>
+      </div>
+      <div class="right">
+        <ParaDiv>
+            Hi! Thanks for visiting my website. <br/>
+            I'm <b>Hieu</b> and I am a currently a junior
+            in the department of computer science and electrical
+            engineering at KAIST, South Korea. My main research interest is
+            applying machine learning techniques to computer graphics. I
+            am always looking collaboration opportunities so feel free
+            to contact me!
+            <br/>
+            In my free time I also enjoy reading books
+            , making sily programs, and baking!<br/>
+        </ParaDiv>
+        <br/>
+        <HeaderS text="News"/>
+        <Division />
+        <NewsCon limit={5} size={news_data.news_data.length} client:visible>
+          {
+            news_data.news_data.map((news) => (
+              <NewsCard date={news.date} title={news.title} client:visible/>
+            ))
+          }
+        </NewsCon>
+      </div>
     </div>
+    <HeaderS text="Publications" side="(* denotes equal contribution)"/>
+    <Division />
+    {
+      bib_data.bibtex_data.map((bib) => (
+        <BibCard
+          title={bib.title}
+          author={[bib.authorPre, bib.authorMe, bib.authorPost]}
+          year={bib.year}
+          journal={bib.journal}
+          links={bib.links}
+          image={bib.image}
+          client:visible
+        />
+      ))
+    }
   </div>
 </Layout>
 
 <style>
 .indexMain {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 5vmin;
+  justify-content: space-between;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
 }
 
 .profileImage {
@@ -102,6 +110,7 @@ img {
 
 .right {
   width: 70%;
+  padding-left: 1rem;
 }
 
 iframe {
@@ -116,7 +125,7 @@ iframe {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .indexMain {
+  .top {
     flex-direction: column;
     align-items: center;
   }

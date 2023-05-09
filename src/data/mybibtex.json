@@ -26,6 +26,21 @@
     },
     {
       "type"         : "article",
+      "title"        : "Generalized Approach towards Secretion-Based Protein Production via Neutralization of Secretion-Preventing Cationic Substrate Residues",
+      "authorPre"    : "Hyunjong Byun, Jiyeon Park, Benedict U Fabia, Joshua Bingwa, ",
+      "authorMe"     : "Hieu, Nguyen-Minh",
+      "authorPost"   : " and Haeshin Lee, Jung Hoon Ahn",
+      "year"         : 2022,
+      "journal"      : "International Journal of Molecular Sciences",
+      "links"        : [
+        {
+          "title" : "Paper",
+          "href"  : "https://www.mdpi.com/1422-0067/23/12/6700"
+        }
+      ]
+    },
+    {
+      "type"         : "article",
       "title"        : "Utilizing the ABC transporter for growth factor Production by fleQ Deletion Mutant of Pseudomonas fluorescens",
       "authorPre"    : "Fabia, Benedict-Uy and Bingwa, Joshua and Park, Jiyeon and ",
       "authorMe"     : "Hieu, Nguyen-Minh",
@@ -34,7 +49,7 @@
       "journal"      : "Biomedicines",
       "links"        : [
         {
-          "title" : "paper",
+          "title" : "Paper",
           "href"  : "https://www.mdpi.com/1151622"
         }
       ]
