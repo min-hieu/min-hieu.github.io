@@ -27,7 +27,7 @@
 
 .controlCon {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 svg {
