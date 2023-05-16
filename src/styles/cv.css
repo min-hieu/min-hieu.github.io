@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
   gap: 0.8rem;
   user-select: none;
   -webkit-user-select: none;
@@ -24,6 +23,11 @@
   color: var(--col-text);
   font-size: 1.2rem;
   user-select: none;
+}
+
+.controlCon {
+  display: flex;
+  justify-content: left;
 }
 
 svg {
@@ -38,20 +42,13 @@ svg {
   justify-content: center;
   align-items: center;
   border-radius: 0.2rem;
+  border-width: 0.08rem;
+  color: white;
+  background: black;
 }
 
 .btn:hover {
-  background: var(--col-fade);
-  filter: invert(80%);
-}
-
-.downCon {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  padding-bottom: 0.6rem;
+  filter: invert(100%);
 }
 
 .downBtn {
@@ -59,25 +56,24 @@ svg {
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  color: var(--col-text);
+  color: white;
+  background: black;
   border-radius: 0.2rem;
   font-size: 1rem;
   user-select: none;
   cursor: pointer;
   border-style: solid;
   border-width: 0.08rem;
-  width: 6rem;
-  height: 1.5rem;
+  border-color: black;
+  padding: 0 .3rem;
   align-text: center;
   box-sizing: border-box;
-  border-color: var(--col-bg);
-  font-weight: 200;
+  font-weight: 400;
   user-select: none;
   -webkit-user-select: none;
 }
 
 .downBtn:hover {
-  background: var(--col-fade);
-  filter: invert(80%);
-  border-style: none;
+  background: white;
+  color: black;
 }

@@ -13,8 +13,8 @@ const CVMain = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNum, setPageNum] = useState(0);
   const pdfPath = '/resume.pdf';
-  const pdfWidth = windowSize.width > windowSize.height 
-    ? windowSize.height 
+  const pdfWidth = windowSize.width > windowSize.height
+    ? windowSize.height
     : windowSize.width * 0.9
 
   function onDocumentLoadSuccess({ numPages }) {
@@ -24,27 +24,22 @@ const CVMain = () => {
   return (
     <div>
       {numPages ?
-        <>
-          <div className="downCon">
-            <a className="downBtn" href={pdfPath}>
-              download
-            </a>
-          </div>
+        <div className='controlCon'>
           <div className="pdfNumCon">
-            <div 
-              className="btn" 
+            <div className="pdfNum">
+              {pageNum+1}/<b>{numPages}</b>
+            </div>
+            <div
+              className="btn"
               onClick={()=>
-                {pageNum == 0 
-                ? setPageNum(numPages-1) 
+                {pageNum == 0
+                ? setPageNum(numPages-1)
                 : setPageNum(pageNum-1)}
               }
             >
               <RiArrowLeftFill />
             </div>
-            <div className="pdfNum">
-              {pageNum+1}/<b>{numPages}</b>
-            </div>
-            <div 
+            <div
               className="btn"
               onClick={()=>
                 setPageNum((pageNum+1)%numPages)
@@ -52,16 +47,19 @@ const CVMain = () => {
             >
               <RiArrowRightFill />
             </div>
+            <a className="downBtn" href={pdfPath}>
+              download
+            </a>
           </div>
-        </>
+        </div>
       : null}
       <div className="pdfCon">
-        <Document 
+        <Document
           file={pdfPath}
           onLoadSuccess={onDocumentLoadSuccess}
           loading="Loading CV..."
         >
-          <Page 
+          <Page
             pageNumber={pageNum+1}
             renderTextLayer={false}
             renderAnnotationLayer={false}

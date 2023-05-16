@@ -29,7 +29,9 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
   return (
     <>
       <div className="bibCard">
-        {image && <img className="bibImage" src={image} />}
+        {image &&
+          <img className="bibImage" src={image}/>
+        }
         <div className="bibText">
           <div className="bibTitle">{title}</div>
           <div className="bibPublish">
