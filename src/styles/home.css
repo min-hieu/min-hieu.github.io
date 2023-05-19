@@ -22,11 +22,12 @@
 .headerS {
   width: fit-content;
   display: flex;
-  padding: 0 2vw;
+  padding-left: 2rem;
+  padding-right: 1rem;
   align-items: center;
   font-size: var(--hssize);
-  font-family: var(--font-mono);
-  font-weight: 600;
+  font-family: var(--font-thin);
+  font-weight: 800;
   color: #000;
   line-height: calc(var(--hssize) * 3 / 2);
 }
