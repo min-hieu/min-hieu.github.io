@@ -1,0 +1,119 @@
+---
+layout: "../../../layouts/Blog.astro"
+title: From Brownian Motion to Diffusion Model
+date: 19/05/2023
+description: This is a brief technical note on Brownian Motion
+tags: ["random", "math"]
+---
+
+## Brownian Motion
+
+To define Brownian motion, we first need to know that such disribution exists.
+<br/>
+
+**Theorem 1 (existence)** $\exist$ a probability distribution over the set of all
+continuous function $B: \mathbb{R}_{\geq 0}\mapsto \mathbb{R}$ s.t.
+1. $P(B(0) = 0) = 1$
+2. (Stationary) $\forall 0\leq s \leq t, B(t) - B(s)~\mathcal{N}(0, t-s)$
+3. (Independent Increment) If intervals $\{[s_i, t_i]\}$ are non-overlapping,
+then $B(t_i) - B(s_i)$ are independent.
+
+
+<br/>
+Now we define the Brownian motion:
+
+<br/>
+**Definition** The distribution given by **Theorem 1** is called Brownian motion.
+<br/>
+
+One important property of Brownian motion is that it's **NOT** differentiable!
+We will not prove this. Since Brownian motion can't be properly computed using
+normal calculus, we will use Ito's Calculus to derive all the equations. To see
+how we can derive Ito's Lemma, we first check an important theorem:
+
+<br/>
+**Theorem 2 (Quadractic Variation)** $\forall T>0$, we have:
+$$
+\lim_{n\rightarrow \infty} \sum_{t=1}^n \left(B\left(\frac{t}{n}T\right)\right) -
+\left(B\left(\frac{t-1}{n}T\right)\right) ^ 2 = T
+$$
+<br/>
+
+This is a surprising fact about Brownian motion because for any continuous and
+differentiable function $f$, we have that
+$$
+\begin{align*}
+\sum_{i=1}^n (f(t_{i+1}) - f(t_i))^2 &\leq \sum_{i=1}^n f'(s_i)(t_{i+1} - t_i) \quad \because \text{ Mean Value Thm. } \\
+&= \left( \max_{0\leq s  \leq T} f'(s)^2 \right) \sum_{i=1}^n (t_{i+1} - t_i) ^2  \\
+&= \left( \max_{0\leq s  \leq T} f'(s)^2 \right) \frac{T^2}{n}
+\end{align*}
+$$
+and as $n\rightarrow 0$, $\sum_{i=1}^n (f(t_{i+1}) - f(t_i))^2 \rightarrow 0$. Thus,
+for normal functions, the quadratic variation is **zero**. We can denote the
+quadractic variation of Brownian motion as $(dB)^2 = dt$. We say that square of
+difference in Brownian motion goes to the difference in time with probability 1.
+
+Intuitively, the quadratic variation simply denote the variance of the Brownian motion between
+an infinitesimal step, which, by definition, equals to the time step. For
+deterministic function, the variance is simply zero. This accumulation of the
+second order term makes the Linear appoximation of Brownian motion much different
+from ordinary functions.
+
+<br/>
+## Ito's Calculus
+Suppose we want to compute $f(B_t)$ for some smooth function $f$. The Taylor
+Expansion of the $f$ is:
+
+$$
+\begin{align*}
+df = f'dB_t + \frac{f''}{2} (dB_t)^2 + \frac{f'''}{3!} (dB_t)^3 + ...
+\end{align*}
+$$
+
+Normally, we would ignore terms after the first order. However, from Theorem 2,
+we know that $(dB_t)^2 = dt$, and thus we can no longer ignore the second order
+term. Finally, we can write the (simple) Ito's Lemma:
+
+<br/>
+**Lemma (Simple Ito)**
+$$
+df = f'dB_t + \frac{1}{2} f''dt
+$$
+<br/>
+
+For a stronger Ito's Lemma, consider the Taylor Expansion of the function
+$f(t, B_t)$:
+
+$$
+df = \frac{\partial f}{\partial t}dt + \frac{\partial f}{\partial B_t} dB_t
++ \frac{1}{2} \left( \frac{\partial^2 f}{\partial t^2} dt^2 + 2 \frac{\partial^2 f}
+{\partial t \partial B_t} + \frac{\partial^2 f}{\partial B_t^2} (dB_t)^2\right) + ...
+$$
+
+Again, we apply the Theorem 2 to get Ito's Lemma:
+
+<br/>
+**Ito Lemma**
+$$
+\begin{align*}
+df &= \frac{\partial f}{\partial t}dt + \frac{\partial f}{\partial B_t} dB_t +
+\frac{1}{2}\frac{\partial^2 f}{\partial B_t^2} (dB_t)^2 \\
+&= \left(\frac{\partial f}{\partial t} + \frac{1}{2} \frac{\partial^2 f}{\partial B_t^2}\right) dt +
+\frac{\partial f}{\partial B_t} dB_t
+\end{align*}
+$$
+<br/>
+
+Now, let's consider a more general stochastic process $X_t$ defined as
+$$
+dX_t = \mu dt + \sigma dB_t
+$$
+Where $\mu dt$ is called the *drift term*. We can use Ito Lemma to write the
+$df(t, X_t)$ as follow:
+
+$$
+\begin{align*}
+df &= \left(\frac{\partial f}{\partial t} + \frac{1}{2} \frac{\partial^2 f}{\partial X_t^2}\right) dt +
+\frac{\partial f}{\partial X_t} dX_t
+\end{align*}
+$$
