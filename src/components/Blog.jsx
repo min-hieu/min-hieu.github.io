@@ -16,7 +16,7 @@ const Tag = ({ color }) => (
 const BlogCard = ({ href, date, title, cols }) => {
   return (
     <>
-      <a href={href}>
+      <a href={href} className="blogLink">
         <div className="card">
           <div className="meta">
             <div className="tagCon">
