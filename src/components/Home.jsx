@@ -13,12 +13,14 @@ const ScholarBtn = ({ }) => (
 )
 
 const NewsCard = ({ date, title }) => {
+  let titleHTML = {__html: title};
   return (
     <>
       <div className="newsCard">
         <div className="newsDate">{date}</div>
         <div className="newsMid">•</div>
-        <div className="newsTitle">{title}</div>
+        <div className="newsTitle" dangerouslySetInnerHTML={titleHTML}>
+        </div>
       </div>
       <Division color="#dadada" />
     </>

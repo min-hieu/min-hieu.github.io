@@ -111,6 +111,7 @@
   font-family: var(--font-thin);
   font-weight: 300;
   color: var(--col-text);
+  gap: 0.3rem;
 }
 
 .newsCon {
