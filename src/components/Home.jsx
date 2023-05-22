@@ -50,7 +50,6 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
           </div>}
         </div>
       </div>
-      <Division color="#dadada" />
     </>
   )
 }
@@ -87,15 +86,15 @@ const Socials = () => (
   <div className="socialCon">
     <a href="https://github.com/min-hieu/"
        className="icon">
-      [Github]
+      <img src='github.svg' />
     </a>
     <a href="https://www.linkedin.com/in/min-hieu/"
        className="icon">
-      [LinkedIn]
+      <img src='linkedin.svg' />
     </a>
     <a href="https://scholar.google.com/citations?user=w8cjoQkAAAAJ&hl=en"
        className="icon">
-      [Scholar]
+      <img src='scholar.svg' />
     </a>
   </div>
 )
