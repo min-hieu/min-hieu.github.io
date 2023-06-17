@@ -166,6 +166,7 @@ $$
 For more detailed derivation of the solution, check out the awesome lecture note
 <sup><a href="">[2]</a></sup> on SDE.
 
+<br></br>
 ## Connection to the Heat Equation
 For fun, let's see the connection between Brownian Motion and its connection to
 the heat equation. This profound connection was discovered by none other than
@@ -195,6 +196,19 @@ kernel and is given as
 $$
 u_\delta (t,x) = \frac{1}{2\sqrt{\pi t}} e^{-\frac{x^2}{4t}}
 $$
+To connect this to Brownian Motion, consider the following SDE:
+$$
+d\mathbf{X}_t = \sqrt{2k} d\mathbf{B}_t \quad \mathbf{X}_0 = 0
+$$
+then, the probability density function of $X_t$ is given as
+$$
+\frac{1}{2\sqrt{\pi k t}} e^{-\frac{x^2}{4kt}}
+$$
+Which is also the solution to the heat equation
+$$
+\frac{\partial u}{\partial t} = k\frac{\partial^2 u}{\partial x^2} \quad u(0,x) = \delta(x)
+$$
+
 
 
 ## <span id="ref">References</span>
