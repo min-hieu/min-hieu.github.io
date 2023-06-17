@@ -1,10 +1,13 @@
 ---
 layout: "../../../layouts/Blog.astro"
-title: From Brownian Motion to Diffusion Model
+title: Brownian Motion and SDE
 date: 19/05/2023
 description: This is a brief technical note on Brownian Motion
 tags: ["random", "math"]
 ---
+
+This is a brief techical note on Brownian Motion and SDE. For more exhaustive
+and rigorous material, checkout the <a href="#ref">references</a>.
 
 ## Brownian Motion
 
@@ -117,3 +120,84 @@ df &= \left(\frac{\partial f}{\partial t} + \frac{1}{2} \frac{\partial^2 f}{\par
 \frac{\partial f}{\partial X_t} dX_t
 \end{align*}
 $$
+
+## Stochastic Differential Equation (SDE)
+
+**Definition**
+
+A SDE is a differential equation of the form
+$$
+\begin{align*}
+d\mathbf{X}_t = \mu(t,\mathbf{X}_t)dt + \sigma(t, \mathbf{X}_t) d\mathbf{B}_t
+\end{align*}
+$$
+
+Then, we have the following theorem:
+
+**Theorem**
+
+*SDE has a solution and if given $\mathbf{X}_0$ then the solution is unique as long as $\mu, \sigma$
+satisfy certain condition<sup><a href="">$\dagger$</a></sup>.*
+
+Let's consider when $\mu$ and $\sigma$ are proportional to $\mathbf{X}_t$:
+
+$$
+\begin{align*}
+d\mathbf{X}_t = \mu\mathbf{X}_tdt + \sigma\mathbf{X}_t d\mathbf{B}_t, \quad
+\sigma, \mu\in \mathbb{R}, \mathbf{X}_0 = \mathbf{x}_0
+\end{align*}
+$$
+Using Ito Lemma, we can show that the solution for the given SDE is $X_t = X_0
+e^{\sigma \mathbf{X}_t + (\mu - \frac{1}{2}\sigma^2)t}$.
+Now, let's consider when the stochastic term $\sigma(t, \mathbf{X}_t)$ is
+independent of the current state $\mathbf{X}_t$:
+$$
+\begin{align*}
+d\mathbf{X}_t = -\alpha\mathbf{X}_tdt + \sigma d\mathbf{B}_t, \quad
+\alpha > 0, \mu\in \mathbb{R}, \mathbf{X}_0 = \mathbf{x}_0
+\end{align*}
+$$
+This is called
+the **Ornstein-Uhlenbeck (OU) Process**.
+And we have the following solution for the OU process:
+$$
+\mathbf{X}_t = e^{-\alpha t}\mathbf{X}_0 + \int_0^t \sigma e^{\alpha(s-t)}d\mathbf{B}_s
+$$
+For more detailed derivation of the solution, check out the awesome lecture note
+<sup><a href="">[2]</a></sup> on SDE.
+
+## Connection to the Heat Equation
+For fun, let's see the connection between the OU process and its connection to
+the heat equation. This profound connection was discovered by none other than
+Albert Einstein in 1905 when he was 26 and working on Special Relativity and the
+Photoelectric Effect :). Let's first define the Heat Equation:
+$$
+\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}
+$$
+with a given boundary condition $u(0, x)$ and $u(t,x)$ is the probability density
+function at time $t$ and position $x$. Due to the linearity property of the
+heat equation (if $u_1, u_2$ are solutions then $u_1+u_2$ is also a solution), the
+intergral $\int u_s ds$ is a solution if all $u_s$ are solutions to the heat equation.
+So, for all initial condition, it's sufficient to solve for
+$$u(0,x) = \delta (x)$$.
+Let denote the solution to this initial condition as $u_\delta(t,x)$.
+We can easily see this if we have some complex initial condition $u_0$, we can
+decompose $u_0$ into delta functions:
+$$
+u_0(x) = \int_{-\infty}^\infty \delta (x-s)u_0(s) ds = \delta(x) * u_0(x)
+$$
+Then, the solution given $u_0$ can also be decomposed into solutions of the $u_0 = \delta$:
+$$
+u(t, x) = \int_{-\infty}^\infty u_\delta (t,x-s)u_0(s) ds = u_\delta(t,x) * u_0(x)
+$$
+Finally, the solution $u_\delta(t,x)$ is also known as the heat kernel or gaussian
+kernel and is given as
+$$
+u_\delta (t,x) = \frac{1}{2\sqrt{\pi t}} e^{-\frac{x^2}{4t}}
+$$
+
+
+## <span id="ref">References</span>
+
+[0] <a href="https://www.youtube.com/watch?v=Z5yRMMVUC5w">MIT OCW, Ito Calculus</a> <br></br>
+[1] <a href="https://www.youtube.com/watch?v=qdbkvD4N-us">MIT OCW, Stochastic Differential Equations</a>
