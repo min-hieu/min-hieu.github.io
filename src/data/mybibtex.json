@@ -3,16 +3,18 @@
     {
       "type"         : "journal",
       "title"        : "SALAD: Part-Level Latent Diffusion for 3D Shape Generation and Manipulation",
-      "authorPre"    : "Juil Koo*, Seungwoo Yoo*, ",
-      "authorMe"     : "Minh Hieu Nguyen*",
-      "authorPost"   : ", and Minhyuk Sung",
+      "author"       : "<a href='https://63days.github.io/'>Juil Koo*</a>, <a href='https://dvelopery0115.github.io/'>Seungwoo Yoo*</a>, <b>Minh Hieu Nguyen*</b>, and <a href='https://mhsung.github.io/'>Minhyuk Sung</a> (* equal contribution)",
       "year"         : 2023,
-      "journal"      : "arXiv preprint arXiv:2303.12236",
+      "journal"      : "ICCV",
       "image"        : "publication/salad.png",
       "links"        : [
         {
           "title" : "ArXiv",
           "href"  : "https://arxiv.org/abs/2303.12236"
+        },
+        {
+          "title" : "Code",
+          "href"  : "https://github.com/KAIST-Geometric-AI-Group/SALAD"
         },
         {
           "title" : "Project",
@@ -27,9 +29,7 @@
     {
       "type"         : "article",
       "title"        : "Generalized Approach towards Secretion-Based Protein Production via Neutralization of Secretion-Preventing Cationic Substrate Residues",
-      "authorPre"    : "Hyunjong Byun, Jiyeon Park, Benedict U Fabia, Joshua Bingwa, ",
-      "authorMe"     : "Hieu, Nguyen-Minh",
-      "authorPost"   : " and Haeshin Lee, Jung Hoon Ahn",
+      "author"       : "Hyunjong Byun, Jiyeon Park, Benedict U Fabia, Joshua Bingwa, <b>Nguyen Minh Hieu</b>, Haesin Lee, and Jung Hoon Ahn",
       "year"         : 2022,
       "journal"      : "International Journal of Molecular Sciences",
       "links"        : [
@@ -42,9 +42,7 @@
     {
       "type"         : "article",
       "title"        : "Utilizing the ABC transporter for growth factor Production by fleQ Deletion Mutant of Pseudomonas fluorescens",
-      "authorPre"    : "Fabia, Benedict-Uy and Bingwa, Joshua and Park, Jiyeon and ",
-      "authorMe"     : "Hieu, Nguyen-Minh",
-      "authorPost"   : " and Ahn, Jung-Hoon",
+      "author"       : "Fabia, Benedict-Uy and Bingwa, Joshua, Park, Jiyeon, <b>Nguyen Minh Hieu</b>, and Ahn, Jung-Hoon",
       "year"         : 2021,
       "journal"      : "Biomedicines",
       "links"        : [

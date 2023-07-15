@@ -50,7 +50,7 @@ import bib_data from "../data/mybibtex.json";
             to contact me!
             <br/>
             In my free time I also enjoy reading books
-            , making sily programs, writing blogs, and baking!<br/>
+            , making silly programs, writing blogs, and baking!<br/>
         </ParaDiv>
         <br/>
         <HeaderS text="News"/>
@@ -64,13 +64,13 @@ import bib_data from "../data/mybibtex.json";
         </NewsCon>
       </div>
     </div>
-    <HeaderS text="Publications" side="(* denotes equal contribution)"/>
+    <HeaderS text="Publications"/>
     <Division />
     {
       bib_data.bibtex_data.map((bib) => (
         <BibCard
           title={bib.title}
-          author={[bib.authorPre, bib.authorMe, bib.authorPost]}
+          author={bib.author}
           year={bib.year}
           journal={bib.journal}
           links={bib.links}

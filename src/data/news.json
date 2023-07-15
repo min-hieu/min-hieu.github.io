@@ -1,6 +1,10 @@
 {
   "news_data" : [
       {
+          "date":"15/07/23",
+          "title": "<a href='https://salad3d.github.io'>SALAD</a> got accepted to ICCV 2023!"
+      },
+      {
           "date":"10/06/22",
           "title": "Joined KAIST <a href='https://mhsung.github.io/'>Geometric AI Lab</a>  as Student Researcher"
       },

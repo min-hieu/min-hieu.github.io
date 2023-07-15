@@ -28,6 +28,7 @@ const NewsCard = ({ date, title }) => {
 }
 
 const BibCard = ({ image, title, author, year, journal, links }) => {
+  let authorHTML = {__html: author};
   return (
     <>
       <div className="bibCard">
@@ -40,8 +41,7 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
             <div className="bibPublisher">{journal}</div>
             <div className="bibYear">{year}</div>
           </div>
-          <div className="bibAuthor">
-            {author[0]}<b>{author[1]}</b>{author[2]}
+          <div className="bibAuthor" dangerouslySetInnerHTML={authorHTML}>
           </div>
           {links && <div className="bibLinkCon">
             {links.map((li, i) =>
