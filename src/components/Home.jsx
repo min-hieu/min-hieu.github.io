@@ -82,8 +82,18 @@ const NewsCon = props => {
   )
 }
 
+const Contacts = () => (
+  <div className="contactCon">
+  hieuristics [at] kaist.ac.kr
+  </div>
+)
+
 const Socials = () => (
   <div className="socialCon">
+    <a href="https://twitter.com/hieuristics"
+       className="icon">
+      <img src='twitter.svg' />
+    </a>
     <a href="https://github.com/min-hieu/"
        className="icon">
       <img src='github.svg' />
@@ -167,5 +177,6 @@ export {
   HeaderS,
   Division,
   Socials,
+  Contacts,
   ScholarBtn,
 };

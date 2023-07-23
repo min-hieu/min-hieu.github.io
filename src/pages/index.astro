@@ -9,6 +9,7 @@ import {
   Section,
   Division,
   Socials,
+  Contacts,
   ScholarBtn,
 } from '../components/Home.jsx';
 import { Image, Picture } from '@astrojs/image/components';
@@ -34,6 +35,7 @@ import bib_data from "../data/mybibtex.json";
         </div>
         <ParaDiv center={true}>
           <Socials/>
+          <Contacts/>
         </ParaDiv>
       </div>
       <div class="right">
@@ -66,20 +68,24 @@ import bib_data from "../data/mybibtex.json";
         </NewsCon>
       </div>
     </div>
-    <HeaderS text="Publications"/>
-    {
-      bib_data.bibtex_data.map((bib) => (
-        <BibCard
-          title={bib.title}
-          author={bib.author}
-          year={bib.year}
-          journal={bib.journal}
-          links={bib.links}
-          image={bib.image}
-          client:visible
-        />
-      ))
-    }
+    <div class="bottom">
+      <div class="bottomContent">
+        <HeaderS text="Publications"/>
+        {
+          bib_data.bibtex_data.map((bib) => (
+            <BibCard
+              title={bib.title}
+              author={bib.author}
+              year={bib.year}
+              journal={bib.journal}
+              links={bib.links}
+              image={bib.image}
+              client:visible
+            />
+          ))
+        }
+      </div>
+    </div>
   </div>
 </Layout>
 
@@ -89,6 +95,7 @@ import bib_data from "../data/mybibtex.json";
   flex-direction: column;
   padding-top: 5vmin;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .top {
@@ -96,10 +103,17 @@ import bib_data from "../data/mybibtex.json";
   flex-direction: row;
 }
 
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .profileImage {
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   padding: 15px;
 }
 
@@ -137,6 +151,12 @@ iframe {
   .left {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .right {
+    width: 90%;
+  }
+  .bottomContent {
+    width: 80%;
   }
   img {
     width: 50%;
