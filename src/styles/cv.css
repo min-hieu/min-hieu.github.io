@@ -60,13 +60,12 @@ svg {
   background: black;
   border-radius: 0.2rem;
   font-size: 1rem;
-  user-select: none;
   cursor: pointer;
   border-style: solid;
   border-width: 0.08rem;
   border-color: black;
   padding: 0 .3rem;
-  align-text: center;
+  text-align: center;
   box-sizing: border-box;
   font-weight: 400;
   user-select: none;

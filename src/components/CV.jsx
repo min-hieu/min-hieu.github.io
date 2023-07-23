@@ -48,7 +48,7 @@ const CVMain = () => {
               <RiArrowRightFill />
             </div>
             <a className="downBtn" href={pdfPath}>
-              download
+              PDF(45kB)
             </a>
           </div>
         </div>
