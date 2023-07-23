@@ -50,6 +50,7 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
           </div>}
         </div>
       </div>
+      <Division color="#dadada" />
     </>
   )
 }
@@ -60,7 +61,7 @@ const NewsCon = props => {
     <>
       <div
         className="newsCon"
-        style={{ "height": `${show ? 'fit-content' : 5 * props.limit + 2.5 + 'vh'}` }}
+        style={{ "height": `${show ? 'fit-content' : 2.5 * Math.min(props.limit, props.size) + 2.5 + 'rem'}` }}
       >
         {props.children}
       </div>

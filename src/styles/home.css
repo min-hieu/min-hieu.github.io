@@ -85,7 +85,7 @@
 .div {
   margin-top: 0.3vw;
   margin-bottom: 0.3vw;
-  width: calc(100vw - 10vw);
+  width: 100%;
   height: 0.06rem;
   background: black;
 }
@@ -109,7 +109,7 @@
   text-align: center;
   flex-direction: row;
   margin: 0 1rem;
-  gap: 2vh;
+  gap: .2rem;
 }
 
 .newsDate {
