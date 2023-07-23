@@ -122,7 +122,7 @@ const BlogMain = ({ pageMap, allPages, tagMap, tagKeys }) => {
   const Tags = () => {
     return (
       <div className="tag">
-        <div className="tagText">tags |</div>
+        <div className="tagText">tags:</div>
         <div className="tagGrid">
           {[...tagKeys].map((k, i) =>
             <TagWord tagk={k} key={2 * i + 1} />
