@@ -57,7 +57,6 @@ import bib_data from "../data/mybibtex.json";
         </ParaDiv>
         <br/>
         <HeaderS text="News"/>
-        <Division />
         <NewsCon limit={5} size={news_data.news_data.length} client:visible>
           {
             news_data.news_data.map((news) => (
@@ -68,7 +67,6 @@ import bib_data from "../data/mybibtex.json";
       </div>
     </div>
     <HeaderS text="Publications"/>
-    <Division />
     {
       bib_data.bibtex_data.map((bib) => (
         <BibCard

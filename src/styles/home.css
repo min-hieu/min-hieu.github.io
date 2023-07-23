@@ -22,14 +22,50 @@
 .headerS {
   width: fit-content;
   display: flex;
-  padding-left: 2rem;
+  padding-left: 1.6rem;
   padding-right: 1rem;
   align-items: center;
   font-size: var(--hssize);
   font-family: var(--font-thin);
-  font-weight: 800;
-  color: #000;
+  font-weight: 100;
+  color: #fff;
+  background-color: #333;
   line-height: calc(var(--hssize) * 3 / 2);
+  height: 1.6rem;
+  position: relative;
+  left: -2rem;
+}
+
+.headerSArrow {
+  width: 0;
+  height: 0;
+  border-top: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid transparent;
+  border-left: 1rem solid #333;
+  position: relative;
+  left: -2rem;
+}
+
+.headerSWrapFront {
+  width: 0;
+  height: 0;
+  border-top: 0.8rem solid #333;
+  border-bottom: 0.8rem solid #333;
+  border-left: 1rem solid #333;
+  position: relative;
+  left: -2rem;
+}
+
+.headerSWrapBack {
+  width: 0;
+  height: 0;
+  border-top: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid transparent;
+  border-right: 1rem solid black;
+  position: relative;
+  position: relative;
+  left: -1rem;
+  bottom: -0.8rem;
 }
 
 .headerSside {
@@ -65,14 +101,14 @@
 }
 
 .newsCard {
-  height: 3rem;
+  height: 2.25rem;
   min-height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   flex-direction: row;
-  margin: 0 2vw;
+  margin: 0 1rem;
   gap: 2vh;
 }
 

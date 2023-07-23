@@ -133,11 +133,14 @@ const Header = ({ text, center }) => {
 const HeaderS = ({ text, center, side }) => {
   return (
     <div className="centerCon">
+      <div className='headerSWrapBack'></div>
+      <div className='headerSWrapFront'></div>
       <div className={
         `headerS ${center ? "center" : ""}`
       }>
         {text}
       </div>
+      <div className='headerSArrow'></div>
       <div className='headerSside'>{side}</div>
     </div>
   )
