@@ -167,7 +167,8 @@
   align-items: center;
   text-align: left;
   font-size: 1.2rem;
-  font-family: var(--font-wide);
+  /*font-family: var(--font-wide);*/
+  font-family: Vollkorn;
   font-weight: 700;
   color: var(--col-text);
   padding: .5rem 0;

@@ -3,24 +3,24 @@
 }
 
 h1 {
-  font-family: 'linux-serif';
+  font-family: 'Vollkorn';
   font-size: 1.65rem;
   margin: 0.25rem 0;
 }
 
 h2 {
-  font-family: 'linux-serif';
+  font-family: 'Vollkorn';
   font-size: 1.45rem;
   margin: 0.25rem 0;
 }
 
 h3 {
-  font-family: 'linux-serif';
+  font-family: 'Vollkorn';
   margin: 0.25rem 0;
 }
 
 th {
-  font-family: 'linux-serif';
+  font-family: 'Vollkorn';
 }
 
 .astro-code {
@@ -43,7 +43,7 @@ ul ol {
 }
 
 li, td, p {
-  font-family: 'linux-serif';
+  font-family: 'Vollkorn';
   font-weight: 300;
   margin: .25rem 0;
 }
