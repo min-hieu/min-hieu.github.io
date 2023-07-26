@@ -42,23 +42,27 @@ import bib_data from "../data/mybibtex.json";
         </ParaDiv>
       </div>
       <div class="right">
-        <ParaDiv>
-            Hi! Thanks for visiting my website.
-            I'm <b>Hieu</b>, and I am currently a junior in the department of
-            computer science and electrical engineering at KAIST, South Korea.
-            I'm doing research under Professor <a href="https://mhsung.github.io/">Minhyuk Sung</a>
-            at the <a href="https://mhsung.github.io/">Geometric AI Lab</a>.
-            I'm broadly interested in stochastic processes
-            with applications in generative modeling and geometry processing.
-            I'm always looking for collaboration opportunities, so feel free to contact me!
-            <br/>
-            In my free time, I also enjoy reading books, making silly
-            programs, writing blogs, and baking!
-            <br/>
-            <br/>
-            My <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number">Erdős number</a>
-            is <b>4</b> (Nguyen Minh Hieu → Minhyuk Sung → Leonidas Guibas → Frances Yao → Paul Erdős).
-        </ParaDiv>
+        <div class="intro">
+          <ParaDiv>
+              Hi! Thanks for visiting my website.
+              I'm <b>Hieu</b>, and I am currently a junior in the department of
+              computer science and electrical engineering at KAIST, South Korea.
+              I'm doing research under Professor <a href="https://mhsung.github.io/">Minhyuk Sung</a>
+              at the <a href="https://mhsung.github.io/">Geometric AI Lab</a>.
+              I'm broadly interested in stochastic processes
+              with applications in generative modeling and geometry processing.
+              I'm always looking for collaboration opportunities, so feel free to contact me!
+              <br/>
+              In my free time, I also enjoy reading books, making silly
+              programs, writing blogs, and baking!
+              <br/>
+              <br/>
+              My <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number">Erdős number</a>
+              is <b>4</b> (Nguyen Minh Hieu → Minhyuk Sung → Leonidas Guibas → Frances Yao → Paul Erdős).
+              <br/>
+              <br/>
+          </ParaDiv>
+        </div>
         <br/>
         <HeaderS text="News"/>
         <NewsCon limit={5} size={news_data.news_data.length} client:visible>
@@ -73,19 +77,23 @@ import bib_data from "../data/mybibtex.json";
     <div class="bottom">
       <div class="bottomContent">
         <HeaderS text="Publications"/>
-        {
-          bib_data.bibtex_data.map((bib) => (
-            <BibCard
-              title={bib.title}
-              author={bib.author}
-              year={bib.year}
-              journal={bib.journal}
-              links={bib.links}
-              image={bib.image}
-              client:visible
-            />
-          ))
-        }
+        <div class="shadowCon">
+        <div class="bibCon">
+          {
+            bib_data.bibtex_data.map((bib) => (
+              <BibCard
+                title={bib.title}
+                author={bib.author}
+                year={bib.year}
+                journal={bib.journal}
+                links={bib.links}
+                image={bib.image}
+                client:visible
+              />
+            ))
+          }
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -149,6 +157,10 @@ iframe {
   padding: .05rem 0 1rem 0;
 }
 
+.intro {
+  padding: 0 1rem;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .indexMain {
@@ -163,10 +175,8 @@ iframe {
     margin-bottom: 2rem;
   }
   .right {
-    width: 90%;
-  }
-  .bottomContent {
-    width: 80%;
+    width: 100%;
+    padding: 0;
   }
   img {
     width: 50%;

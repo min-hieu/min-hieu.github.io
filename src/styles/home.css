@@ -96,10 +96,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1rem;
 }
 
 .center {
   text-align: center;
+}
+
+.shadowCon {
+  overflow-y: hidden;
+  padding: 0 1rem;
 }
 
 .newsCard {
@@ -151,6 +157,8 @@
 
 .newsCon {
   overflow: hidden;
+  box-shadow: -1.2rem 0 1.5em -2.2rem #444, 1.2rem 0 1.5em -2.2rem #444;
+  padding: .3rem 1rem 1rem 0;
 }
 
 .bibCard {
@@ -218,6 +226,8 @@
 
 .bibCon {
   overflow: hidden;
+  box-shadow: -1.2rem 0 1.5em -2.2rem #444, 1.2rem 0 1.5em -2.2rem #444;
+  padding: .5rem 1rem 0 1rem;
 }
 
 .bibLinkCon {

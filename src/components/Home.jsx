@@ -58,7 +58,7 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
 const NewsCon = props => {
   const [show, setShow] = useState(false);
   return (
-    <>
+    <div className="shadowCon">
       <div
         className="newsCon"
         style={{ "height": `${show ? 'fit-content' : 2.5 * Math.min(props.limit, props.size) + 2.5 + 'rem'}` }}
@@ -79,7 +79,7 @@ const NewsCon = props => {
         </div>
         : null
       }
-    </>
+    </div>
   )
 }
 
