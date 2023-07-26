@@ -38,8 +38,7 @@ const BibCard = ({ image, title, author, year, journal, links }) => {
         <div className="bibText">
           <div className="bibTitle">{title}</div>
           <div className="bibPublish">
-            <div className="bibPublisher">{journal}</div>
-            <div className="bibYear">{year}</div>
+            <div className="bibPublisher"><i>{journal} {year}</i></div>
           </div>
           <div className="bibAuthor" dangerouslySetInnerHTML={authorHTML}>
           </div>
