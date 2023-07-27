@@ -9,20 +9,24 @@
       "image"        : "publication/salad.png",
       "links"        : [
         {
-          "title" : "ArXiv",
-          "href"  : "https://arxiv.org/abs/2303.12236"
+          "title" : "Project",
+          "href"  : "https://salad3d.github.io"
         },
         {
           "title" : "Code",
           "href"  : "https://github.com/KAIST-Geometric-AI-Group/SALAD"
         },
         {
-          "title" : "Project",
-          "href"  : "https://salad3d.github.io"
+          "title" : "ArXiv",
+          "href"  : "https://arxiv.org/abs/2303.12236"
         },
         {
           "title" : "PDF",
           "href"  : "https://salad3d.github.io/assets/salad.pdf"
+        },
+        {
+          "title" : "Demo",
+          "href"  : "https://huggingface.co/spaces/KAIST-Geometric-AI-Lab/salad-demo/"
         }
       ]
     },
