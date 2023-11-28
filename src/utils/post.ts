@@ -4,7 +4,7 @@ import type { Post, Tag } from "../types/posts";
 export function sortMDByDate(posts: MDXInstance<Post>[] = []) {
   return posts.sort(
     (a, b) =>
-      new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+      new Date(b.date).valueOf() - new Date(a.date).valueOf()
   );
 }
 
