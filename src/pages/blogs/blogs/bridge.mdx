@@ -1,0 +1,41 @@
+---
+layout: "../../../layouts/Blog.astro"
+title: Understanding Schrödinger Bridge
+date: 08/16/2023
+description: A summary and disection of Schrödinger Bridge
+tags: ["random", "generative models", "math", "pde", "sde"]
+---
+
+## This page is under construction
+
+## The Schrödinger Bridge Problem
+The Schrödinger Bridge Problem is a weak version of the Optimal Transport
+
+## Flow Matching and The Conditioning Trick
+Flow Matching<sup><a href="#cite-flow">[1]</a></sup> introduce the conditioning trick.
+The conditioning trick is first derived in the context of speeding up continuous flow
+model but its ability for allowing simulation-free training is later used in training
+Schrödinger Bridges<sup><a href="">[3]</a></sup>. In short, the conditioning trick
+can be seen in the simplification of the flow-matching loss:
+$$
+
+$$
+
+## The Diffusion Process
+The diffusion equation or also known as the Fokker-Planck equation is
+described by a hyperbolic PDE:
+$$
+\partial_t p(\mathbf{x}, t) = - \nabla \cdot [\mathbf{\mu}(\mathbf{x},t) p(\mathbf{x}, t)] + \nabla \cdot \nabla\cdot [D(\mathbf{x}, t)p(\mathbf{x}, t)]
+$$
+This diffusion process can also be described by the corresponding SDE:
+$$
+d\mathbf{X}_t = \mathbf{\mu}(\mathbf{X}_t, t)dt + \mathbf{\sigma}(\mathbf{X}_t, t) d\mathbf{W}_t
+$$
+The link between these two equation can be seen through the proof of the famous
+Feynmann-Kac's formula.
+
+
+## References
+     [0] <a id="" href="https://openreview.net/pdf?id=nioAdKCEdXB"> SB-FBSDE: Likelihood Training of Schrödinger Bridge using Forward-Backward SDEs Theory</a>
+<br/>[1] <a id="" href="https://arxiv.org/abs/2210.02747">Flow Matching for Generative Modeling</a>
+<br/>[2] <a id="" href="https://arxiv.org/abs/2302.05872.pdf">I<sup>2</sup>SB: Image-to-Image Schrödinger Bridge</a>

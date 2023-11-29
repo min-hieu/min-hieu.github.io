@@ -1,0 +1,51 @@
+---
+layout: "../../../layouts/Blog.astro"
+title: Walk-on-Sphere for Helmholtz
+date: 03/28/2023
+description: solving Helmholtz Equation
+tags: ["sound", "graphics", "math"]
+---
+
+note: for all details of notations, please refer to the end of the post.
+
+## Introduction
+To produce physical sound effect, it typically requires
+two separate processes: find object's eigenmode, and radiation.
+This blog will mainly focus on the later stage. As
+radiation typically solved via Boundary Element Method (BEM), solving for
+object with low frequency becomes very expensive very quick as the resolution
+of the frequency closely related with the resolution of the meshing of object.
+I'm interested in finding alternative method to quickly compute radiation
+causes by an object modal to the listener. Here I will introduce the wave equation:
+$$
+\left( \Delta - \frac{1}{c^2}\delta^2_t \right) u(x) = 0
+$$
+This is a time-domain description of wave. It's derived from the
+linear elastic deformation. At first, I'm interested in trying to apply Monte Carlo
+methods such as walk-on-sphere to solve such equation. However, upon further research,
+it turns out that the wave equation on time domain has no stochastic representation and
+thus, can't be solved via the walk-on-sphere algorithm. However, it's frequency
+variant, Helmholtz equation do:
+$$
+\left( \Delta + \frac{w^2}{c^2} \right) u(x) = 0
+$$
+We have the stochastic representation of such equation as:
+$$
+u(x) = \mathbb{E}\left[ e^{-\lambda T} f(W_T) \right]
+$$
+However, in order to solve this equation with having to run the
+full simulation of brownian motion, we have a few options:
+Duffin Walk-on-Sphere, Weighted-Walk-on-Sphere, and Walk-on-Moving-Sphere.
+I will briefly explain them here.
+
+## Duffin Walk-on-Sphere
+Following the Duffin Correspondence, we can map the Helmholtz equation
+to a Laplace equation in a transformed coordinate system.
+Let there be $g(\lambda, \cdot): \mathbb{R} \mapsto \mathbb{R}$:
+$$
+g(\lambda; x') = cosh (\sqrt{-2\lambda}, x')
+$$
+where $x' \in \mathbb{R}$. We perform the transform by mapping the original
+domain $D$ to the extended domain $D\times \mathbb{R}$. That is, we
+concatenate to the original coordinate a real number $x'$ to get
+the new coordinate $\bar{x} = (x, x')$.
