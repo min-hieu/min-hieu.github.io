@@ -1,18 +1,38 @@
 ---
 layout: "../../../layouts/Blog.astro"
-title: Finite Element Method for Dummies
-date: 08/16/2023
-description: A Note on Finite Element Method
+title: A Note on Elastic Deformation
+date: 12/07/2023
+description: A Note on Elastic Deformation
 tags: ["math", "pde"]
 ---
 
 ## This page is under construction
 
-## Strong and Weak PDE Formulation
-
-## Finite Elements and Quadrature Approximation
-
-## Other PDEs and Error Analysis
+$$
+    \begin{aligned}
+    \mathbf{u}(\mathbf{x}, t) = \begin{bmatrix}
+    u_1(\mathbf{x},t) \\
+    u_2(\mathbf{x},t) \\
+    u_3(\mathbf{x},t)
+    \end{bmatrix}
+    \end{aligned}
+$$
+    **Stress** denotes a force on surface $i$ in the direction $j$
+$$
+    \begin{aligned}
+    \sigma_{ij} = \bm{\sigma}(\mathbf{x}, t) = \begin{bmatrix}
+    \sigma_{11} & \sigma_{12} & \sigma_{13} \\
+    \sigma_{21} & \sigma_{22} & \sigma_{23} \\
+    \sigma_{31} & \sigma_{32} & \sigma_{33}
+    \end{bmatrix}
+    \end{aligned}
+$$
+    **Strain** denotes the **variation** of the displacement under stress
+$$
+    \begin{aligned}
+    u_i(\mathbf{x} + \delta\mathbf{x}) \approx u_i(\mathbf{x}) + \frac{\partial u_i(\mathbf{x})}{\partial x_j} \delta x_j = \underbrace{u_i(\mathbf{x})}_{translation} + \underbrace{\delta u_i(\mathbf{x})}_{rotation + deformation}
+    \end{aligned}
+$$
 
 ## References
      [0] <a id="" ></a>
