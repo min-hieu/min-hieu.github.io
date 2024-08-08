@@ -358,6 +358,7 @@ iframe {
   border-radius: 0.2rem;
   padding: 0.15rem 0.3rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .showMoreCon {
