@@ -1,0 +1,23 @@
+.mainCon {
+  width: 100vw;
+  height: fit-content;
+  min-height: calc(100vh - var(--nav-height));
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: white;
+  justify-content: center;
+  padding-bottom: 20vh;
+}
+
+.contentCon {
+  width: 50rem;
+  max-width: 95vw;
+  position: relative;
+  top: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vmin;
+}
+

@@ -1,0 +1,64 @@
+/* sans font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* sans font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* serif font - Cormorant Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* monospace font - inconsolata */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+/* korean font - Noto Sans Korean */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* roboto + roboto mono */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* ibm plex mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&display=swap');
+/* Vollkorn */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Vollkorn Small Caps */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
+
+:root {
+  --col-text:    #000;
+  --col-dark:    #000;
+  --col-bg:      #fff;
+  --col-accent:  #fff;
+  --col-fade:    #d9d9d9;
+
+  --nav-height:   5rem;
+
+  --font-mono:    'Roboto Mono', monospace;
+  --font-code:    'IBM Plex Mono', monospace;
+  --font-wide:    'Montserrat', sans-serif;
+  --font-thin:    'Roboto', sans-serif;
+  --font-korean:  'Noto Sans', sans-serif;
+  --font-serif:   'Vollkorn' , sans-serif;
+
+  --fsize: 1rem;
+  --fsizesmall: 0.8rem;
+  --hsize: 2rem;
+  --hssize: 1.25rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: #a00;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  :root {
+    --nav-height: 15rem;
+  }
+}

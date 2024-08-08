@@ -1,0 +1,30 @@
+#cvMain {
+  height: fit-content;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.pdfCon {
+  width: 100%;
+  aspect-ratio: 595 / 841;
+}
+
+.downBtnCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.downBtn {
+  padding: .3rem .8rem;
+  font-size: 1.1rem;
+  background: #a00;
+  color: white;
+  font-family: var(--font-mono);
+  border-radius: .4rem;
+  cursor: pointer;
+}
