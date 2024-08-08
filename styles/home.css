@@ -424,6 +424,13 @@ iframe {
   height: 2rem;
 }
 
+.projDesc {
+  font-size: 1rem;
+  font-family: var(--font-thin);
+  font-weight: 300;
+  color: var(--col-text);
+}
+
 @media only screen and (max-width: 768px) {
   .bibCard {
     flex-direction: column;
