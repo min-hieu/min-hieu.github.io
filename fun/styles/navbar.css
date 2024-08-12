@@ -30,6 +30,7 @@
   gap: calc(var(--nav-height) / 5);
   flex-direction: row;
   align-items: center;
+  z-index: 2;
 }
 
 .navBtn {

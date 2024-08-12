@@ -299,6 +299,7 @@
       <!--Navbar-->
       <div class="navBar">
         <div class="navCon">
+          <div class="navBg"></div>
           <div class="navBtnCon">
             <a rel="prefetch" href="/" class='navBtn'>
               Home
@@ -317,7 +318,6 @@
             <span></span>
           </div>
         </div>
-        <div class="navBg"></div>
         <script>
           const btnContainer = document.querySelector('.navBtnCon');
           const container = document.querySelector('.navCon');
@@ -326,17 +326,19 @@
           const toggleInput = document.querySelector('#navTogInput');
 
           toggleInput.addEventListener('click', () => {
+            let cssRules = document.styleSheets[0].cssRules
+            let style = cssRules[9].style;
+            let styleMobile = cssRules[cssRules.length - 1].cssRules[0].style;
+
             let curr_visibility = btnContainer.style.display;
             if (curr_visibility === 'none') {
               btnContainer.style.display = 'flex';
-              container.style.height = 'var(--nav-height)';
-              navBg.style.height = 'var(--nav-height)';
-              contentCon.style.top = 'var(--nav-height)';
+              style.setProperty('--nav-height', '5rem');
+              styleMobile.setProperty('--nav-height', '15rem');
             } else {
               btnContainer.style.display = 'none';
-              container.style.height = 0;
-              navBg.style.height = 0;
-              contentCon.style.top = 0;
+              style.setProperty('--nav-height', '0');
+              styleMobile.setProperty('--nav-height', '0');
             }
           });
         </script>
