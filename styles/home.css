@@ -450,7 +450,12 @@ iframe {
   }
 
   .icon img {
-    width: 8 vmin;
-    height: 86vmin;
+    width: 8vmin;
+    height: 8vmin;
+  }
+
+  .icon {
+    width: 8vmin;
+    height: 8vmin;
   }
 }
