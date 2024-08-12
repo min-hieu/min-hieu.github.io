@@ -30,6 +30,9 @@
             download
           </a>
         </div>
+        <div id="waitMsg">
+          loading pdf...
+        </div>
         <div class="pdfCon" id="pdf-div-1">
           <canvas id="pdf-page-1" class="pdf-canvas"></canvas>
         </div>
@@ -68,8 +71,11 @@
 
               });
             };
+
             loadPage(1);
             loadPage(2);
+
+            document.getElementById('waitMsg').style.display = 'none';
 
           }, (err) => {
             console.error('pdf loading failed: ',err);
