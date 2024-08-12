@@ -137,7 +137,7 @@ iframe {
   align-items: center;
   font-size: var(--hssize);
   font-family: var(--font-thin);
-  font-weight: 100;
+  font-weight: 300;
   color: #fff;
   background-color: #a00;
   height: 2rem;
