@@ -4,3 +4,13 @@
 
 # macOS-specific files
 .DS_Store
+
+# avoid uncompressed files
+*.gz
+*.zip
+*.rar
+*.jpg
+*.jpeg
+*.png
+*.PNG
+!copyright.png
