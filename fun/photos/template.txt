@@ -6,11 +6,12 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
     <title>Charlie's Funpage</title>
     <meta name="description" content="Welcome to Charlie's Homepage!">
-    <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/navbar.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/fun.css" />
-    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/navbar.css" />
+    <link rel="stylesheet" href="../../styles/footer.css" />
+    <link rel="stylesheet" href="../../styles/photo.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
   </head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC5SMZ8FY3"></script>
   <script>
@@ -25,22 +26,8 @@
 
       <!--Main Content-->
       <div class="contentCon">
-        <div class="funMain">
-          <div class="funCon">
-            <a href="/fun/photos" class="funCard">
-              <img alt='photography-thumbnail' class="funCardThumbnail" src="assets/photo-thumbnail.webp"/>
-              <div class="funText">
-                <div class="funTitle">
-                  Photography 📸
-                </div>
-                <div class="funDesc">
-                  I love traveling and taking snapshots of the places I've been.
-                  I shoot with a Sony A6400 with a 16-50mm kit lens and a vintage KMZ
-                  Helios 44-2 58mm f2 lens.
-                </div>
-              </div>
-            </a>
-          </div>
+        <div class="tips">tips: hold to zoom in photos</div>
+        <div id="photoMain">
         </div>
       </div>
       <!--Main Content End-->

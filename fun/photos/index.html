@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <title>
+   Charlie's Funpage
+  </title>
+  <meta content="Welcome to Charlie's Homepage!" name="description"/>
+  <link href="../../styles/global.css" rel="stylesheet"/>
+  <link href="../../styles/navbar.css" rel="stylesheet"/>
+  <link href="../../styles/footer.css" rel="stylesheet"/>
+  <link href="../../styles/photo.css" rel="stylesheet"/>
+  <link href="../../styles/main.css" rel="stylesheet"/>
+  <link href="../../styles/home.css" rel="stylesheet"/>
+ </head>
+ <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KC5SMZ8FY3">
+ </script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KC5SMZ8FY3');
+ </script>
+ <body>
+  <div class="mainCon">
+   <!--Main Content-->
+   <div class="contentCon">
+    <div class="tips">
+     tips: hold to zoom in photos
+    </div>
+    <div id="photoMain">
+     <div class="column">
+      <img alt="bike" src="assets/bike.webp"/>
+      <img alt="tomato" src="assets/tomato.webp"/>
+      <img alt="katto" src="assets/katto.webp"/>
+      <img alt="tv" src="assets/tv.webp"/>
+      <img alt="bench" src="assets/bench.webp"/>
+     </div>
+     <div class="column">
+      <img alt="piglets" src="assets/piglets.webp"/>
+      <img alt="gs25" src="assets/gs25.webp"/>
+      <img alt="N1" src="assets/N1.webp"/>
+      <img alt="danang" src="assets/danang.webp"/>
+      <img alt="coffee" src="assets/coffee.webp"/>
+     </div>
+     <div class="column">
+      <img alt="flower" src="assets/flower.webp"/>
+      <img alt="cherry" src="assets/cherry.webp"/>
+      <img alt="noodle-shop" src="assets/noodle-shop.webp"/>
+      <img alt="lamp" src="assets/lamp.webp"/>
+      <img alt="funny-toy" src="assets/funny-toy.webp"/>
+     </div>
+    </div>
+   </div>
+   <!--Main Content End-->
+   <!--Navbar-->
+   <div class="navBar">
+    <div class="navCon">
+     <div class="navBg">
+     </div>
+     <div class="navBtnCon">
+      <a class="navBtn" href="/" rel="prefetch">
+       Home
+      </a>
+      <a class="navBtn" href="/fun/" rel="prefetch">
+       Fun
+      </a>
+      <a class="navBtn" href="/cv.html" rel="prefetch">
+       Resume
+      </a>
+     </div>
+     <div class="navTogBtn">
+      <input checked="" id="navTogInput" type="checkbox"/>
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <script>
+     const btnContainer = document.querySelector('.navBtnCon');
+          const container = document.querySelector('.navCon');
+          const navBg = document.querySelector('.navBg');
+          const contentCon = document.querySelector('.contentCon');
+          const toggleInput = document.querySelector('#navTogInput');
+
+          toggleInput.addEventListener('click', () => {
+            let cssRules = document.styleSheets[0].cssRules
+            let style = cssRules[9].style;
+            let styleMobile = cssRules[cssRules.length - 1].cssRules[0].style;
+
+            let curr_visibility = btnContainer.style.display;
+            if (curr_visibility === 'none') {
+              btnContainer.style.display = 'flex';
+              style.setProperty('--nav-height', '5rem');
+              styleMobile.setProperty('--nav-height', '15rem');
+            } else {
+              btnContainer.style.display = 'none';
+              style.setProperty('--nav-height', '0');
+              styleMobile.setProperty('--nav-height', '0');
+            }
+          });
+    </script>
+   </div>
+   <!--Navbar End-->
+  </div>
+  <!--Footer -->
+  <div class="footer">
+   <div class="footerMainCon">
+    <div class="centerCon">
+     <div class="div" style="#828282">
+     </div>
+    </div>
+    <div class="footerCon">
+     <div class="fLeft">
+      Copyright © 2018-2024 Ng. Minh Hieu
+     </div>
+     <div class="footerRight">
+      <div class="footerLink">
+       <a class="footerBtn" href="/" rel="prefetch">
+        Home
+       </a>
+      </div>
+      •
+      <div class="footerLink">
+       <a class="footerBtn" href="/fun" rel="prefetch">
+        Fun
+       </a>
+      </div>
+      •
+      <div class="footerLink">
+       <a class="footerBt" href="/cv.html" rel="prefetch">
+        Resume
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--Footer End-->
+ </body>
+</html>
