@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-    <title>Charlie's Funpage</title>
-    <meta name="description" content="Welcome to Charlie's Homepage!">
+    <title>Photos</title>
+    <meta name="description" content="Charlie's photos">
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="../../styles/navbar.css" />
     <link rel="stylesheet" href="../../styles/footer.css" />
