@@ -3,11 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
 }
 
 .funCon {
   width: 60rem;
-  height: 80vh;
   max-width: 100%;
 }
 
@@ -26,6 +27,7 @@
 .funCardThumbnail {
   height: 100%;
   aspect-ratio: 4 / 3;
+  padding: 20px;
 }
 
 .funText {
@@ -62,5 +64,8 @@
     flex-direction: column;
     height: fit-content;
     padding: 1.5rem 1.5rem;
+  }
+  .funCardThumbnail {
+    width:100%;
   }
 }
