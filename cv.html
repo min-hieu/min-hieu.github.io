@@ -1,172 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
-    <title>Hieu's CV</title>
-    <meta name="description" content="Welcome to Charlie's Homepage!">
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/cv.css" />
-  </head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC5SMZ8FY3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-KC5SMZ8FY3');
-  </script>
-  <body>
-    <div class="mainCon" style="padding-bottom: 10vh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <title>Hieu's CV</title>
+  <meta name="description" content="Welcome to Charlie's Homepage!">
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/cv.css" />
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC5SMZ8FY3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      <!--Main Content-->
-      <div class="contentCon" style="padding-top: 5vh">
-        <div class="downBtnCon">
-          <a class="downBtn">
-            download
+  gtag('config', 'G-KC5SMZ8FY3');
+</script>
+
+<body>
+  <div class="mainCon" style="padding-bottom: 10vh">
+
+    <!--Main Content-->
+    <div class="contentCon" style="padding-top: 5vh">
+      <div class="downBtnCon">
+        <a class="downBtn">
+          download
+        </a>
+      </div>
+      <div id="waitMsg">
+        loading pdf...
+      </div>
+      <div class="pdfCon" id="pdf-div-1">
+        <canvas id="pdf-page-1" class="pdf-canvas"></canvas>
+      </div>
+      <div class="pdfCon" id="pdf-div-2">
+        <canvas id="pdf-page-2" class="pdf-canvas"></canvas>
+      </div>
+      <script src="scripts/pdf.mjs" type="module"></script>
+      <script type="module">
+        let url = 'assets/hieu_cv.pdf';
+        let {pdfjsLib} = globalThis;
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'scripts/pdf.worker.mjs';
+
+        let loadingTask = pdfjsLib.getDocument(url);
+        loadingTask.promise.then((pdf) => {
+          // Fetch the first page
+          const loadPage = (pageNumber) => {
+            pdf.getPage(pageNumber).then((page) => {
+              // Prepare canvas using PDF page dimensions
+              let canvas = document.getElementById(`pdf-page-${pageNumber}`);
+              let container = document.getElementById(`pdf-div-${pageNumber}`);
+              let context = canvas.getContext('2d');
+
+              let viewport = page.getViewport({scale: 3.0});
+
+              console.log(viewport.width, viewport.height);
+              console.log(container.clientWidth, container.clientHeight);
+              canvas.width = viewport.width;
+              canvas.height = viewport.height;
+
+              // Render PDF page into canvas context
+              let renderContext = {
+                canvasContext: context,
+                viewport: viewport
+              };
+              let renderTask = page.render(renderContext);
+
+            });
+          };
+
+          loadPage(1);
+          loadPage(2);
+
+          document.getElementById('waitMsg').style.display = 'none';
+
+        }, (err) => {
+          console.error('pdf loading failed: ', err);
+        });
+      </script>
+    </div>
+    <!--Main Content End-->
+
+    <!--Navbar-->
+    <div class="navBar">
+      <div class="navCon">
+        <div class="navBg"></div>
+        <div class="navBtnCon">
+          <a rel="prefetch" href="/" class='navBtn'>
+            Home
+          </a>
+          <a rel="prefetch" href="/fun/" class='navBtn'>
+            Fun
+          </a>
+          <a rel="prefetch" href="/cv.html" class='navBtn'>
+            Resume
           </a>
         </div>
-        <div id="waitMsg">
-          loading pdf...
+        <div class="navTogBtn">
+          <input type="checkbox" id="navTogInput" checked />
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="pdfCon" id="pdf-div-1">
-          <canvas id="pdf-page-1" class="pdf-canvas"></canvas>
-        </div>
-        <div class="pdfCon" id="pdf-div-2">
-          <canvas id="pdf-page-2" class="pdf-canvas"></canvas>
-        </div>
-        <script src="scripts/pdf.mjs" type="module"></script>
-        <script type="module">
-          let url = 'assets/hieu_cv.pdf';
-          let { pdfjsLib } = globalThis;
-          pdfjsLib.GlobalWorkerOptions.workerSrc = 'scripts/pdf.worker.mjs';
-
-          let loadingTask = pdfjsLib.getDocument(url);
-          loadingTask.promise.then((pdf) => {
-            // Fetch the first page
-            const loadPage = (pageNumber) => {
-              pdf.getPage(pageNumber).then((page) => {
-                // Prepare canvas using PDF page dimensions
-                let canvas = document.getElementById(`pdf-page-${pageNumber}`);
-                let container = document.getElementById(`pdf-div-${pageNumber}`);
-                let context = canvas.getContext('2d');
-
-                let viewport = page.getViewport({scale: 3.0});
-
-                console.log(viewport.width, viewport.height);
-                console.log(container.clientWidth, container.clientHeight);
-                canvas.width  = viewport.width;
-                canvas.height = viewport.height;
-
-                // Render PDF page into canvas context
-                let renderContext = {
-                  canvasContext: context,
-                  viewport: viewport
-                };
-                let renderTask = page.render(renderContext);
-
-              });
-            };
-
-            loadPage(1);
-            loadPage(2);
-
-            document.getElementById('waitMsg').style.display = 'none';
-
-          }, (err) => {
-            console.error('pdf loading failed: ',err);
-          });
-        </script>
       </div>
-      <!--Main Content End-->
+      <script>
+        const btnContainer = document.querySelector('.navBtnCon');
+        const container = document.querySelector('.navCon');
+        const navBg = document.querySelector('.navBg');
+        const contentCon = document.querySelector('.contentCon');
+        const toggleInput = document.querySelector('#navTogInput');
 
-      <!--Navbar-->
-      <div class="navBar">
-        <div class="navCon">
-          <div class="navBg"></div>
-          <div class="navBtnCon">
-            <a rel="prefetch" href="/" class='navBtn'>
+        toggleInput.addEventListener('click', () => {
+          let cssRules = document.styleSheets[0].cssRules
+          let style = cssRules[9].style;
+          let styleMobile = cssRules[cssRules.length - 1].cssRules[0].style;
+
+          let curr_visibility = btnContainer.style.display;
+          if (curr_visibility === 'none') {
+            btnContainer.style.display = 'flex';
+            style.setProperty('--nav-height', '5rem');
+            styleMobile.setProperty('--nav-height', '15rem');
+          } else {
+            btnContainer.style.display = 'none';
+            style.setProperty('--nav-height', '0');
+            styleMobile.setProperty('--nav-height', '0');
+          }
+        });
+      </script>
+    </div>
+    <!--Navbar End-->
+  </div>
+
+  <!--Footer -->
+  <div class="footer">
+    <div class="footerMainCon">
+      <div class="centerCon">
+        <div class="div" style='#dadada'></div>
+      </div>
+      <div class="footerCon">
+        <div class="fLeft">
+          Copyright © 2018-2025 <br> Nguyen Minh Hieu
+        </div>
+        <div class="footerRight">
+          <div class="footerLink">
+            <a rel="prefetch" href="/" class='footerBtn'>
               Home
             </a>
-            <a rel="prefetch" href="/fun/" class='navBtn'>
+          </div>
+          •
+          <div class="footerLink">
+            <a rel="prefetch" href="/fun" class='footerBtn'>
               Fun
             </a>
-            <a rel="prefetch" href="/cv.html" class='navBtn'>
+          </div>
+          •
+          <div class="footerLink">
+            <a rel="prefetch" href="/cv.html" class='footerBt'>
               Resume
             </a>
           </div>
-          <div class="navTogBtn">
-            <input type="checkbox" id="navTogInput" checked/>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <script>
-          const btnContainer = document.querySelector('.navBtnCon');
-          const container = document.querySelector('.navCon');
-          const navBg = document.querySelector('.navBg');
-          const contentCon = document.querySelector('.contentCon');
-          const toggleInput = document.querySelector('#navTogInput');
-
-          toggleInput.addEventListener('click', () => {
-            let cssRules = document.styleSheets[0].cssRules
-            let style = cssRules[9].style;
-            let styleMobile = cssRules[cssRules.length - 1].cssRules[0].style;
-
-            let curr_visibility = btnContainer.style.display;
-            if (curr_visibility === 'none') {
-              btnContainer.style.display = 'flex';
-              style.setProperty('--nav-height', '5rem');
-              styleMobile.setProperty('--nav-height', '15rem');
-            } else {
-              btnContainer.style.display = 'none';
-              style.setProperty('--nav-height', '0');
-              styleMobile.setProperty('--nav-height', '0');
-            }
-          });
-        </script>
-      </div>
-      <!--Navbar End-->
-    </div>
-
-    <!--Footer -->
-    <div class="footer">
-      <div class="footerMainCon">
-        <div class="centerCon" >
-          <div class="div" style='#828282'></div>
-        </div>
-        <div class="footerCon">
-          <div class="fLeft">
-            Copyright © 2018-2024 Ng. Minh Hieu
-          </div>
-          <div class="footerRight">
-            <div class="footerLink">
-              <a rel="prefetch" href="/" class='footerBtn'>
-                Home
-              </a>
-            </div>
-            •
-            <div class="footerLink">
-              <a rel="prefetch" href="/fun" class='footerBtn'>
-                Fun
-              </a>
-            </div>
-            •
-            <div class="footerLink">
-              <a rel="prefetch" href="/cv.html" class='footerBt'>
-                Resume
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <!--Footer End-->
-  </body>
+  </div>
+  <!--Footer End-->
+</body>
+
 </html>
-

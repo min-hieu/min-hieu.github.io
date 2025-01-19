@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.bottomContent {
+  width: 100%;
+}
+
 .profileImage {
   display: flex;
   justify-content: center;
@@ -170,14 +174,13 @@ iframe {
   margin-bottom: 0.3vw;
   width: 100%;
   height: 0.06rem;
-  background: black;
+  background: #dadada;
 }
 
 .centerCon {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1rem;
 }
 
 .center {
@@ -353,12 +356,12 @@ iframe {
 }
 
 .bibLink {
-  font-size: .75rem;
+  font-size: .85rem;
   font-family: var(--font-thin);
   color: white;
   background: black;
   border-radius: 0.2rem;
-  padding: 0.15rem 0.3rem;
+  padding: 0.3rem 0.5rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -450,7 +453,7 @@ iframe {
   }
 
   .indexMain {
-    padding-bottom: 25vh;
+    /* padding-bottom: 25vh; */
   }
 
   .icon img {

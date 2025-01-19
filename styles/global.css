@@ -56,6 +56,6 @@ a {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   :root {
-    --nav-height: 15rem;
+    --nav-height: 5rem;
   }
 }
