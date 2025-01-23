@@ -28,61 +28,133 @@
     <!--Main Content-->
     <div class="contentCon" style="padding-top: 5vh">
       <div class="downBtnCon">
-        <a class="downBtn">
-          download
+        <a class="downBtn" href="assets/hieu_cv.pdf">
+          ⭳ Download PDF
         </a>
       </div>
-      <div id="waitMsg">
-        loading pdf...
+      <div id="cvName">
+        Nguyen Minh Hieu
       </div>
-      <div class="pdfCon" id="pdf-div-1">
-        <canvas id="pdf-page-1" class="pdf-canvas"></canvas>
+      <div class="cvInfo">
+        Research Engineer in 3D Vision, Geometry Processing, and Machine Learning
       </div>
-      <div class="pdfCon" id="pdf-div-2">
-        <canvas id="pdf-page-2" class="pdf-canvas"></canvas>
+      <div id="cvContact">
+        <a>hieu1052k3@gmail.com</a> •
+        <a>hieuristics.xyz</a> •
+        <a>(+82) 010 3078 0305</a>
       </div>
-      <script src="scripts/pdf.mjs" type="module"></script>
-      <script type="module">
-        let url = 'assets/hieu_cv.pdf';
-        let {pdfjsLib} = globalThis;
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'scripts/pdf.worker.mjs';
-
-        let loadingTask = pdfjsLib.getDocument(url);
-        loadingTask.promise.then((pdf) => {
-          // Fetch the first page
-          const loadPage = (pageNumber) => {
-            pdf.getPage(pageNumber).then((page) => {
-              // Prepare canvas using PDF page dimensions
-              let canvas = document.getElementById(`pdf-page-${pageNumber}`);
-              let container = document.getElementById(`pdf-div-${pageNumber}`);
-              let context = canvas.getContext('2d');
-
-              let viewport = page.getViewport({scale: 3.0});
-
-              console.log(viewport.width, viewport.height);
-              console.log(container.clientWidth, container.clientHeight);
-              canvas.width = viewport.width;
-              canvas.height = viewport.height;
-
-              // Render PDF page into canvas context
-              let renderContext = {
-                canvasContext: context,
-                viewport: viewport
-              };
-              let renderTask = page.render(renderContext);
-
-            });
-          };
-
-          loadPage(1);
-          loadPage(2);
-
-          document.getElementById('waitMsg').style.display = 'none';
-
-        }, (err) => {
-          console.error('pdf loading failed: ', err);
-        });
-      </script>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Education
+        </div>
+        <div class="divisor"></div>
+        <div class="cvEntry">
+          <div class="cvEntryHeader">
+            <div class="cvEntryHeaderLeft">
+              <div class="cvEntryInstitute">
+                Korea Advanced Institute of Science and Technology (KAIST)
+              </div>
+              <div class="cvEntryPosition">
+                Bachelor in Computer Science and Electrical Engineering
+              </div>
+            </div>
+            <div class="cvEntryHeaderRight">
+                <div>Feb 2021 - Aug 2024</div>
+                <div>Daejeon, South Korea</div>
+            </div>
+          </div>
+          <div class="cvEntryDetails">
+          </div>
+        </div>
+      </div>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Industry Experiences
+        </div>
+        <div class="divisor"></div>
+        <div class="cvEntry">
+          <div class="cvEntryHeader">
+            <div class="cvEntryHeaderLeft">
+              <div class="cvEntryInstitute">
+                Netropy Inc.
+              </div>
+              <div class="cvEntryPosition">
+                Research Engineer • 3D Reconstruction
+              </div>
+            </div>
+            <div class="cvEntryHeaderRight">
+                <div>Oct 2024 - Present</div>
+                <div>Seoul, South Korea</div>
+            </div>
+          </div>
+          <div class="cvEntryDetails">
+              <li>
+                Research and develop robust large scale 3D reconstruction methods for
+                robotics simulation.
+              </li>
+          </div>
+        </div>
+        <div class="cvEntry">
+          <div class="cvEntryHeader">
+            <div class="cvEntryHeaderLeft">
+              <div class="cvEntryInstitute">
+                StoneLab
+              </div>
+              <div class="cvEntryPosition">
+                Machine Learning Research Intern • 3D Machine Learning
+              </div>
+            </div>
+            <div class="cvEntryHeaderRight">
+                <div>Mar 2024 - Jun 2024</div>
+                <div>Daejeon, South Korea</div>
+            </div>
+          </div>
+          <div class="cvEntryDetails">
+          </div>
+        </div>
+        <div class="cvEntry">
+          <div class="cvEntryHeader">
+            <div class="cvEntryHeaderLeft">
+              <div class="cvEntryInstitute">
+                Steinfeld Co.
+              </div>
+              <div class="cvEntryPosition">
+                Software Engineer Intern • Visualization and Geometry Processing
+              </div>
+            </div>
+            <div class="cvEntryHeaderRight">
+                <div>Jun 2022 - Aug 2022</div>
+                <div>Daejeon, South Korea</div>
+            </div>
+          </div>
+          <div class="cvEntryDetails">
+          </div>
+        </div>
+      </div>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Research Experiences
+        </div>
+        <div class="divisor"></div>
+      </div>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Publications
+        </div>
+        <div class="divisor"></div>
+      </div>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Personal Projects
+        </div>
+        <div class="divisor"></div>
+      </div>
+      <div class="cvSection">
+        <div class="cvSectionHeader">
+          Skills
+        </div>
+        <div class="divisor"></div>
+      </div>
     </div>
     <!--Main Content End-->
 

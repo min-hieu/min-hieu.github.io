@@ -35,7 +35,7 @@
 
 .navBtn {
   border-style: solid;
-  border-radius: 0.7rem;
+  /* border-radius: 0.7rem; */
   border-color: transparent;
   width: fit-content;
   height: calc(var(--nav-height) * 0.3);

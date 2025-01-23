@@ -42,14 +42,14 @@
   align-items: center;
   text-align: left;
   font-size: 1.5rem;
-  font-family: var(--font-thin);
+  font-family: "Vollkorn";
   font-weight: 700;
   color: var(--col-text);
 }
 
 .funDesc {
   font-size: var(--fsize);
-  font-family: 'Vollkorn';
+  font-family: 'Inter';
   font-weight: 200;
   line-height: 1.1rem;
   color: #000;

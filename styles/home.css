@@ -92,9 +92,8 @@ iframe {
 .para {
   width: 100%;
   font-size: var(--fsize);
-  /*font-family: var(--font-thin);*/
-  font-family: 'Vollkorn';
-  font-weight: 200;
+  font-family: 'Inter';
+  font-weight: 300;
   line-height: 1.1rem;
   color: #000;
   line-height: calc(var(--fsize) * 1.3);
@@ -234,7 +233,7 @@ iframe {
   width: 100%;
   text-align: left;
   font-size: var(--fsizesmall);
-  font-family: var(--font-thin);
+  font-family: "Inter";
   font-weight: 300;
   color: var(--col-text);
 }
@@ -360,7 +359,7 @@ iframe {
   font-family: var(--font-thin);
   color: white;
   background: black;
-  border-radius: 0.2rem;
+  /* border-radius: 0.2rem; */
   padding: 0.3rem 0.5rem;
   text-decoration: none;
   cursor: pointer;

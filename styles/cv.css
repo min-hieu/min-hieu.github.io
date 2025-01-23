@@ -15,16 +15,17 @@ canvas {
 .downBtnCon {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
+  padding: 1rem 0;
 }
 
 .downBtn {
-  padding: .3rem .8rem;
-  font-size: 1.1rem;
+  padding: .3rem .5rem;
+  font-size: 1rem;
   background: #a00;
   color: white;
-  font-family: var(--font-mono);
+  font-family: "Inter";
   border-radius: .4rem;
   cursor: pointer;
 }
@@ -34,4 +35,66 @@ canvas {
   text-align: center;
   padding: 2rem 0;
   font-size: 1.5rem;
+}
+
+.divisor {
+  background: #dadada;
+  height: 2px;
+  width: 100%;
+}
+
+.cvSection {
+  font-family: "Inter";
+  margin: .5rem 0;
+}
+
+.cvSectionHeader {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.cvEntry {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin: .5rem 0;
+}
+
+.cvEntryHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  margin: .25rem 0;
+}
+
+.cvEntryInstitute {
+  font-weight: 700;
+}
+
+.cvEntryPosition {
+  font-style: italic;
+}
+
+.cvEntryHeaderRight {
+  color: #949494;
+}
+
+.cvEntryDetails li {
+  text-indent: 1rem;
+}
+
+li::marker {
+  margin: 0;
+}
+
+#cvHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#cvName {
+  font-size: 1.8rem;
+  font-weight: 700;
 }
