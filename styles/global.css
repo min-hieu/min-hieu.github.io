@@ -47,6 +47,7 @@ body {
 a {
   color: #a00;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {

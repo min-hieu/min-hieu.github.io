@@ -2,6 +2,10 @@
   height: fit-content;
 }
 
+a {
+  cursor: pointer;
+}
+
 canvas {
   height: 100%;
   width: 100%;
@@ -62,7 +66,7 @@ canvas {
 .cvEntryHeader {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: top;
   margin: .25rem 0;
 }
@@ -97,4 +101,29 @@ li::marker {
 #cvName {
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.cvEntryHeaderLeft {
+  width: 100%;
+  align-items: center;
+}
+
+.cvEntryHeaderRight {
+  width: 30%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .cvEntry {
+    font-size: .7rem;
+    line-height: .9rem;
+  }
+
+  .cvEntryHeaderRight {
+    width: 10rem;
+  }
+
+  .cvEntryHeaderLeft {
+    width: 80%;
+  }
 }
