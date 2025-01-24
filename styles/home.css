@@ -307,9 +307,10 @@ iframe {
   display: flex;
   align-items: center;
   text-align: left;
-  font-size: var(--fsize);
-  font-family: var(--font-thin);
+  font-size: 1.1rem;
+  font-family: 'Vollkorn', serif;
   font-weight: 700;
+  line-height: 1.2rem;
   color: var(--col-text);
 }
 
@@ -429,12 +430,11 @@ iframe {
 }
 
 .projDesc {
-  font-size: var(--fsize);
-  font-family: 'Vollkorn';
+  font-family: 'Inter', sans-serif;
   font-weight: 200;
-  line-height: 1.1rem;
+  font-size: 0.8rem;
+  line-height: 1.0rem;
   color: #000;
-  line-height: calc(var(--fsize)* 1.3);
 }
 
 @media only screen and (max-width: 768px) {
