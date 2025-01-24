@@ -126,4 +126,12 @@ li::marker {
   .cvEntryHeaderLeft {
     width: 80%;
   }
+
+  .cvInfo {
+    font-size: .7rem;
+  }
+
+  #cvContact {
+    font-size: .7rem;
+  }
 }
