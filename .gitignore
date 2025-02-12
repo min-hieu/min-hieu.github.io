@@ -14,3 +14,5 @@
 *.png
 *.PNG
 !copyright.png
+
+globe/globe/target
