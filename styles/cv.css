@@ -32,6 +32,12 @@ canvas {
   font-family: "Inter";
   border-radius: .4rem;
   cursor: pointer;
+  display: flex;
+  gap: .3rem;
+}
+
+.downBtn img {
+  width: 1rem;
 }
 
 #waitMsg {
