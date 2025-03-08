@@ -39,9 +39,6 @@
                 Nguyen Minh Hieu <br><i style="color:#a00">"Charlie"</i>
               </div>
               <div class="socialCon">
-                <a href="https://twitter.com/hieuristics" class="icon">
-                  <img alt='twitter-icon' src='assets/icons/twitter.svg' />
-                </a>
                 <a href="https://bsky.app/profile/hieuristics.bsky.social" class="icon">
                   <img alt='bluesky-icon' src='assets/icons/bluesky.svg' />
                 </a>
@@ -62,8 +59,15 @@
           </div>
           <div class="right">
             <div class="intro">
-              <div class="para">
-                Hallo!
+              <div id="introBtnCon">
+                  <div class="langBtn selected" id="introBtnEn">En</div>
+                  /
+                  <div class="langBtn" id="introBtnDe">De</div>
+                  /
+                  <div class="langBtn" id="introBtnVn">Vn</div>
+              </div>
+              <div class="para paraIntro selected" id="introEn">
+                Hello!
                 <br>
                   I'm currently a research engineer at <a href="https://netropy.ai">Netropy</a> in Seoul, South Korea.
                 I obtained my BSc in Computer Science and Electrical Engineering at <a
@@ -88,6 +92,61 @@
                 <br>
                 <br>
               </div>
+              <div class="para paraIntro" id="introDe">
+                Hallo!
+                <br>
+                Ich arbeite derzeit als Forschungsingenieur bei <a href="https://netropy.ai">Netropy</a>
+                  in Seoul, Südkorea. Meinen B.Sc. in Informatik und Elektrotechnik habe ich an der
+                  <a href="https://kaist.ac.kr/">KAIST</a> gemacht. Zuvor habe ich unter Professor
+                  <a href="https://mhsung.github.io/">Minhyuk Sung</a> am
+                  <a href="https://mhsung.github.io/">Geometric AI Lab</a> geforscht.
+                Ich interessiere mich besonders dafür, Geometrieprobleme in Grafik, Vision und
+                  Ingenieurwesen mit einem fundierten und prinzipiengeleiteten Ansatz zu lösen.
+                Wenn meine Fähigkeiten für dein Projekt hilfreich sein könnten, melde dich gerne bei mir!
+                <br>
+                <br>
+                In meiner Freizeit mache ich gerne Malerei, Fotografie, betreibe <a href="https://www.geocaching.com/play">Geocaching</a> und programmiere!
+                <br>
+                <br>
+                Meine <a href="https://de.wikipedia.org/wiki/Erd%C5%91s-Zahl">Erdős-Zahl</a> ist <b>4</b> (Nguyen Minh Hieu →
+                  <a href="https://mhsung.github.io/">Minhyuk Sung</a> →
+                  <a href="https://en.wikipedia.org/wiki/Leonidas_J._Guibas">Leonidas Guibas</a> →
+                  <a href="https://en.wikipedia.org/wiki/Frances_Yao">Frances Yao</a> →
+                  <a href="https://en.wikipedia.org/wiki/Paul_Erd%C5%91s">Paul Erdős</a>).
+                <br>
+                <br>
+              </div>
+              <div class="para paraIntro" id="introVn">
+                Xin chào!
+                <br>
+                Hiện tại, mình là kỹ sư nghiên cứu tại <a href="https://netropy.ai">Netropy</a> ở Seoul, Hàn Quốc.
+                Mình đã hoàn thành bằng Computer Science và Electrical Engineering tại <a href="https://kaist.ac.kr/">KAIST</a>. Trước đây, mình đã thực hiện nghiên cứu dưới sự hướng dẫn của Giáo sư <a href="https://mhsung.github.io/">Minhyuk Sung</a> tại <a href="https://mhsung.github.io/">Geometric AI Lab</a>.
+                <br>
+                <br>
+                Số <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number">Erdős</a> của mình là <b>4</b>
+                  (Nguyễn Minh Hiếu → <a href="https://mhsung.github.io/">Minhyuk Sung</a> → <a href="https://en.wikipedia.org/wiki/Leonidas_J._Guibas">Leonidas Guibas</a> → <a href="https://en.wikipedia.org/wiki/Frances_Yao">Frances Yao</a> → <a href="https://en.wikipedia.org/wiki/Paul_Erd%C5%91s">Paul Erdős</a>).
+                <br>
+                <br>
+              </div>
+              <script>
+                for (let i = 0; i < document.getElementsByClassName("langBtn").length; i++) {
+                  let btn = document.getElementsByClassName("langBtn")[i]
+                  btn.addEventListener("click", () => {
+                    let lang = btn.id.split("introBtn")[1]
+                    let introLang = document.getElementById("intro" + lang)
+                    for (let j = 0; j < document.getElementsByClassName("langBtn").length; j++) {
+                      let btn2 = document.getElementsByClassName("langBtn")[j]
+                      btn2.classList.remove("selected")
+                    }
+                    btn.classList.add("selected")
+                    for (let j = 0; j < document.getElementsByClassName("paraIntro").length; j++) {
+                      let para = document.getElementsByClassName("paraIntro")[j]
+                      para.classList.remove("selected")
+                    }
+                    introLang.classList.add("selected")
+                  });
+                }
+              </script>
             </div>
             <br>
 
@@ -250,6 +309,24 @@
 
             <div class="shadowCon">
               <div class="bibCon">
+
+                <div class="bibCard">
+                  <img alt='digital-aerochrome-thumbnail' class="bibImage"
+                    src="assets/images/project/digital-aerochrome.webp" />
+                  <div class="bibText">
+                    <div class="bibTitle">Digital Aerochrome</div>
+                    <div class="bibPublish">
+                      <div class="bibPublisher"><i>2025</i></div>
+                    </div>
+                    <div class="projDesc">
+                        I modded an Olympus EPL-2 camera to shoot
+                        Aerochrome film digitally!
+                    </div>
+                    <div class="bibLinkCon">
+                      <a class="bibLink" href="dig-aero">(Coming Soon)</a>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="bibCard">
                   <img alt='vol-rendering-thumbnail' class="bibImage"
