@@ -14,10 +14,8 @@
 
 #photoMain img {
   width: 15rem;
-  /* object-fit: scale-down; */
+  height: 15rem;
   object-fit: cover;
-  width: 20vw;
-  height: 20vw;
   padding: .25rem;
 }
 
