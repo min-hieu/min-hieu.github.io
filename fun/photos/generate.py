@@ -5,7 +5,8 @@ from pathlib import Path
 def getAllImagePath():
     all_images = list(Path("./assets").glob("*.webp"))
     exclude_list = ["copyright.webp"]
-    return [img for img in all_images if img.name not in exclude_list]
+    all_images = sorted([img for img in all_images if img.name not in exclude_list])
+    return all_images
 
 def readSoup():
     with open("./template.html") as fp:
