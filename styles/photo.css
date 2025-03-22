@@ -14,14 +14,22 @@
 
 #photoMain img {
   width: 15rem;
-  object-fit: scale-down;
+  /* object-fit: scale-down; */
+  object-fit: cover;
+  width: 20vw;
+  height: 20vw;
   padding: .25rem;
 }
 
-#photoMain img:hover {
-  background-color: #f0f0f0;
-  transform: scale(2.3);
-  transition: transform 0.25s ease-in-out;
+/* #photoMain img:hover { */
+/*   background-color: #f0f0f0; */
+/*   transform: scale(1.5); */
+/*   transition: transform 0.25s ease-in-out; */
+/* } */
+
+#photoMain .active {
+  width: 100%;
+  height: auto;
 }
 
 .tips {
