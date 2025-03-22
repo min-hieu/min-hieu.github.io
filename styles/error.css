@@ -28,3 +28,14 @@
   padding: 0;
   margin-bottom: 2rem;
 }
+
+.errCon img {
+  width: 80%;
+}
+
+.wip0 {
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1.5rem;
+}
