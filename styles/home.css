@@ -410,6 +410,10 @@ iframe {
   justify-content: center;
 }
 
+.contactCon img {
+  height: 1rem;
+}
+
 .icon {
   cursor: pointer;
   width: 1.25rem;
