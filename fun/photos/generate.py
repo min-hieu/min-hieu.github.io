@@ -18,7 +18,7 @@ def writeSoup(soup):
         fp.write(soup.prettify())
 
 def attachImg(container, img_pth):
-    newImg = soup.new_tag('img', src=str(img_pth), alt=img_pth.stem)
+    newImg = soup.new_tag('img', src=str(img_pth), alt=img_pth.stem, loading="lazy")
     newImg['class'] = 'photo'
     container.append(newImg)
 
