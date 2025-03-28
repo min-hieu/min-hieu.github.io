@@ -19,15 +19,13 @@
   padding: .25rem;
 }
 
-/* #photoMain img:hover { */
-/*   background-color: #f0f0f0; */
-/*   transform: scale(1.5); */
-/*   transition: transform 0.25s ease-in-out; */
-/* } */
-
 #photoMain .active {
   width: 100%;
   height: auto;
+}
+
+.alignCenter {
+  align-items: center;
 }
 
 .tips {
@@ -37,4 +35,75 @@
   font-size: 1.2rem;
   font-family: 'Vollkorn';
   font-weight: 200;
+}
+
+.licenseCon {
+  width: 44.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #eee;
+  font-size: 1rem;
+}
+
+.licenseEntry {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.licenseEntryHead {
+  font-weight: 700;
+}
+
+.licenseEntryTail {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  gap: .5rem;
+}
+
+.licenseIconCon {
+  height: 1.5rem;
+}
+
+.licenseIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.licenseLink {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  #photoMain img {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .licenseCon {
+    width: 90vw;
+    flex-direction: column;
+    gap: .25rem;
+  }
+
+  .licenseEntry {
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .licenseEntryHead {
+    width: min-content;
+  }
+
+  .licenseEntryTail {
+    justify-content: left;
+  }
 }

@@ -27,18 +27,49 @@
   <div class="mainCon">
 
     <!--Main Content-->
-    <div class="contentCon">
+    <div class="contentCon alignCenter">
+      <div class="licenseCon">
+        <div class="licenseEntry">
+          <div class="licenseEntryHead">
+            Author:
+          </div>
+          <div class="licenseEntryTail">
+            Nguyen Minh Hieu
+          </div>
+        </div>
+        <div class="licenseEntry">
+          <div class="licenseEntryHead">
+            Updated:
+          </div>
+          <div class="licenseEntryTail">
+            29-03-2025
+          </div>
+        </div>
+        <div class="licenseEntry">
+          <div class="licenseEntryHead">
+            Licensed:
+          </div>
+          <div class="licenseEntryTail">
+            <a class="licenseLink" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+            <div class="licenseIconCon">
+              <img class="licenseIcon" src="icons/CC.svg"></img>
+              <img class="licenseIcon" src="icons/BY.svg"></img>
+              <img class="licenseIcon" src="icons/NC-EU.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="photoMain">
       </div>
       <script>
-document.querySelectorAll('.photo').forEach(el => {
-    el.addEventListener('click', () => {
-        document.querySelectorAll('.photo').forEach(other => {
-            other.classList.remove('active');
+        document.querySelectorAll('.photo').forEach(el => {
+          el.addEventListener('click', () => {
+            document.querySelectorAll('.photo').forEach(other => {
+              other.classList.remove('active');
+            });
+            el.classList.add('active');
+          });
         });
-        el.classList.add('active');
-    });
-});
       </script>
     </div>
     <!--Main Content End-->
