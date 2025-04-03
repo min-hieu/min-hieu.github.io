@@ -297,9 +297,15 @@ iframe {
 .bibImage {
   width: 30%;
   max-width: 80vw;
-  padding: .5rem;
+  padding: .0rem;
   border: solid 1px;
   border-radius: 0.3rem;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.bibImagePad {
+  padding: .5rem;
 }
 
 .bibTitle {
